@@ -20,7 +20,7 @@ class DenseRetriever:
             raise ValueError('FAISS index dimension does not match config')
         self.model = SentenceTransformer(config['model_name'])
 
-    def retrieve(self, query, top_k=10, filters=None, use_query_instruction=True):
+    def retrieve(self, query, top_k=10, filters=None, use_prefix=True):
         if filters is not None:
             raise NotImplementedError('Metadata filtering is not implemented yet')
         if not isinstance(query, str) or not query.strip():
@@ -28,7 +28,7 @@ class DenseRetriever:
         if not isinstance(top_k, int) or top_k < 1:
             raise ValueError('top_k must be a positive integer')
 
-        prefix = 'Represent this sentence for searching relevant passages: ' if use_query_instruction else ''
+        prefix = 'Represent this sentence for searching relevant passages: ' if use_prefix else ''
         query_embedding = self.model.encode(
             [prefix + query], normalize_embeddings=True, convert_to_numpy=True
         )
@@ -40,13 +40,16 @@ class DenseRetriever:
             if idx < 0:
                 continue
             chunk = self.chunks[int(idx)]
+            metadata = chunk['metadata'].copy()
+            metadata['document_id'] = chunk['document_id']
+            metadata['source'] = chunk['source']
+            metadata['title'] = chunk['title']
+
             results.append({
                 'chunk_id': chunk['id'],
                 'text': chunk['text'],
                 'score': float(score),
                 'retrieval_method': 'dense',
-                'metadata': {**chunk.get('metadata', {}),
-                             **{key: value for key, value in chunk.items()
-                                if key not in ('id', 'text', 'metadata')}},
+                'metadata': metadata,
             })
         return results
