@@ -1,0 +1,9 @@
+{
+  "k1": 1.5,
+  "b": 0.75,
+  "method": "lucene",
+  "stopwords": "en",
+  "stemmer": "english",
+  "lower": true,
+  "num_docs": 12813
+}
