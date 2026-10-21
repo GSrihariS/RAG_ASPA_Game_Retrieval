@@ -8,7 +8,7 @@ def main():
     parser.add_argument('--top-k', type=int, default=5)
     parser.add_argument('--no-prefix', action='store_true',
                         help='Disable BGE query prefix for baseline comparison')
-    parser.add_argument('--game', help='Filter reviews by exact game name (case-insensitive)')
+    parser.add_argument('--game', nargs='+', help='Filter reviews by exact game name(s) (case-insensitive)')
     args = parser.parse_args()
 
     retriever = DenseRetriever()
