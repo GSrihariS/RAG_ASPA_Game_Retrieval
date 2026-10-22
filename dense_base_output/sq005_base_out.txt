@@ -1,0 +1,65 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1030300:235915880:chunk:003 | score=0.6496
+The main topic of conversation around this game has been difficulty. Flying enemies use evasion to force you into uncomfortable positions. Enemies with projectiles seem to do calculus to figure out where you are going, and where you've been. Health pools can be hefty. The fights are longer, and demand more of you than HK at it's base level. All of that to say, I wouldn't have it any other way. Some games are not for some people. The game expects to pay attention to where traps are, the game expects you to know heal windows, attack patterns, and enemy waves to be able to strategize, OR you can sometimes throw the kitchen sink of tools, sawblades, poison, and cog flies at bosses and do it your own way.
+
+2. steam:1030300:233368212:chunk:002 | score=0.6071
+The best fights have exactly the kind of difficulty I enjoy: you die, understand something new, immediately try again, and eventually beat the boss because you actually improved.
+
+The movement also gets significantly better as you unlock abilities such as dash, cloak glide, wall cling and downward strike. At that point the platforming starts to feel much more fluid and intuitive — and it becomes obvious that many areas were probably designed around these abilities from the beginning.
+
+The visual and thematic design is also fantastic. Trobbyo, for example, is an excellent concept: a performer who never left his role, with attacks based around the stage, dance, fireworks, smoke and spectacle. The game is full of this kind of creativity.
+
+What doesn't work
+
+Unfortunately, the game constantly wastes my time between the good parts.
+
+3. steam:1030300:233368212:chunk:005 | score=0.6052
+The biggest problem
+
+The frustrating part is that Silksong clearly knows how to make fantastic difficult gameplay.
+
+When the game gives me a boss, a short runback and a readable moveset, I can happily die ten times and keep thinking:
+
+“One more try.”
+
+When the game gives me a long enemy gauntlet, platforming, environmental hazards and no checkpoint, I start thinking:
+
+“Why am I wasting my time doing this again?”
+
+That distinction ultimately killed the game for me.
+
+I don't mind difficult games. I don't even mind extremely difficult games. I mind difficulty created by making me repeat content I have already mastered.
+
+I eventually reached a section with an enemy arena dealing two-mask damage, followed by a lava escape/platforming sequence, without a meaningful checkpoint. At that point I simply stopped playing.
+
+4. steam:1030300:235644311:chunk:001 | score=0.6044
+5/10
+
+Absolutely gorgeous, interesting story, you really wanna learn more and explore…
+
+But the game kinda stops you from doing any of that unless you, the player, have a lot of skill or like dying repeatedly. And I mean *repeatedly*. It’s not fun. Imo anyway. For me the experience js felt frustrating, like I was trapped and helpless the entire time, bc the game does virtually nothing to help you- not even advice. (And player advice tends to boil down to ‘git gud’ which is NOT helpful.)
+
+If you like that aspect in games, requiring a lot of skill and treated deaths and allat, go right ahead, this is the game for you! Seriously, could not recommend it more for that kinda gameplay.
+
+5. steam:1030300:235062202:chunk:006 | score=0.6021
+I changed controllers three times and it didn't matter. Maybe it's my hardware but doing the ridiculous platforming challenges or boss fights with a super tight margin of error to beat with my down attack or input getting eaten and taking damage instead of bouncing gets a little frustrating after it happens over 100 times.
+- Part of the fun in progressing in these games is the movement skills. Getting to jet around the map with new abilities on a good line is part of what makes challenging platformers enjoyable. SO MANY TIMES there are enemies placed in exactly the right spot to screw up your line. They have unpredictable movement and attack patterns and it makes learning a strategy for boss fight run backs annoyingly unreliable.
+
+6. steam:1030300:235237167:chunk:001 | score=0.6001
+Loved the game. It's very hard for the first time, but in my second play through it becomes easier (still challenging).
+
+7. steam:1030300:235781090:chunk:001 | score=0.5991
+A swift, elegant journey through a kingdom of threads and secrets creates an experience defined by agility, atmosphere, and striking emotional undertones. Every region feels alive with tension and beauty, inviting careful exploration while rewarding bold leaps into the unknown. Movement stands at the heart of the adventure, delivering fluidity, speed, and precision that turn traversal into a graceful flow across intricate landscapes and perilous arenas. Combat builds on that momentum, offering sharp timing, layered mechanics, and encounters that feel both challenging and exhilarating.
+
+Worldbuilding unfolds with quiet depth, revealing a realm shaped by conflict, resilience, and delicate balance. Characters encountered along the path leave strong impressions through distinct personalities, memorable designs, and interactions that enrich the unfolding narrative.
+
+8. steam:1030300:237059059:chunk:001 | score=0.5981
+The story, music and visuals are excellent. The game play and progression can feel difficult.
+
+9. steam:1030300:235994143:chunk:001 | score=0.5973
+This is harder than the original hollow knight but keeps its fun and challenging game play style. This can feel like platforming hell at times or heaven depending on which side you fall on. Its a great game, but a challenge. I do recommend it for the right person.
+
+10. steam:1030300:235540519:chunk:001 | score=0.5958
+The atmosphere and movement is amazing, but the game becomes tedious and difficult for difficult's sake instead of a fun challenge

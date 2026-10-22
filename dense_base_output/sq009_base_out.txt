@@ -1,0 +1,96 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1903340:234304474:chunk:003 | score=0.6045
+OST is a banger nuff said
+
+Biggest criticism I have is performance. This game look a lot of tweaking computer and in-game settings to get working properly. And I know first thing most people will just say is "pc diff" or "nice potato" but specs should be attached to this review you can judge for yourself. Once I got it working it ran fine, although this is still an Unreal Engine game and textures/rendering were sometimes off, and then there would be the occasional massive performance drop from certain effects. The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug.
+
+2. steam:1903340:234304474:chunk:004 | score=0.5672
+The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug. This did force me to eventually look up cutscenes online to see what was happening in game. This might be a game where it just works better on console than pc if that's an option for you.
+
+Overall game is well worth it, it earned its Game of the Year and other titles for a reason.
+
+3. steam:1903340:234401491:chunk:004 | score=0.5556
+- NPCs are hit or miss - usually a few unique lines, but rarely anything that will actually stick with you
+
+- Enemy variety can wear thin in the rare stretch where you're only fighting one type. Thankfully, most areas mix things up
+
+Performance-wise, it's been running smoothly for me with no crashes or noticeable issues. PC specs attached. Note: I am using DLSS and getting around 60fps consistently on my rig.
+
+I haven't finished the story yet, but I keep getting pulled back in every time I turn the game on, and it's had some genuinely great twists so far. Easily one of the more original and gripping games I've played in a while
+
+4. steam:1903340:236516781:chunk:002 | score=0.5474
+This was on normal difficulty, by the way. Nevertheless, I pushed on after that hour only to find that unless you succeeded at the mechanic in battle you were heavily punished for missing it. Wait, what? So instead of placing a mechanic there to reward the player if performed successfully they're punished instead if they miss? That shouldn't be the case at all because now you're being FORCED by the game to make sure you CONSTANTLY and CONSISTENTLY dodge/parry every attack if you want to survive. Otherwise, your party quickly perishes.
+
+Second, the scaling of enemy difficulty. As is normal, as your party becomes stronger throughout the course of the game, so do enemies. However, their HP begin to grow to scales that make every fight a slog.
+
+5. steam:1903340:235592844:chunk:001 | score=0.5429
+rpg combined with parry and dodge mechanism, plus selection of characters (team based rpg)... nice music, nice history, funny characters and strategic selections, decisions matters and is not designed for babies, you should take good decisions or your team's power will be very poor.
+
+6. steam:1903340:237380861:chunk:001 | score=0.5428
+Incredible game, but it has some serious performance issues on PC. Frame stutters happen all the time, and entire cutscenes fail to load and crash the game. I've had to re-fight bosses because cutscenes that play after the boss fight crashed the game and it didn't save me defeating the boss.
+
+I've attatched my PC Spces - its not a budget build or something.
+
+Despite the issues I still recommend it.
+
+There is also a narrative choice I hate in this game - the entire world the game takes place in is revealed to be canonically fictional... like an "...and it was all a dream" ending. Really sucks out the emotional weight the game had when it started.
+
+7. steam:1903340:237236835:chunk:001 | score=0.5407
+I wasn't expecting a turn-based RPG to scratch my Sekiro itch.
+
+Great game so far. I understand now why it got GOTY
+
+Optimisation is a bit bad though and unplayable without DLSS, but maybe it's just me.
+
+8. steam:1903340:235208823:chunk:002 | score=0.5382
+Some boss fights go on WAY too long, I'm talking like 45 minutes in one fight and then on to the next one. People will argue OH BUT YOU NEED THIS SPECIFIC BUILD AND THEN DO THIS AND THAT-- Bro, if you're saying that to play the game, then you need like 10 different guides, maybe your game just isn't that good.
+
+Them lying about using AI, regardless of them using simply as a placeholder beforehand then removing it, and lying about it is incredibly disingenuous
+
+Story is decent, has ups and downs, but feels a little cliche at times.
+
+Buggy, inconsistent performance even on a 5090. You will have a lot of parry timings ruined simply because of the game's un-optimization.
+
+If you absolutely ADORE turn based RPGs, pick it up on sale. But do not believe the hype.
+
+9. steam:1903340:235035398:chunk:001 | score=0.5363
+Graphics: You forget what reality is
+
+Gameplay: Very good
+
+Audio: Eargasm
+
+Audience: Adults
+
+PC Requirements: Decent
+
+Game Size: Workable
+
+Difficulty: Easy to learn / Hard to master
+
+Grind: Only if u care about leaderboards/ranks
+
+Story: It'll replace your life
+
+Game Time: Average
+
+Price: Worth the price
+
+Bugs: Never heard of
+
+? / 10: 10
+
+10. steam:1903340:237518647:chunk:002 | score=0.5347
+- Cons: There are a lot of areas that required "Quality of Life" updates that never happened, like a much better loadout system (skills, weapons, luminas), features for organizing pictos, lack of meaningful side quests, and most importantly the damage balance is just non-existent.
+
+- Verdict: 7/10, the game is really good and entertaining, however its most important RPG aspect which is combat is simply broken and was never fixed, it did not deserve "Best RPG 2025" award.
+
+---
+
+[/hr]
+
+Long version
+
+The game performance was really good compared to what we have nowadays, I played with High settings and DLSS 5 balanced (Neural Rendering), I was playing at 80 FPS, which by comparison in other games under the same settings I was getting around 50 FPS.

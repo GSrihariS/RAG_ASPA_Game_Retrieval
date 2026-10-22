@@ -1,0 +1,43 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:550:237225061:chunk:001 | score=0.7139
+It's a decent game on single player. I can imagine playing with your mates might be a bit more fun. As it's an older game, it didn't wow me much graphics wise.
+
+2. steam:550:236936607:chunk:001 | score=0.7005
+I liked the game. Entertaining co-op experience. I like the cooperative team work experience. The maps are highly detailed and have a high level of polish. Another quality software product from valve. However, it has a high level of violence and gore. Turning on low violence mode makes the game more enjoyable.
+
+3. steam:550:235680222:chunk:001 | score=0.6906
+Left 4 Dead 2 is still one of the most fun co-op games I've played. The gameplay is simple but really addictive, especially when playing with friends. Every campaign can feel different depending on how you play and what happens along the way.
+
+I also really like the atmosphere, the variety of weapons, and the different infected types that keep the gameplay exciting. The online community is still active too, so it's easy to find people to play with.
+
+Overall, it's an old game, but it still holds up really well and is definitely worth playing.
+
+4. steam:550:235746405:chunk:001 | score=0.6827
+Great co-op game! You have to get 4 people to play this together. Don't play with AI. The Director AI adjusting each game's pacing is awesome. Each play through is unique.
+
+5. steam:550:235037832:chunk:001 | score=0.6822
+Left 4 Dead 2 is undoubtedly the greatest coop shooter of all time. it has infinite replay value that has allowed it to be my most played game on Steam and the multiplayer has lead to me meet some amazing people.
+
+This infinite replay value is due to the genius RNG, workshop content/mods and the way-ahead-of-its-time "Director" mechanic as well as Valve's attention to detail especially in the writing of the characters and the world you play in.
+
+Competitors in recent years have attempted to replicate Left 4 Dead 2's formula and made some decent games but they still fall flat on their faces in comparison with Left 4 Dead 2 despite it's almost two decade old age.
+
+6. steam:550:237126830:chunk:001 | score=0.6706
+One of the best times you can have with friends. L4D2 is an amazing co-op game that's designed in a way that makes sure that everyone contributes to the party and sticks together. The director makes damn well sure you're not blitzing ahead of everyone else and is sticking with everyone in order to make progress, as well as knowing when to ease on the player when things are tense. It makes every playthrough different and unique, and allows for different stories to be told, such as being knocked off the roof of Mercy Hospital by a tank.
+
+And it's CHEAP as hell? Hell yeah!
+
+7. steam:550:237340522:chunk:001 | score=0.6696
+Fun, simple. Great multiplayer.
+
+8. steam:550:237211284:chunk:001 | score=0.6696
+Pretty fun game, especially with friends.
+
+9. steam:550:236904695:chunk:001 | score=0.6677
+Never played this until now I really like playing with my friends!
+Would recommend if you have friends to play with.
+
+10. steam:550:236199165:chunk:001 | score=0.6586
+Great game with lots of support from the community.

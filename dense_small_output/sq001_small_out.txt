@@ -1,0 +1,70 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1903340:236958974:chunk:005 | score=0.7512
+Since the story is such an intrinsic part of the experience, I don't think I can give the game a positive review on the gameplay and art direction alone. Though, I go back and forth.
+I think the game is still worth playing but maybe be warned about the story going in so you don't get as disappointed as I did.
+
+2. steam:1903340:235857239:chunk:001 | score=0.7237
+Masterpiece.
+
+The story is a slow-burning emotional roller coaster, which feels very complete at the end of the game.
+
+The combat could be described to be a hybrid of turn-based combat with the parry mechanics of souls-like games. While the combat feels difficult at times, it is also very rewarding.
+
+Music is amazing and each piece of music feels like it was crafted to that specific scenario very well, especially in boss fights.
+
+Character design, level design, models, animations, everything feels well put together.
+
+10/10, would ride the roller coaster of emotions again.
+
+3. steam:1903340:234738041:chunk:004 | score=0.7204
+I think most players will be pulled into the story 1-2 hours in and continue onwards seeking to find out more. This is exactly what happened to me and when a game manages to captivate, that's really all there needs to be said at the end of the day. I felt connected to the characters and shared their sense of hopelessness, dread, fear and desire to push on, it didn't feel like another cheap iteration of "random gang of nobodies goes out to fight big evil thing and save the world from certain doom" even though I do believe that's the idea so far, but perhaps I will have to revisit this point once I'm fully finished with the game.
+
+4. steam:1903340:237518647:chunk:003 | score=0.7193
+Visually speaking, the environment and characters are out of this world, even more so when using DLSS 5 Neural Rendering, I spent a bunch of time taking screenshots as it looked completely astonishing.
+
+The story and characters really captures you as a player, you can feel their fear, anguish, joy and sadness. It's among the few games that actually manage to transmit the character's feelings to the player, they did a perfect job on that.
+
+However, the game was overly-hyped, in my opinion. I very much enjoyed the game up until half way through the story, at which point the game allowed me to finish every single encounter in 1 to 3 turns max (including bosses), and that went all the way through finishing the story. Then it only got more absurd after finishing the main story (one-shots).
+
+5. steam:1903340:235592384:chunk:002 | score=0.7183
+The characters fit nicely into this world visually speaking, even if the monologues and dialogue might be a little cheesy at times.
+
+The gameplay itself is somewhat interesting, the need to adapt and build synergy between the characters keeps the repetitive gameplay loop bearable. Enemy encounters are usually very similar or identical, even among different enemy groups. The battles themselves are enjoyable, as you need to be accurate with your timings while attacking, dodging, and parrying. Overall, the system repeats itself heavily, which becomes painfully evident in Act II. The story is still there, but it’s basically just a copy and paste of Act I, minus the new scenery.
+
+One thing we also “get to have” whilst progressing through the game is new companions with their own abilities and powers. While it’s great to give the player more options to “choose” from, the game doesn't actually let you choose much.
+
+6. steam:1903340:237098430:chunk:002 | score=0.7172
+But the writer seems more interested in just kind of hitting the emotional beats without really putting the work in to make a story that is effective on an intellectual level. And I think that explains why the game is so popular. Overwhelmingly everything that is really popular and highly rated as art, is effective at manipulating the audience's emotions, and that requires not spending too much time exploring or explaining the setting.
+
+For me personally, if I don't understand the setting, and the rules of the story's universe, the background, why things are the way they are, I have a lot of trouble caring about what happens. It might as well just all be a dream, and that's what Clair Obscur feels like to me so far.
+
+7. steam:1903340:235699901:chunk:002 | score=0.7166
+I kept expecting the narrative to introduce something that would significantly change my perception of what was happening, but that never really happened. I also found some of the conflicts and contradictions in the characters’ motivations more off-putting than compelling. Instead of making them feel more complex or human, these moments often made their actions and decisions harder for me to connect with. Character development in general felt limited, which was particularly disappointing for a game that places so much emphasis on its narrative and cast.
+
+The gameplay is enjoyable at first, but as an RPG it lacks depth. Most of the systems are straightforward, and there isn’t much need to carefully think about your build or experiment with different approaches.
+
+8. steam:1903340:235727655:chunk:001 | score=0.7112
+- Soundtrack is phenomenal
+- Story is incredibly well written, although slightly stagnates in the middle but then picks up again
+- Characters are intriguing and well-designed
+- Exploration is somewhat rewarding
+- Combat is serviceable, with decent enemy variety, nothing groundbreaking but not bad either
+
+The story, characters and soundtrack heavily carries the game.
+
+8/10
+
+9. steam:1903340:235669025:chunk:006 | score=0.7003
+just a random thought don't mind me rambling.
+
+Overall, the game deserve it's praise. I would say he's a bit overrated but it would be a lie if i said i didnt enjoy it thouroughly.
+I definitely recommend it for thoses who love a good story and know their way around RPG's or thoses who are looking to get into the genre. It's not a game for everyone but it's a breath of fresh air in an industry that puts so much money into souless cashgrabs games.
+
+10. steam:1903340:234835749:chunk:002 | score=0.6993
+Your choices matter little, there are two endings and you choose which one you want manually. The only RPG elements are builds, progression and excellent story. But you don't really get to roleplay; just immerse in the story you follow through the protagonist's eyes.
+
+Gameplay - 7/10
+
+It's not for everyone. It is a JRPG formula (like older Final Fantasy games), with turn based combat and party system. The only major difference is the rhythm-based defensive mechanics. You don't just tank the incoming attacks - you're supposed to dodge and/or parry them, like it's some soulslike. It CAN be annoying. It CAN be tedious. But it does get better, it has a lot of potential for different builds and the ability to create something incredibly OP with the right skills and gear. But what truly matters is that for it's story - those caveats can be ignored.

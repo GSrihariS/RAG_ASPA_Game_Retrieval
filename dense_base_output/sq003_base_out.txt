@@ -1,0 +1,61 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1091500:235452968:chunk:001 | score=0.5129
+Sept 2026 - Games run beautifully, no crashes, glitches or nothing, kinda sad I missed the T pose bugs.
+
+Running on Linux as well, and I could not ask for a smoother experience.
+
+As for the game itseld, you know you need to play it. You don't need a review to know that ;)
+
+2. steam:1091500:237260245:chunk:002 | score=0.5026
+The story makes the game more interesting because the decisions you make can affect certain events and relationships throughout the game.
+
+However, I think the game can sometimes feel overwhelming because of its large open world and numerous missions. Some activities can also become repetitive after playing for a long time. Despite these weaknesses, I still think the game offers a memorable experience.
+
+Overall, I would recommend Cyberpunk 2077 to players who enjoy open-world games, action, and science fiction. For me, its graphics, storyline, and freedom of exploration make it a worthwhile game to experience.
+
+3. steam:1091500:236888462:chunk:001 | score=0.5021
+Title: Never Fade Away...
+
+A lot of time has passed since launch, and only now can I truly say it: this game is a masterpiece. The work CD Projekt Red put into turning this around is fantastic.
+
+The plot tackles real, massive issues reflecting our own world. This isn't just a brief main quest that feels like a small add-on to a massive map—it’s a deeply human story filled with heroes, villains, and losers. It asks what it really takes for a "nobody" to become a legend, and more importantly, what price you pay for that success. This is pure, authentic Cyberpunk. To be honest, I wasn't sure CDPR could pull it off, but the voice acting and performances are fabulous. They brought Night City to life so convincingly that you instantly buy into its ruthless rules and struggles.
+
+4. steam:1091500:236534523:chunk:003 | score=0.5005
+CHARACTERS AND CHOICES
+The characters, the premise and thickening plot are also selling the game hard. Deep and multi-dimensional characters, similar to how they function in The Witcher, but belonging to this world ofc. Over the top, but still believable scenarios where you have make difficult and often very ambiguous choices. It also shows you and forces you to consider what your stance is on a lot of ethical dilemmas linked to a highly technological world where humans, AI and robotic implants mix together in an incredibly corrupt city where the environmental concerns of today where never dealt with.
+
+Haven't finished the story yet, but at 100 hours, I can safely recommend it. Does require a beast of a PC though, that's also part of why I waited a long time to play it.
+
+5. steam:1091500:234266400:chunk:001 | score=0.4988
+Good Ebening.
+
+I have now played this game for about a day, after buying it on sale over 5 years after its initial release date. I personally think this game would've probably been worth full price, but I love a good sale me so that certainly tipped the scales. I was concerned about the hardware requirements, especially after everything people were saying upon release. Overall, my machine is a solid gaming laptop, slightly below recommended specs but could run it fine overall with solid but not the best graphics. This was completely fine for me, I was still impressed with the detail and this did not affect my immersion into the game at all. On to the main aspects of the game itself:
+
+6. steam:1091500:237306676:chunk:003 | score=0.4971
+The worldbuilding and storytelling for these side gigs are often limited to reading a shard that you can find on the ground or in buildings. I find the Phantom Liberty gig content having more variety and in depth storytelling than the base game, with a lot more dialogue and player choice on the outcome. Many moderm games do these lore reading dumps and thats fine, but I just wish the quality and delivery was as good in the rest of the game as it was in the DLC.
+
+In terms of player choice, combat is like a Deus Ex/Fallout lovechild. Cyberware, netrunning, stealth and skill trees give the player freedom to defeat enemies however they want. First playthrough i played as a melee heavy cyberpsycho, and on my recent replay I mostly focused on stealth, netrunning and pistol headshot damage multipliers.
+
+7. steam:1091500:233496617:chunk:003 | score=0.4964
+The narrative of the game's dialogue choices branch enough that they allow several playthroughs with decently varied outcomes at key plot points. while managing to create numerous characters who generally don't overstay their welcome and are enjoyable, which is fairly rare in the modern day for triple-A game writers. It isn't the most amazing writing in video game history, but the story takes itself seriously and isn't seeped in Whedon-esque self-deprecating characters buried under multiple layers of irony.
+My only complaint is, despite having been out for 6 years now, There are still some bugs I've encountered, usually minor ones like a visual glitch or NPC abruptly t-posing for a brief moment, but the worst one I've seen thus far was a softlock which forced me to reload to a previous save.
+
+8. steam:1091500:233615060:chunk:001 | score=0.4958
+My personal assessment of Cyberpunk 2077 is that the game is good apart from some vehicle configs when driving and build freedom I.e. (cyberware configurations/unlmited perk allow) but has a major flaw of being a bad "RPG" through and through. Replays aren't unique simply because of the overly basic dialogue system, and questlines having options of either failure or completion. The inclusion if Johnny Silverhand (Keanu Reeves) doesn't hit hard with the way he flip flops his opinion on you based on the type of quest you are doing (main quests vs side quests) - "Put some iron in your mouth". Phantom Liberty actually pivots from this and attempts to be more succinct with it's story, which I and many players adore.
+
+9. steam:1091500:237338556:chunk:001 | score=0.4938
+As close to a perfect game as any I've ever played. There's nothing really bad about it (I didn't really play during the buggy launch; the game runs flawlessly now). And, as with The Witcher 3, CDPR nailed the expansion.
+
+No point doing a long write-up. If you're reading this, do yourself a favour and get the game if you haven't already. Play it for some time, and you'll realise why it's something special.
+
+As for me, at the very least, yearly replays of this game are in order, I think, for the next few years.
+
+10. steam:1091500:237409620:chunk:002 | score=0.4932
+I digress.
+
+Story wise, I really liked ingraining myself in everything. Beginning as a random nomad and ending up an untouchable legend... But, the more intriguing thing to me was how it handles the idea of individuality.
+Spoilers beyond this point.
+
+Night City is advertised to us as a place where you can be or do anything- and the gameplay can match that with how many different ways you can tackle any given problem, I was just taking the direct solution. Individuality is in surplus, and it manages to instead remain a commodity to the player after the first act... Once you are threatened with losing your very Self. The looming idea you're slowly being overwritten by someone who died, and, depending on your choices, is about to be born again through you.

@@ -1,0 +1,53 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1962663:225903136:chunk:001 | score=0.7736
+Optimise the game or lose your players. That simple...Why can't they understand that?
+
+2. steam:1249970:215701034:chunk:001 | score=0.7095
+I bought this game despite the “Mostly Negative” reviews because I wanted to judge it for myself. I had read many complaints about poor performance, but I usually take those with a grain of salt—most players don’t properly configure their games or systems.
+
+Unfortunately, the performance is far worse than expected. For a title released in 2024, you would assume post-launch updates would have addressed major issues. I can’t speak for how it ran at launch, but in its current state, the game is still laughable.
+
+I’m running a Ryzen 7 3700X, an AMD Radeon 9070 XT, and 32GB of DDR4 RAM. On paper, the game runs fine at 1080p on max settings, maintaining a mostly stable 72 FPS—but that’s where the problems start.
+
+3. steam:390340:23782721:chunk:001 | score=0.7038
+bad optimization
+bad control
+bad engine
+
+Devs about it :
+"We will be adding additional Asian languages to the game soon. Please stay tuned! " - (c) Capcom
+
+4. steam:1249970:227599855:chunk:004 | score=0.7015
+Sadly, we know that many big companies are run by people who do not understand video games.
+
+Having such stupid logic errors in a highly anticipated game is frustrating. Generally, driving feels very weird too. The car's handling is extremely unstable. When you brake at high speeds, the car stops almost instantly, which feels very unnatural. It is too twitchy at high speeds, and you cannot control it precisely. The legendary old TDU had a handling model that was 100 times better and more realistic.
+
+No Optimization: Feels Like a Cheap AI Generation
+
+The technical side of the game is an absolute disaster. Optimization simply does NOT exist. I can play the latest, most demanding games at 4K resolution on high settings with 60fps, yet I cannot even get a stable 30 FPS in Solar Crown with the same settings.
+
+5. steam:1962663:237090806:chunk:001 | score=0.7010
+So poorly optimized for PC. From the hundreds of gigs needed to play just Warzone to assets not loading in game to poorly optimized menu options... The devs couldn't have cared less about the player experience and are relying heavily on the brand's reputation to bring in players.
+
+6. steam:1249970:212365513:chunk:003 | score=0.6977
+It's hard to tell if this is a deliberate design choice or simply another side effect of the extreme poor optimization causing input lag and inconsistent frame pacing.
+
+My Final Observation:
+
+The potential for a great open-world racing experience is here, but right now, it is buried under a mountain of technical flaws. The developers must prioritize fixing the performance and the core networking issues before adding any new content. Until these critical issues are addressed, I cannot recommend this game.
+
+We are waiting for the TDU we were promised.
+
+7. steam:2246340:235967937:chunk:001 | score=0.6952
+They fixed optimization!! Runs like butter now!! Stop reading this review and go play the game!!
+
+8. steam:2246340:235632678:chunk:001 | score=0.6940
+Optimization is fixed greatly! If you can use DLSS, it can run even at high settings on a PC i've had since quarantine. Gameplay is insanely fun and satisfying - a ton easier than world, but the difficulty spikes upwards later into high rank.
+
+9. steam:2246340:235808366:chunk:001 | score=0.6931
+What a terribly optimised game, Capcom can't make a game run stable 60fps to save their lives also with gen AI now being used in development I'd avoid all future products from this company.
+
+10. steam:2246340:235730389:chunk:001 | score=0.6924
+Great game recommend especially after optimization updated.

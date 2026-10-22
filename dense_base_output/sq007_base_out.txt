@@ -1,0 +1,80 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1174180:237231115:chunk:001 | score=0.6188
+**One of the worst control schemes I've encountered in a modern game**
+
+Red Dead Redemption 2 is an incredible-looking game with an amazing world, story, characters, and attention to detail—but the controls are unnecessarily complicated, unintuitive, and at times downright frustrating.
+
+The biggest problem is that the game seems to have been designed around an enormous number of context-sensitive actions rather than intuitive controls. Your character constantly has different actions mapped to the same buttons depending on what you're looking at, where you're standing, what you're holding, or what the game thinks you should be doing. Simple things like walking through a door, getting on a horse, picking something up, talking to someone, looting a body, or interacting with an object can become an exercise in figuring out which button the game wants you to press this time.
+
+2. steam:1174180:237447502:chunk:002 | score=0.6149
+The epilogue also drags on long after the main story has ended.
+
+The first part of the game is sluggish, and so is the gameplay. I’m all for realism, but the heavy movement and horse controls often feel more like fighting the game than playing it. The combat isn’t that good either: shootouts are easily won with Dead Eye or the controller’s lock-on. By the way, I strongly recommend playing with a controller.
+
+I feel positive about the game. The world, the atmosphere, and the sheer amount of detail are special, and I’m glad I played it, so I could form a opinion about it. If I had to rate it, it would be a 7/10 for me personally.
+
+3. steam:1174180:235823587:chunk:002 | score=0.6023
+Well, enough of the Arthur glazing. Let's move on to rating the other categories.
+
+**OPEN WORLD — 9/10**
+This game has one of the greatest world designs there is. The details, visuals, interactions, everything is top-tier. But I am not giving it a 10 because I think there could've been more side quests.
+
+**CHARACTERS — 10/10**
+Characters are a very strong point of this game. The camp members are all well-written, and each character has their own past and a lot of depth. You can genuinely connect with each of them.
+
+**STORY — 9/10**
+I would say it's a 9 because it was somewhat predictable, but it still turned out to be excellent. So yes, 9/10.
+
+4. steam:1174180:236771154:chunk:001 | score=0.5994
+Great game for story and online. Love the game for people who like cowboys and horses. Great game for hunting. But in online, admins just make it annoying to play online. Like doing random stuff like spawning people to places spawn animals and doing innopropriate stuff for female characters. They also sometimes lock you up in prison for no reason.
+
+5. steam:1174180:234702980:chunk:001 | score=0.5927
+one of the best story games I've ever played
+
+this game is so detailed and has a bunch of mechanics, inventory system, hunting, crafting ammo, exploring the world, looting and doing robberies, meeting wild strangers...
+you can choose how you wanna play it and that affects your playthrough
+
+online is also pretty good, even tho it stopped receiving new dlcs a long time ago (still receives new telegram missions once in a while, and regular bonuses), it is still fun to do roles, missions or just mess around with other players
+
+6. steam:1174180:235592845:chunk:002 | score=0.5908
+Arthur Morgan remains one of the greatest protagonists in fiction.
+
+World Detail & Immersion
+
+- Unrivaled Environment: From snow-capped mountains to murky bayous and dusty frontier towns, the world feels living, breathing, and completely independent of the player.
+
+- Meticulous Simulation: The level of detail—dynamic weather, realistic animal behavior, hair growth systems, and subtle NPC routines—creates a sense of immersion that no other open-world game currently matches.
+
+Gameplay & Physics
+
+- Deliberate Pacing: The gameplay prioritizes weight and realism over instant arcade gratification. Weapon maintenance, looting animations, and horse handling all carry physical weight.
+
+- Gunplay & Euphoria Physics: Heavy, impactful gunplay enhanced by ragdoll physics and Deadeye mechanics makes every shootout feel raw, kinetic, and cinematic.
+
+- Activities & Crafting: Deep hunting, fishing, tracking, camping, and random world encounters offer endless distraction outside of main story missions.
+
+7. steam:1174180:237385142:chunk:001 | score=0.5895
+Legendary game! Could be the perfect game but found the controls in closed spaces (feels like witcher 3 inside houses) lacking and I wanted more interaction with the environment. Still Its in my 10 fav games of all time.
+
+8. steam:1174180:237231115:chunk:002 | score=0.5884
+The controls also frequently feel like they're fighting against the player. Arthur can feel sluggish and overly deliberate, basic movements can require multiple inputs, and the game often interprets your input differently than you intended. There are times when you want to perform one simple action and end up doing something completely different because several contextual actions are competing for the same controls.
+
+The keyboard and mouse implementation is particularly disappointing. For a PC game, the controls feel like they were built around a console controller and then adapted to keyboard and mouse rather than properly designed for PC. There are far too many commands, awkward key combinations, and inconsistent interactions, while some basic functions aren't nearly as intuitive as they should be.
+
+9. steam:1174180:237235575:chunk:002 | score=0.5880
+These weren't just NPCs waiting around for the player to trigger a mission. They felt like actual people, with their own personalities, relationships and lives. And I think that says everything about the quality of the writing.
+
+Then there's Arthur Morgan.
+
+For me, quite possibly the greatest video game protagonist of all time.
+
+Arthur embodies that classic image of the American cowboy, the Marlboro Man. Tough, masculine, loyal, a man who lives by his own code. But what makes him such a fascinating character is that beneath that image lies someone far more complicated.
+
+He's not a particularly good person, especially at the beginning of the story, but that's largely because the life he leads is the only one he's ever known. His morality is shaped by the people who raised him, his loyalty to them, and the values he's spent his entire life believing in.
+
+10. steam:1174180:234313707:chunk:001 | score=0.5871
+The open world is both not very good and essential for the themes of the game. Normally I say "this should have just been a linear game" but so much would be lost that it wouldnt be worth it.
+
+The characters and story carry the game, but they carry it very well.

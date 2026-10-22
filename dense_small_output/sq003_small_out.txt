@@ -1,0 +1,48 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1091500:237015766:chunk:001 | score=0.6333
+An amazing story, carefully witten characters and stories, plenty of endings according to your choices, a huge variety of weapons and play styles. Definetly one of the most intelligent games I`ve ever played. A major highlight for the DLC and it's endings, it feels like an epic sci-fi movie. As to stability, played 2026 in a full AMD setup, running smoothly.
+
+2. steam:1091500:236774931:chunk:001 | score=0.6249
+"a delayed game is eventually good, but a rushed game is forever bad"
+
+Guess this game managed to buck the system
+
+3. steam:1091500:234001399:chunk:001 | score=0.6189
+Best game, from the best developer,
+
+Just don't forget, the game is fixed.
+
+4. steam:1091500:233496617:chunk:003 | score=0.6132
+The narrative of the game's dialogue choices branch enough that they allow several playthroughs with decently varied outcomes at key plot points. while managing to create numerous characters who generally don't overstay their welcome and are enjoyable, which is fairly rare in the modern day for triple-A game writers. It isn't the most amazing writing in video game history, but the story takes itself seriously and isn't seeped in Whedon-esque self-deprecating characters buried under multiple layers of irony.
+My only complaint is, despite having been out for 6 years now, There are still some bugs I've encountered, usually minor ones like a visual glitch or NPC abruptly t-posing for a brief moment, but the worst one I've seen thus far was a softlock which forced me to reload to a previous save.
+
+5. steam:1091500:237151869:chunk:001 | score=0.6120
+So far, no problem. The game runs PRETTY WELL, AND THE STORY IS GETTING BETTER.
+
+6. steam:1091500:236864903:chunk:008 | score=0.6076
+And that's why, even after all the updates, all the fixes, Phantom Liberty, and everything CD Projekt Red poured into this game, part of Cyberpunk 2077 still feels half cooked to this day.
+
+One of the biggest contradictions is still sitting there at the heart of V's story. Untouched. Unfixed. They wrote about a person discovering that their life suddenly has an expiration date, but never implemented the one element that could have made that premise truly meaningful. Your life is supposed to be on borrowed time. The grim story of a dystopian hell where one person is desperately trying to find some meaning in the trash heap around them loses much of its weight when the game refuses to make time matter. For all the work CD Projekt Red has done rebuilding Cyberpunk 2077, this contradiction has been sitting there since the beginning.
+
+The elephant never left the room.
+
+7. steam:1091500:235135748:chunk:001 | score=0.6063
+Yes but... The game crashes to the desktop every hour on the hour. I send the report to the developer. Decent game but is this really the standard?
+
+8. steam:1091500:237024373:chunk:001 | score=0.6030
+Lot to be learned. Lot to be said for such a great game. Listen to it and keep in mind that dystopias are supposed to mock the present as a hyperbole. They shouldn't become the present.
+
+also sandevistan go brrrr.
+
+9. steam:1091500:236814727:chunk:002 | score=0.6029
+The physics, cars, NPCs, and animations can still be very buggy and sometimes do not feel smooth. It is disappointing that even after almost six years, some of these problems are still there.
+I think Cyberpunk 2077 could have been one of the greatest games of all time if it had received another five or six years of development, but CD Projekt Red made the choice to release it when they did.
+The game is still worth playing and finishing, especially for the main story. The Dogtown/Phantom Liberty storyline is also very good. But if you like exploring the open world and paying attention to small details, you will notice many of the game's weaknesses.
+I finished the game, experienced all the endings, and completed all the achievements. My favorite ending is “(Don't Fear) The Reaper.”
+
+10. steam:1091500:236921489:chunk:001 | score=0.6024
+The game's resurrection from its first release through Phantom Liberty is well documented. A bug filled failure, victim of greed and crunches. But instead of walking away with their tail firmly between their legs, CDPR took the complaints and criticisms to heart, and began a long-term renovation. By patch 1.61, the game actually was playable and you didn't wait for the inevitable crash. With patch 2.0, they rewrote everything from skill trees to fundamental game play. Phantom Liberty may be the only DLC released for the game, but it's one of the best, period.
+
+The game is based on Mike Pondsmith's TTRPG, and the influence of that game is all over the DNA of 2077.
