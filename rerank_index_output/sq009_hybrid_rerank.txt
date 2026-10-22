@@ -1,0 +1,89 @@
+
+1. steam:1903340:235208823:chunk:002 | Clair Obscur: Expedition 33 | rerank=0.0176 | S+D (sparse#1 dense#5)
+Some boss fights go on WAY too long, I'm talking like 45 minutes in one fight and then on to the next one. People will argue OH BUT YOU NEED THIS SPECIFIC BUILD AND THEN DO THIS AND THAT-- Bro, if you're saying that to play the game, then you need like 10 different guides, maybe your game just isn't that good.
+
+Them lying about using AI, regardless of them using simply as a placeholder beforehand then removing it, and lying about it is incredibly disingenuous
+
+Story is decent, has ups and downs, but feels a little cliche at times.
+
+Buggy, inconsistent performance even on a 5090. You will have a lot of parry timings ruined simply because of the game's un-optimization.
+
+If you absolutely ADORE turn based RPGs, pick it up on sale. But do not believe the hype.
+
+2. steam:1903340:235154542:chunk:006 | Clair Obscur: Expedition 33 | rerank=0.0139 | S (sparse#17)
+The game uses a lot of Dark Souls mechanics though dodges and parrying, but doesn’t actively punish you for failing, which is great for experimentation.
+However, there are optional bosses, and unless you are either insanely overleveled/optimized or a god at parrying/dodging, you’re going to constantly get 1 or 2-shot. The optional content is no joke (look up the Simon fight on Youtube).
+
+Technical (Graphics/Performance) – [10/10]
+
+The graphics are exceptionally good. This is easily PS5-era fidelity and beyond. The cutscenes look stellar and the area's art style is phenomenal.
+The performance was perfect. I played the game fully maxed and ran into no issues at all.
+Perhaps the only thing I can nitpick here is with the Unreal Engine making animations and movements stiff, floaty, and often going through the environment.
+
+3. steam:1903340:235743699:chunk:006 | Clair Obscur: Expedition 33 | rerank=0.0106 | S (sparse#5)
+That's all I feel like I should say on that, because I don't want to spoil anything.
+
+The music I think is the most underated aspect of this game. Many, many great tracks in this game that range from haunting, to intense, to legitimate ♥♥♥♥♥♥♥ jams. It's a phenominal soundtrack and just another part of what makes this game perfect.
+
+Graphical optimization also felt perfect for it. I came off from Zero Company looking very blocky due to it's optimization, but Clair looks ♥♥♥♥♥♥♥ amazing even on medium settings. It never chugged for me, always looked amazing, and to my knowledge never dipped below 60 fps outside maybe one cutscene. I'm on a Nvidia 3070 (or 3060 I don't remember) and it runs fantastic.
+
+4. steam:1903340:237518647:chunk:002 | Clair Obscur: Expedition 33 | rerank=0.0040 | D (dense#3)
+- Cons: There are a lot of areas that required "Quality of Life" updates that never happened, like a much better loadout system (skills, weapons, luminas), features for organizing pictos, lack of meaningful side quests, and most importantly the damage balance is just non-existent.
+
+- Verdict: 7/10, the game is really good and entertaining, however its most important RPG aspect which is combat is simply broken and was never fixed, it did not deserve "Best RPG 2025" award.
+
+---
+
+[/hr]
+
+Long version
+
+The game performance was really good compared to what we have nowadays, I played with High settings and DLSS 5 balanced (Neural Rendering), I was playing at 80 FPS, which by comparison in other games under the same settings I was getting around 50 FPS.
+
+5. steam:1903340:234304474:chunk:003 | Clair Obscur: Expedition 33 | rerank=0.0021 | S+D (sparse#11 dense#1)
+OST is a banger nuff said
+
+Biggest criticism I have is performance. This game look a lot of tweaking computer and in-game settings to get working properly. And I know first thing most people will just say is "pc diff" or "nice potato" but specs should be attached to this review you can judge for yourself. Once I got it working it ran fine, although this is still an Unreal Engine game and textures/rendering were sometimes off, and then there would be the occasional massive performance drop from certain effects. The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug.
+
+6. steam:1903340:234401491:chunk:004 | Clair Obscur: Expedition 33 | rerank=0.0014 | D (dense#4)
+- NPCs are hit or miss - usually a few unique lines, but rarely anything that will actually stick with you
+
+- Enemy variety can wear thin in the rare stretch where you're only fighting one type. Thankfully, most areas mix things up
+
+Performance-wise, it's been running smoothly for me with no crashes or noticeable issues. PC specs attached. Note: I am using DLSS and getting around 60fps consistently on my rig.
+
+I haven't finished the story yet, but I keep getting pulled back in every time I turn the game on, and it's had some genuinely great twists so far. Easily one of the more original and gripping games I've played in a while
+
+7. steam:1903340:237380861:chunk:001 | Clair Obscur: Expedition 33 | rerank=0.0011 | D (dense#12)
+Incredible game, but it has some serious performance issues on PC. Frame stutters happen all the time, and entire cutscenes fail to load and crash the game. I've had to re-fight bosses because cutscenes that play after the boss fight crashed the game and it didn't save me defeating the boss.
+
+I've attatched my PC Spces - its not a budget build or something.
+
+Despite the issues I still recommend it.
+
+There is also a narrative choice I hate in this game - the entire world the game takes place in is revealed to be canonically fictional... like an "...and it was all a dream" ending. Really sucks out the emotional weight the game had when it started.
+
+8. steam:1903340:236976780:chunk:001 | Clair Obscur: Expedition 33 | rerank=0.0006 | S+D (sparse#2 dense#2)
+Amazing game. Need to do settings optimization to make it playable on steam deck
+
+9. steam:1903340:237089819:chunk:001 | Clair Obscur: Expedition 33 | rerank=0.0005 | S (sparse#14)
+Im sorry, I cannot with good conscience say this game is good. And before any of you diehards come for my head, I need you to listen for a second:
+
+Almost half of the PC player base that either owns or has played this game has not gotten to either level 33 with a character or has gotten to Old Lumiere
+
+Let me say it again for the people in the back. ALMOST HALF OF THE PC PLAYER BASE HAS YET TO MAKE IT THROUGH EVEN A THIRD OF THIS GAME. PERIOD. If it is SooOOoOOoo good, and deserves the title of Game of the Year, than why cant most players even bring themselves to play a even a third of it?
+
+10. steam:1903340:237341178:chunk:001 | Clair Obscur: Expedition 33 | rerank=0.0005 | S (sparse#13)
+Almost as good as the hype says - and that’s still pretty damn good.
+
+After watching Expedition 33 completely sweep the Game Awards, I couldn't really go into it with zero expectations. My main thought was honestly: “There is no way this game is THAT good.”
+
+While my expectations were met in that regard, I have to say overall the game is still fantastic. Since it has been glazed so much, I mostly want to break down both what makes it so special and the issues that I rarely see anyone talking about.
+
+---
+
+[/hr]
+
+What Makes the Game Phenomenal
+
+- Incredible Music & World-Building: The soundtrack is mind-blowing, and the overall exposition and storytelling hooked me immediately and that is SO rare for me.

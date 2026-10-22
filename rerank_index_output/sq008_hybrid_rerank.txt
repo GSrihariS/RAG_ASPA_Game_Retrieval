@@ -1,0 +1,66 @@
+
+1. steam:1056960:237336561:chunk:005 | Wolfenstein: Youngblood | rerank=0.0956 | D (dense#13)
+Sure, you're technically moving, but at some point you have to wonder why you're putting up with the experience at all.
+
+And before anyone rushes in to explain that performance can vary depending on hardware, settings, drivers, or whatever other perfectly reasonable technical explanation might apply, let me clarify something: optimization is part of the product. I shouldn't have to become an unpaid technical support engineer just to make a game that feels like a mobile title run acceptably. If a game is going to demand the patience of a NASA engineer to operate, I'd at least appreciate it doing something impressive once it's running.
+
+The most frustrating part is that this is a franchise with an established history. There's a foundation to build on. There are previous games to learn from. There are fans who already know what the series is capable of.
+
+2. steam:1272080:231553504:chunk:002 | PAYDAY 3 | rerank=0.0796 | S (sparse#5)
+but i'm sure most of the original launch players felt that way, and it wasn't good enough for em then, i think it is now.
+
+anyways i say all that to say, it didn't seem good at launch, but after a long road of optimizations and updates its more than playable now.
+
+3. steam:1249970:216072577:chunk:002 | Test Drive Unlimited Solar Crown | rerank=0.0419 | S (sparse#13)
+For a modern racing game, it simply doesn’t look sharp or clean, and it certainly doesn’t justify the performance hit.
+
+The controls are actually decent and feel responsive, which makes the situation even more frustrating. There is a good driving game buried here, but the awful optimization, low FPS, and unimpressive visuals destroy any sense of satisfaction. Racing games live and die by smooth performance, and Solar Crown fails badly in that department.
+
+Until the developers seriously fix performance and visual clarity, this game is hard to recommend to anyone-especially PC players with high-end systems who expect far better.
+
+4. steam:2246340:234506826:chunk:001 | Monster Hunter Wilds | rerank=0.0243 | D (dense#19)
+optimization is better but still hard on anything older than a 3060, game itself is great! gameplay loops feel good, and the wound system is much better and cleaner than clutchclaw from Worlds. no G-Rank yet but a solid game.
+
+5. steam:1249970:208994799:chunk:001 | Test Drive Unlimited Solar Crown | rerank=0.0229 | S (sparse#15)
+Its ok on sale. The new taxi missions are good, but it still needs optimization very badly.
+
+60 FPS @ 1080p requires minimum settings and heavy DLSS on a 3070 and ryzen 5 5600x, and its not a stable 60.
+
+I should say that things are steadily getting better with every update. Performance at launch was astronomically worse.
+
+edit: trend of performance increase continues. as of 02/2026 the game is running WAY better. not perfect, but I don't feel like it's hampering my driving remotely as much. still wait for sale.
+
+6. steam:1249970:215172647:chunk:001 | Test Drive Unlimited Solar Crown | rerank=0.0206 | S (sparse#2)
+I don't write reviews on anything but I will say this... DO NOT BUY this game even on a deep sale, It has zero optimization and runs like garbage even on the lowest graphic settings with DLSS set to performance. Waste of time, internet and money.
+
+Believe the reviews you see, they hot hating or lying.
+
+7. steam:1903340:235208823:chunk:002 | Clair Obscur: Expedition 33 | rerank=0.0176 | S (sparse#7)
+Some boss fights go on WAY too long, I'm talking like 45 minutes in one fight and then on to the next one. People will argue OH BUT YOU NEED THIS SPECIFIC BUILD AND THEN DO THIS AND THAT-- Bro, if you're saying that to play the game, then you need like 10 different guides, maybe your game just isn't that good.
+
+Them lying about using AI, regardless of them using simply as a placeholder beforehand then removing it, and lying about it is incredibly disingenuous
+
+Story is decent, has ups and downs, but feels a little cliche at times.
+
+Buggy, inconsistent performance even on a 5090. You will have a lot of parry timings ruined simply because of the game's un-optimization.
+
+If you absolutely ADORE turn based RPGs, pick it up on sale. But do not believe the hype.
+
+8. steam:1249970:212365513:chunk:003 | Test Drive Unlimited Solar Crown | rerank=0.0147 | D (dense#6)
+It's hard to tell if this is a deliberate design choice or simply another side effect of the extreme poor optimization causing input lag and inconsistent frame pacing.
+
+My Final Observation:
+
+The potential for a great open-world racing experience is here, but right now, it is buried under a mountain of technical flaws. The developers must prioritize fixing the performance and the core networking issues before adding any new content. Until these critical issues are addressed, I cannot recommend this game.
+
+We are waiting for the TDU we were promised.
+
+9. steam:1249970:215701034:chunk:001 | Test Drive Unlimited Solar Crown | rerank=0.0129 | D (dense#2)
+I bought this game despite the “Mostly Negative” reviews because I wanted to judge it for myself. I had read many complaints about poor performance, but I usually take those with a grain of salt—most players don’t properly configure their games or systems.
+
+Unfortunately, the performance is far worse than expected. For a title released in 2024, you would assume post-launch updates would have addressed major issues. I can’t speak for how it ran at launch, but in its current state, the game is still laughable.
+
+I’m running a Ryzen 7 3700X, an AMD Radeon 9070 XT, and 32GB of DDR4 RAM. On paper, the game runs fine at 1080p on max settings, maintaining a mostly stable 72 FPS—but that’s where the problems start.
+
+10. steam:2246340:234266232:chunk:001 | Monster Hunter Wilds | rerank=0.0127 | S (sparse#12)
+At launch I would not have reccomended this game to buy because of the limited content and performance issues it had. Obviously the big glaring issue was performance which was atrocious. I was fortunate enough to be able to run it but it was still so poorly optimized and I am glad that I can now say it has finally been fixed. Even if it took them way to long to do it. The content was the second big issue mainly because the highest tier hunts at the time were insanely easy due to wound exploitation and monsters being too easily staggered by it. However since then they have added many new monsters and endgame difficulties that have made that issue nonexistent.

@@ -1,0 +1,72 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:2246340:236961401:chunk:002 | score=0.5841
+Performance was nowhere near acceptable, so the settings were gradually lowered.
+
+The current setup is mostly somewhere between Medium and High. Things like sky shadows are set to Low, DLSS is set to Balanced, Frame Generation is off and Ray Tracing is set to Low.
+
+Even with these settings, performance is extremely inconsistent. Around 90 FPS is fairly normal, but the game randomly drops all the way down to around 15 FPS. My target is a stable 60 FPS without Frame Generation, so these drops are obviously not acceptable.
+
+Unfortunately, the performance problems are only one part of the issue.
+
+The screen will randomly turn completely black while the game itself continues running. There is no crash, no obvious trigger and no loss of audio. The display is still on, but the picture is simply gone.
+
+2. steam:2246340:235721383:chunk:001 | score=0.5725
+fun, but very poorly optimized. if you have burly hardware that won’t matter at all. if you don’t this might be a rough and ugly experience. if your machine is able to run it it’s a heck of a game.
+
+played largely via bazzite with no problems.
+
+3. steam:2246340:236279511:chunk:001 | score=0.5653
+Horrible optimization.
+Game thinks I should play it on ultra, but without Frame Generation, the game doesn't reach 30 fps.
+Even on the Lowest Settings it still can't reach 60 fps.
+It "easily" reaches stable ~90 fps with Frame Generation on both ultra and Lowest, but it causes the game to look horrible and it causes me to have a headache after half an hour of playing.
+I sincerly hoped for the updates to make the game "playable" for me, but I still need a break every 30 or so minutes.
+
+It can be a fun game, but please download the demo first and see if you can enjoy the game despite the need for frame generation.
+
+4. steam:2246340:234649812:chunk:001 | score=0.5645
+absolutely f*cking not. i swear to god capcom has the word ''optimization'' printed on their toilet paper, it's so catastrophically bad that even laughing at how sh*t it is stops being entertaining and becomes a genuine concern for the future of games, and it's not even an exaggeration.
+
+i'm sure the game is great, in fact it might even be better than World and Rise when the Ascendance DLC comes out, but the game's optimization is so pathetic it can't even be compared to anything else, mind you i didn't buy nor play this when it came out, where it had infinitely more lousy problems.
+
+5. steam:2246340:235687218:chunk:001 | score=0.5643
+(Coming for someone returning to the game after seeing DLC vids)
+
+They have fixed most performance issues. After playing with settings, I can easily get above 60 fps in most towns and during fights.
+
+With Frame gen auto, I can get 90 - 100+ with out any issues in mouse responsiveness. Have gotten no crashes sense returning as well, and online play seems very stable.
+
+Mind you this is with MY settings preference, You might want something on high that I have on low that tanks your fps.
+
+TLDR; Performance issues mostly fixed, don't be poor and play with setting.
+
+6. steam:2246340:233802960:chunk:001 | score=0.5615
+10/10 game, played with 4 players and it was glitchless and optimized compared to apparent reviews
+
+7. steam:2246340:233967607:chunk:001 | score=0.5611
+Verified on Deck, my ass!
+This is a true showcase of how broken the verified system is.
+
+"Runs Great"
+Yeah, as polygonal as a N64 game with the framerate to match. (20fps average)
+
+Is it a fun game? Yeah. But one of the worst optimized games I ever played.
+
+Beating out Remnant 2 when trying to play on Steam Deck. In which that is a truly great game bogged by the worst optimization.
+
+8. steam:2246340:235632678:chunk:001 | score=0.5570
+Optimization is fixed greatly! If you can use DLSS, it can run even at high settings on a PC i've had since quarantine. Gameplay is insanely fun and satisfying - a ton easier than world, but the difficulty spikes upwards later into high rank.
+
+9. steam:2246340:235540687:chunk:001 | score=0.5566
+Love this game. Already played on console before so playtime is probably more like ~150hrs. I personally encountered no performance issues, though that does not mean they do not exist.
+
+10. steam:2246340:237196590:chunk:001 | score=0.5564
+Monster Hunter Wilds is an absolute triumph of creature design, visceral combat, and sprawling, living ecosystems. The sheer scale of the new biomes and the fluidity of the weapon movesets make every hunt an unforgettable spectacle.
+
+However, the game suffers from severe performance issues that heavily impact the experience. On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.
+
+Furthermore, the story is a dismal 2/10. The narrative drags on with uninspired dialogue, predictable twists, and bland characters that you will actively want to skip just to get back to the action.
+
+Despite these heavy flaws in technical stability and storytelling, the core gameplay loop of hunting, crafting, and mastering your weapon is too exhilarating to put down.

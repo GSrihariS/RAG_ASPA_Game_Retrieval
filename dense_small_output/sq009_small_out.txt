@@ -1,0 +1,110 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1903340:234304474:chunk:003 | score=0.6679
+OST is a banger nuff said
+
+Biggest criticism I have is performance. This game look a lot of tweaking computer and in-game settings to get working properly. And I know first thing most people will just say is "pc diff" or "nice potato" but specs should be attached to this review you can judge for yourself. Once I got it working it ran fine, although this is still an Unreal Engine game and textures/rendering were sometimes off, and then there would be the occasional massive performance drop from certain effects. The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug.
+
+2. steam:1903340:236976780:chunk:001 | score=0.6425
+Amazing game. Need to do settings optimization to make it playable on steam deck
+
+3. steam:1903340:237518647:chunk:002 | score=0.6415
+- Cons: There are a lot of areas that required "Quality of Life" updates that never happened, like a much better loadout system (skills, weapons, luminas), features for organizing pictos, lack of meaningful side quests, and most importantly the damage balance is just non-existent.
+
+- Verdict: 7/10, the game is really good and entertaining, however its most important RPG aspect which is combat is simply broken and was never fixed, it did not deserve "Best RPG 2025" award.
+
+---
+
+[/hr]
+
+Long version
+
+The game performance was really good compared to what we have nowadays, I played with High settings and DLSS 5 balanced (Neural Rendering), I was playing at 80 FPS, which by comparison in other games under the same settings I was getting around 50 FPS.
+
+4. steam:1903340:234401491:chunk:004 | score=0.6415
+- NPCs are hit or miss - usually a few unique lines, but rarely anything that will actually stick with you
+
+- Enemy variety can wear thin in the rare stretch where you're only fighting one type. Thankfully, most areas mix things up
+
+Performance-wise, it's been running smoothly for me with no crashes or noticeable issues. PC specs attached. Note: I am using DLSS and getting around 60fps consistently on my rig.
+
+I haven't finished the story yet, but I keep getting pulled back in every time I turn the game on, and it's had some genuinely great twists so far. Easily one of the more original and gripping games I've played in a while
+
+5. steam:1903340:235208823:chunk:002 | score=0.6369
+Some boss fights go on WAY too long, I'm talking like 45 minutes in one fight and then on to the next one. People will argue OH BUT YOU NEED THIS SPECIFIC BUILD AND THEN DO THIS AND THAT-- Bro, if you're saying that to play the game, then you need like 10 different guides, maybe your game just isn't that good.
+
+Them lying about using AI, regardless of them using simply as a placeholder beforehand then removing it, and lying about it is incredibly disingenuous
+
+Story is decent, has ups and downs, but feels a little cliche at times.
+
+Buggy, inconsistent performance even on a 5090. You will have a lot of parry timings ruined simply because of the game's un-optimization.
+
+If you absolutely ADORE turn based RPGs, pick it up on sale. But do not believe the hype.
+
+6. steam:1903340:234935979:chunk:001 | score=0.6331
+Graphics: Decent
+
+Gameplay: Very good
+
+Audio: Eargasm
+
+Audience: Teens; Adults
+
+PC Requirements: Decent
+
+Game Size: Workable
+
+Difficulty: Significant brain usage
+
+Grind: Only if u care about leaderboards/ranks
+
+Story: It'll replace your life
+
+Game Time: Average
+
+Price: Worth the price
+
+Bugs: Never heard of
+
+? / 10: 10
+
+7. steam:1903340:234304474:chunk:004 | score=0.6290
+The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug. This did force me to eventually look up cutscenes online to see what was happening in game. This might be a game where it just works better on console than pc if that's an option for you.
+
+Overall game is well worth it, it earned its Game of the Year and other titles for a reason.
+
+8. steam:1903340:235369095:chunk:002 | score=0.6285
+I followed advice online, locked fps at 60, set the game to full-screen, but they only seem to solve the issue for a short while until the crash pops up again. The only thing I haven't tried is lowering shaders, and even if that does help, I stand by this review. We shouldn't have to adjust settings that our rigs can handle because the game hasn't been optimized correctly. You can see by PC specs that I shouldn't have any issues, and I don't with anything else in the game, it appears to run great until it doesn't. Anyway, grab it if you want to add some frustration to your life, if not, pick another title, or be prepared to tinker with the settings and deal with some crashes regardless of your rig.
+
+9. steam:1903340:235577205:chunk:001 | score=0.6262
+The graphics and character design are all fine but a lot of the animation for basic interactions and a lot of the conversations are just not up to standard. It seems like the devs focused entirely on making the graphics and the cinematics look amazing but failed to polish anything else. I mean its bad. Conversations with a puppet bad.
+
+The combat system is unique but in my opinion it is a wash. QTE's in a "turn based game" are not a bad idea necessarily but the focus in this game is so heavy on them that you might as well not bother with working on you party at all. Just time your parry right and you'll win every fight. No need to do a lot of the usual turn based game strategy and team gear management.
+
+10. steam:1903340:235035398:chunk:001 | score=0.6245
+Graphics: You forget what reality is
+
+Gameplay: Very good
+
+Audio: Eargasm
+
+Audience: Adults
+
+PC Requirements: Decent
+
+Game Size: Workable
+
+Difficulty: Easy to learn / Hard to master
+
+Grind: Only if u care about leaderboards/ranks
+
+Story: It'll replace your life
+
+Game Time: Average
+
+Price: Worth the price
+
+Bugs: Never heard of
+
+? / 10: 10

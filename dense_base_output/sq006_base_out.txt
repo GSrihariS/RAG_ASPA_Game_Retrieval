@@ -1,0 +1,59 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1145350:233574022:chunk:001 | score=0.5803
+I really want to give this game a positive review because I love Hades. But Hades 2 Feels different somehow. My feedback might contain (Spoilers)
+
+The main story 8/10 it feels short
+
+The art style is always 10/10 for me.
+Tho I wish we can change some pictures of characters because i dont like the new hermes look.
+
+The voice acting 7/10
+Polyphemus - just sounds like asterius.
+Nyx voice - sounds really blurry compare to the first game.
+Chaos - sometimes his voice is also blurry.
+
+The music is 10/10
+
+I want to focus more on the gameplay feedback because from story to music everything is great.
+
+2. steam:1145350:235641183:chunk:002 | score=0.5685
+2. It makes it very easy to play it after a long time (like one year) again. For nearly every interaction / trait / attack / special attack w/e is a tooltip on hover, which displays, what it exactly is, how to use it (e.g. long press O-button or short press X button ...). This way, even after a year, you can go straight back in.
+3. The music makes it quite fun, by increasing the intensity through out the game from stage to stage. One round has multiple stages, where each stage results in a boss fight. At the beginning of a stage, the music is quite temperate and in contrast to that, you often get a cinema-like title at the end of a stage. Best example is probably stage 2 in the Underground region.
+
+3. steam:1145350:235874387:chunk:003 | score=0.5680
+One of the greatest strengths of the medium is to have dialogue with the player, to respond when poked, and to poke back. The levels to which this game recognises your choices is frankly absurd, and I can only imagine the spreadsheets and programming needed in order to organise such a thing. Using a specific keepsake, in a specific difficulty level, against a specific boss, having done something specific on the night before - so much of what you do is accounted for, and I was constantly impressed by the lengths this game goes to answer the question “I wonder if they have dialogue for that?” with a resounding “YES!”
+
+The combat is also greatly increased, with more flexibility and buildcrafting than before, offering a wide array of weapons, each with several aspects that really change how you play the game.
+
+4. steam:1145350:236396265:chunk:001 | score=0.5676
+My second favourite game of 2025!
+
+There are reasons as to why it's not number one, though. The major one being the writing; While good throughout large parts of the game - the banter between characters, narrator, and Melinoë is especially excellent - the conclusion to the story is lackluster, I felt like both Mel and the player are stripped of agency during the most important parts (and I'm not only talking about the main ending, but the epilogue as well - that was some real BS, at least for me).
+
+I know starting off with the worst aspect of a game, that took over my life for a whole month last year, looks quite weird, but the resolution of the story really soured my experience - which as I said was fantastic! (for the most part)
+
+5. steam:1145350:236165013:chunk:001 | score=0.5672
+Fun gameplay , high replayability due to build variety , bossfights are more interesting than Hades1 and take longer to master ... which ultimately is a good thing even though it might give new players to the series some trouble early on. This game is also a nice game to run on slightly older laptops (for example during long travel ).
+Downside : the music is good from a technical standpoint (the musicians are good) but contains negative lyrics so I dont run it with the music, where as Hades 1 had very good music that was more instrumental (less lyrics). Basically Hades 1 had superior music.
+I really dislike negative lyrics in music in general like from rap music, rock or pop music or whatever ...
+
+6. steam:1145350:236531888:chunk:001 | score=0.5658
+I really love this game. The combat retains the feel of the original but adds a twist with new mechanics. Visually, it is stunning, and there are plenty of special interactions and events to discover between NPCs. The music is so beautiful that I’ve been playing it on repeat on Spotify.
+
+7. steam:1145350:236529874:chunk:007 | score=0.5647
+The bosses are another highlight. Hades has always understood that a good roguelike boss needs to test something specific about how you have been playing, rather than simply possessing a large health bar. Hades II expands upon this with encounters that test positioning, timing, crowd control and resource management. I mean, Supergiant turned a malevolent set of Sirens from Homer's Odyssey into a new up and coming rock band that prefer introducing you to their music physically! XD Some fights become chaotic spectacles, while others force you to learn patterns and resist the instinct to throw every ability you have at the nearest moving object, which happens quite occasionally lol.
+
+8. steam:1145350:237063745:chunk:001 | score=0.5548
+from what i have seen of the game, its reaallly good with a lot more mechanics than the first opus, very good musics and bosses.
+
+9. steam:1145350:235476854:chunk:001 | score=0.5532
+is good game
+
+10. steam:1145350:237070856:chunk:003 | score=0.5497
+cons/downgrades:
+
+-i definitely far prefer the call mechanic of the first game to the hex mechanic, which tbh is always a little underwhelming. plus, it being it's own thing means i end up choosing boons instead.
+-the builds feel a little less memorable to me. so far, the best i've found is the aspect of melinoe on the twin daggers, using a backstab daedalus. apart from that, everything kinda blends in.
+-the surface is a little less interesting, thematically or otherwise, than the underworld. just my opinion, but i feel it's because the enemies feel like reskinned underworld enemies, if more annoying, and the bosses feel slightly disconnected from Melinoe herself.

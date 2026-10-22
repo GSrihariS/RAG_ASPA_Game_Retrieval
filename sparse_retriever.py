@@ -1,9 +1,12 @@
 import json
+from collections import defaultdict
 from pathlib import Path
 
 import bm25s
 import numpy as np
 import Stemmer
+
+from filters import parse_game_filter
 
 
 class SparseRetriever:
@@ -17,7 +20,10 @@ class SparseRetriever:
         if self.model.scores['num_docs'] != len(self.chunks):
             raise ValueError('BM25 index and chunk records are out of sync')
         self.stemmer = Stemmer.Stemmer(self.config['stemmer'])
-        self.appids = np.array([chunk['metadata']['appid'] for chunk in self.chunks])
+        rows = defaultdict(list)
+        for i, chunk in enumerate(self.chunks):
+            rows[chunk['metadata']['game_name'].casefold()].append(i)
+        self.game_rows = {game: np.array(indices) for game, indices in rows.items()}
 
     def _tokenize(self, query):
         tokens = bm25s.tokenize(
@@ -30,32 +36,28 @@ class SparseRetriever:
         )[0]
         return [token for token in tokens if token in self.model.vocab_dict]
 
-    def _filter_mask(self, filters):
-        if not filters:
-            return None
-        unknown = set(filters) - {'appid'}
-        if unknown:
-            raise ValueError(f'Unsupported filter keys: {sorted(unknown)}')
-        appids = filters['appid']
-        if isinstance(appids, int):
-            appids = [appids]
-        return np.isin(self.appids, list(appids))
-
     def retrieve(self, query, top_k=10, filters=None):
         if not isinstance(query, str) or not query.strip():
             raise ValueError('Query must be a nonempty string')
         if not isinstance(top_k, int) or top_k < 1:
             raise ValueError('top_k must be a positive integer')
 
-        mask = self._filter_mask(filters)
+        games = parse_game_filter(filters)
+        if games is None:
+            eligible = None
+        else:
+            # Restrict candidates before ranking, so all results match the game.
+            found = [self.game_rows[game] for game in games if game in self.game_rows]
+            if not found:
+                return []
+            eligible = np.sort(np.concatenate(found))
+
         tokens = self._tokenize(query)
         if not tokens:
             return []
         scores = self.model.get_scores(tokens)
-        if mask is not None:
-            scores = np.where(mask, scores, 0.0)
 
-        candidates = np.flatnonzero(scores > 0)
+        candidates = np.flatnonzero(scores > 0) if eligible is None else eligible[scores[eligible] > 0]
         order = candidates[np.argsort(-scores[candidates], kind='stable')][:top_k]
 
         results = []

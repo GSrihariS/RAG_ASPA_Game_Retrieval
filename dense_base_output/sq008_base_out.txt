@@ -1,0 +1,61 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:1962663:225903136:chunk:001 | score=0.6923
+Optimise the game or lose your players. That simple...Why can't they understand that?
+
+2. steam:1249970:216350354:chunk:001 | score=0.6266
+The game is okey, it has been on my wishlist for months on end, and after playing the open weekend, i saw that the game has very to none optimazation what so ever, i have a i5 11th gen, amd rx 6700xt 12gb vram, and 32gb ddr4 ram, and the game on medium ran around 45fps at peak, but with the fps drops its unplayable. The constant fps lags, the game crashed once on me, i had no server issues. Is the worth geting, in the state that it is No, will it be if the devs make an optimazation on the game and make it so i or anyone else can play on medium to high settings with around 70-90 stable fps, yes.
+
+3. steam:1249970:215701034:chunk:001 | score=0.6169
+I bought this game despite the “Mostly Negative” reviews because I wanted to judge it for myself. I had read many complaints about poor performance, but I usually take those with a grain of salt—most players don’t properly configure their games or systems.
+
+Unfortunately, the performance is far worse than expected. For a title released in 2024, you would assume post-launch updates would have addressed major issues. I can’t speak for how it ran at launch, but in its current state, the game is still laughable.
+
+I’m running a Ryzen 7 3700X, an AMD Radeon 9070 XT, and 32GB of DDR4 RAM. On paper, the game runs fine at 1080p on max settings, maintaining a mostly stable 72 FPS—but that’s where the problems start.
+
+4. steam:1249970:216052459:chunk:001 | score=0.6060
+I really like the features this game offers, but ive had a bad experience with the performance updates that have happend. when i started playing (october 13 2025) it good enough to the point where i could do races, but since season 5 released i haven't taken the time to play since the fps is just at its lowest. I can't tell you how many times i have tried to change the settings to something that would work for me. every time i tried fps would start well but after leaving the room it dropped with 20 fps and then after leaving the hotel it would straight up go towards 30/40 fps whilst it previously had a good 70/80 fps and it felt laggy.
+
+5. steam:2246340:236961401:chunk:002 | score=0.6050
+Performance was nowhere near acceptable, so the settings were gradually lowered.
+
+The current setup is mostly somewhere between Medium and High. Things like sky shadows are set to Low, DLSS is set to Balanced, Frame Generation is off and Ray Tracing is set to Low.
+
+Even with these settings, performance is extremely inconsistent. Around 90 FPS is fairly normal, but the game randomly drops all the way down to around 15 FPS. My target is a stable 60 FPS without Frame Generation, so these drops are obviously not acceptable.
+
+Unfortunately, the performance problems are only one part of the issue.
+
+The screen will randomly turn completely black while the game itself continues running. There is no crash, no obvious trigger and no loss of audio. The display is still on, but the picture is simply gone.
+
+6. steam:1903340:234304474:chunk:003 | score=0.6045
+OST is a banger nuff said
+
+Biggest criticism I have is performance. This game look a lot of tweaking computer and in-game settings to get working properly. And I know first thing most people will just say is "pc diff" or "nice potato" but specs should be attached to this review you can judge for yourself. Once I got it working it ran fine, although this is still an Unreal Engine game and textures/rendering were sometimes off, and then there would be the occasional massive performance drop from certain effects. The most egregious performance issue was that cutscenes were broken and would only show a red screen at times which, funnily enough, I thought was a feature not a bug.
+
+7. steam:1272080:209235711:chunk:002 | score=0.6026
+Optimization + UE 5 = no comment.
+While they started to fix everything with optimization, the network side is just terrible. Finding a lobby is impossible, connecting is usually impossible, and even if you do manage to connect, you'll most likely get kicked at the start or during the match.
+There are still a lot 8hit ton of bugs in the game.
+
+A lot of features have been removed from the game, with only a few really good new ones added.
+At the start, there weren't even simple notifications about loot when it was handed over, no chases, no multi-part robberies, no safe houses, no lore, no restarts or pauses during robberies - although they did add some of this, it took them over a year just to add a couple of buttons and notifications.
+
+8. steam:2246340:235687218:chunk:001 | score=0.6017
+(Coming for someone returning to the game after seeing DLC vids)
+
+They have fixed most performance issues. After playing with settings, I can easily get above 60 fps in most towns and during fights.
+
+With Frame gen auto, I can get 90 - 100+ with out any issues in mouse responsiveness. Have gotten no crashes sense returning as well, and online play seems very stable.
+
+Mind you this is with MY settings preference, You might want something on high that I have on low that tanks your fps.
+
+TLDR; Performance issues mostly fixed, don't be poor and play with setting.
+
+9. steam:2246340:235396537:chunk:001 | score=0.6003
+So far so good to me, the optimization is so much better than at launch I guess? Because I never bought the game on launch. But now is so much better and I love the game!
+
+10. steam:2246340:235192473:chunk:001 | score=0.6002
+I actually regretted not buying this game when it was first released because of the reviews saying it wasn’t optimized well. I ended up buying it while it was on sale, and so far, I haven’t encountered any of the performance issues that other people have been experiencing. Maybe it’s because I’m still early into the game, but we’ll see after a few more hours...
+
+I guess it’s actually much better to try the game firsthand rather than relying solely on other people’s reviews.

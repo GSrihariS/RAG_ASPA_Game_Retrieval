@@ -1,0 +1,50 @@
+Dense Retriever class initialized
+Retriever has retrieved
+
+1. steam:2246340:233802960:chunk:001 | score=0.6600
+10/10 game, played with 4 players and it was glitchless and optimized compared to apparent reviews
+
+2. steam:2246340:235601947:chunk:001 | score=0.6534
+this game needs serious optimisation and balancing...
+
+3. steam:2246340:235632678:chunk:001 | score=0.6483
+Optimization is fixed greatly! If you can use DLSS, it can run even at high settings on a PC i've had since quarantine. Gameplay is insanely fun and satisfying - a ton easier than world, but the difficulty spikes upwards later into high rank.
+
+4. steam:2246340:235730389:chunk:001 | score=0.6478
+Great game recommend especially after optimization updated.
+
+5. steam:2246340:236351914:chunk:002 | score=0.6437
+It's like World but a bit faster, and with more attacks.
+
+World -
+It's like World but with bigger zones and the villages are within the map, with seamless transition between. Most of the maps have a path you can travel to seamlessly traverse between them, though some have loading screens.
+
+Performance -
+I'm not gonna beat around the bush, my PC is an absolute potato. I played the demo a good while, adjusting settings, using some mods to boost performance, etc. and making sure it was something I would enjoy enough to justify buying the game despite my pc not being able to play it properly.
+I get around 25fps most of the time, which is *fine*. there's some slowdown in some areas, which is not fine.
+
+6. steam:2246340:235808366:chunk:001 | score=0.6421
+What a terribly optimised game, Capcom can't make a game run stable 60fps to save their lives also with gen AI now being used in development I'd avoid all future products from this company.
+
+7. steam:2246340:235967937:chunk:001 | score=0.6402
+They fixed optimization!! Runs like butter now!! Stop reading this review and go play the game!!
+
+8. steam:2246340:235632171:chunk:001 | score=0.6379
+Positive: Great gameplay and graphics with huge potential
+Negative: multiplayer mode is sometimes icky
+
+9. steam:2246340:235687218:chunk:001 | score=0.6330
+(Coming for someone returning to the game after seeing DLC vids)
+
+They have fixed most performance issues. After playing with settings, I can easily get above 60 fps in most towns and during fights.
+
+With Frame gen auto, I can get 90 - 100+ with out any issues in mouse responsiveness. Have gotten no crashes sense returning as well, and online play seems very stable.
+
+Mind you this is with MY settings preference, You might want something on high that I have on low that tanks your fps.
+
+TLDR; Performance issues mostly fixed, don't be poor and play with setting.
+
+10. steam:2246340:237179070:chunk:001 | score=0.6320
+Amazing game, horrible PC optimization
+Every person I know who runs this on PC has performance issues
+I cant go an hour without crashing mid fight
