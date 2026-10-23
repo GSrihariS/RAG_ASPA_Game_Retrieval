@@ -1,5 +1,7 @@
 from sentence_transformers import CrossEncoder
 
+from fusion import merge
+
 MODEL_NAME = 'BAAI/bge-reranker-v2-m3'
 
 
@@ -18,30 +20,7 @@ class Reranker:
             self._model = CrossEncoder(self.model_name, max_length=self.max_length, device=self.device)
         return self._model
 
-    @staticmethod
-    def merge(results):
-        """Deduplicate retriever outputs by chunk ID, keeping each method's rank and score.
-
-        `results` is HybridRetriever.retrieve output ({method: [hits]}) or a single list of hits.
-        """
-        if isinstance(results, list):
-            method = results[0]['retrieval_method'] if results else 'single'
-            results = {method: results}
-        merged = {}
-        for method, hits in results.items():
-            for rank, hit in enumerate(hits, start=1):
-                entry = merged.get(hit['chunk_id'])
-                if entry is None:
-                    entry = merged[hit['chunk_id']] = {
-                        'chunk_id': hit['chunk_id'],
-                        'text': hit['text'],
-                        'metadata': hit['metadata'],
-                        'retrieved_by': [],
-                    }
-                entry['retrieved_by'].append(method)
-                entry[f'{method}_rank'] = rank
-                entry[f'{method}_score'] = hit['score']
-        return list(merged.values())
+    merge = staticmethod(merge)
 
     def rerank(self, query, results, top_k=5):
         if not isinstance(query, str) or not query.strip():

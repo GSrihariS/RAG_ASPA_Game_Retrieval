@@ -4,3 +4,4 @@ bm25s
 PyStemmer
 numpy
 scipy
+streamlit
