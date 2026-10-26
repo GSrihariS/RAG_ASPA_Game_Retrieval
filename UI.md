@@ -33,5 +33,5 @@ The first start takes about 30–40 s while the indexes and embedding model load
 
 - **Sidebar**: choose the retrieval mode (Hybrid + Rerank, Hybrid (RRF), BM25, Dense), filter by game, set top-k, and pick the query expansion mode (Hierarchical by default, Broad, or Off). More parameters (candidates per retriever, reranker candidates, RRF k) are under **Advanced**.
 - **Query**: type a question or pick one under **Sample queries** (loaded from `eval/queries.jsonl`).
-- **Results**: per-stage latency in ms, the detected aspects/subtopics with the expanded BM25 and dense queries (the reranker still scores the original query), the share of recommended reviews among the hits, and one card per review with scores, source ranks (`S` = BM25, `D` = dense), date, playtime and a link to the review on Steam.
+- **Results**: per-stage latency in ms, the detected aspects/subtopics with the expanded BM25 and dense queries (the reranker still scores the original query), the average playtime of the reviewers, and one card per review with scores, source ranks (`S` = BM25, `D` = dense), date, playtime and a link to the review on Steam.
 - **Download results (JSON)** saves the query, parameters, timings and results.

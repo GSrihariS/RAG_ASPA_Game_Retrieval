@@ -103,15 +103,8 @@ def score_line(hit, mode):
 
 
 def render_stats(hits):
-    recommended = sum(1 for hit in hits if hit['metadata'].get('steam_recommended'))
-    share = recommended / len(hits)
     playtimes = [hit['metadata'].get('playtime_at_review_minutes') or 0 for hit in hits]
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric('Recommended 👍', f'{share:.0%} ({recommended}/{len(hits)})')
-    col2.metric('Not recommended 👎', f'{1 - share:.0%} ({len(hits) - recommended}/{len(hits)})')
-    col3.metric('Avg playtime at review', f'{sum(playtimes) / len(playtimes) / 60:.1f} h')
-    st.progress(share, text='Share of retrieved reviews that recommend the game (Steam metadata)')
+    st.metric('Avg playtime at review', f'{sum(playtimes) / len(playtimes) / 60:.1f} h')
 
     counts = Counter(hit['metadata']['game_name'] for hit in hits)
     if len(counts) > 1:
@@ -142,13 +135,11 @@ def render_expansion(expansion, expansion_mode, mode):
 
 def render_hit(rank, hit, mode):
     meta = hit['metadata']
-    verdict = '👍 Recommended' if meta.get('steam_recommended') else '👎 Not recommended'
     created = meta.get('created_at_utc', '')[:10]
     playtime = (meta.get('playtime_at_review_minutes') or 0) / 60
 
     with st.container(border=True):
-        st.markdown(f"**{rank}. {meta['game_name']}** &nbsp; {verdict} &nbsp; "
-                    f"`{describe_source(hit)}`")
+        st.markdown(f"**{rank}. {meta['game_name']}** &nbsp; `{describe_source(hit)}`")
         st.caption(f"{score_line(hit, mode)} &nbsp;|&nbsp; 📅 {created} &nbsp;|&nbsp; ⏱ {playtime:.1f} h played"
                    f" &nbsp;|&nbsp; 👍 {meta.get('helpful_votes', 0)} helpful"
                    f" &nbsp;|&nbsp; chunk {meta.get('chunk_index')}/{meta.get('chunk_count')}")
