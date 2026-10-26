@@ -3,6 +3,7 @@ import sys
 
 from fusion import RRF_K
 from hybrid_retriever import HybridRetriever
+from query_expansion import expand_query
 from reranker import Reranker
 
 SOURCE_TAGS = {('sparse',): 'S', ('dense',): 'D', ('sparse', 'dense'): 'S+D'}
@@ -26,6 +27,10 @@ def main():
     parser.add_argument('--game', nargs='+', help='Filter reviews by exact game name(s) (case-insensitive)')
     parser.add_argument('--no-rerank', action='store_true',
                         help='Print the RRF-fused top-k without reranking')
+    parser.add_argument('--no-expand', action='store_true',
+                        help='Disable aspect-based expansion for both retrievers')
+    parser.add_argument('--expansion-mode', choices=('hierarchical', 'broad'), default='hierarchical',
+                        help='Hierarchical (default) or previous broad aspect-wide expansion')
     args = parser.parse_args()
     if args.rerank_candidates < args.top_k:
         parser.error('--rerank-candidates must be at least --top-k')
@@ -33,8 +38,22 @@ def main():
 
     retriever = HybridRetriever()
     filters = {'game_name': args.game} if args.game else None
+    expansion = None if args.no_expand else expand_query(args.query, mode=args.expansion_mode)
+    sparse_query = args.query if expansion is None else expansion.sparse
+    dense_query = args.query if expansion is None else expansion.dense
+    if expansion is None:
+        print('Query expansion: disabled')
+    else:
+        print('Expansion mode:', args.expansion_mode)
+        if args.expansion_mode == 'hierarchical':
+            for aspect, topics in expansion.subtopics:
+                print(f'  {aspect}: ' + (', '.join(topics) if topics else '(broad fallback)'))
+        print('Detected aspects:', ', '.join(expansion.aspects) or '(none)')
+        print('BM25 query:', sparse_query)
+        print('Dense query:', dense_query)
     fused = retriever.retrieve_fused(args.query, top_k=args.rerank_candidates, candidates=args.candidates,
-                                     filters=filters, rrf_k=args.rrf_k)
+                                     filters=filters, rrf_k=args.rrf_k,
+                                     sparse_query=sparse_query, dense_query=dense_query)
 
     if args.no_rerank:
         for rank, hit in enumerate(fused[:args.top_k], start=1):
