@@ -8,11 +8,13 @@ import streamlit as st
 
 from fusion import RRF_K, merge, reciprocal_rank_fusion
 from hybrid_retriever import HybridRetriever
+from query_expansion import expand_query
 from query_hybrid import describe_source
 from reranker import Reranker
 
 QUERIES_PATH = Path('eval/queries.jsonl')
 MODES = ['Hybrid + Rerank', 'Hybrid (RRF)', 'BM25', 'Dense']
+EXPANSION_MODES = {'Hierarchical': 'hierarchical', 'Broad': 'broad', 'Off': None}
 
 st.set_page_config(page_title='Steam Review Search', page_icon='🎮', layout='wide')
 
@@ -42,8 +44,11 @@ def game_names(retriever):
 
 
 @st.cache_data(max_entries=64, show_spinner=False)
-def search(query, mode, games, top_k, candidates, rerank_candidates, rrf_k):
-    """Run one query and return (hits, per-stage timings in ms). Cached so reruns keep the measured timings."""
+def search(query, mode, games, top_k, candidates, rerank_candidates, rrf_k, sparse_query, dense_query):
+    """Run one query and return (hits, per-stage timings in ms). Cached so reruns keep the measured timings.
+
+    `sparse_query` / `dense_query` are the (possibly expanded) retriever inputs; the reranker scores the original query.
+    """
     retriever = load_retriever()
     filters = {'game_name': list(games)} if games else None
     timings = {}
@@ -51,11 +56,11 @@ def search(query, mode, games, top_k, candidates, rerank_candidates, rrf_k):
 
     if mode in ('BM25', 'Hybrid (RRF)', 'Hybrid + Rerank'):
         start = time.perf_counter()
-        results['sparse'] = retriever.sparse.retrieve(query, top_k=candidates, filters=filters)
+        results['sparse'] = retriever.sparse.retrieve(sparse_query, top_k=candidates, filters=filters)
         timings['BM25'] = (time.perf_counter() - start) * 1000
     if mode in ('Dense', 'Hybrid (RRF)', 'Hybrid + Rerank'):
         start = time.perf_counter()
-        results['dense'] = retriever.dense.retrieve(query, top_k=candidates, filters=filters)
+        results['dense'] = retriever.dense.retrieve(dense_query, top_k=candidates, filters=filters)
         timings['Dense'] = (time.perf_counter() - start) * 1000
 
     if mode in ('BM25', 'Dense'):
@@ -114,6 +119,27 @@ def render_stats(hits):
         st.bar_chart(dict(counts.most_common()), horizontal=True)
 
 
+def render_expansion(expansion, expansion_mode, mode):
+    if expansion is None:
+        st.caption('Query expansion: off')
+        return
+    if not expansion.aspects:
+        st.caption('Query expansion: no aspect detected, query used as is')
+        return
+    with st.expander(f"Query expansion ({expansion_mode.lower()}): {', '.join(expansion.aspects)}"):
+        if EXPANSION_MODES[expansion_mode] == 'hierarchical':
+            for aspect, topics in expansion.subtopics:
+                st.markdown(f"- **{aspect}**: {', '.join(topics) if topics else '(broad fallback)'}")
+        if mode != 'Dense':
+            st.markdown('**BM25 query**')
+            st.code(expansion.sparse, language=None, wrap_lines=True)
+        if mode != 'BM25':
+            st.markdown('**Dense query**')
+            st.code(expansion.dense, language=None, wrap_lines=True)
+        if mode == 'Hybrid + Rerank':
+            st.caption('The reranker scores candidates against the original query.')
+
+
 def render_hit(rank, hit, mode):
     meta = hit['metadata']
     verdict = '👍 Recommended' if meta.get('steam_recommended') else '👎 Not recommended'
@@ -143,6 +169,9 @@ def main():
         games = st.multiselect('Filter by game', games_all, key='games',
                                help='Leave empty to search all games')
         top_k = st.slider('Results to show (top-k)', 1, 30, 5)
+        expansion_mode = st.radio('Query expansion', list(EXPANSION_MODES), horizontal=True,
+                                  help='Add aspect keywords to the BM25 and dense queries. Hierarchical only adds '
+                                       'the matched subtopics; Broad adds the whole aspect vocabulary.')
         with st.expander('Advanced'):
             candidates = st.slider('Candidates per retriever', 5, 100, 20)
             rerank_candidates = st.slider('Fused candidates passed to reranker', 5, 100, 30,
@@ -172,13 +201,20 @@ def main():
         st.info('Enter a query or pick a sample query to start.')
         return
 
+    query = query.strip()
+    expansion = expand_query(query, mode=EXPANSION_MODES[expansion_mode]) if EXPANSION_MODES[expansion_mode] else None
+    sparse_query = query if expansion is None else expansion.sparse
+    dense_query = query if expansion is None else expansion.dense
+
     spinner = 'Retrieving and reranking...' if mode == 'Hybrid + Rerank' else 'Retrieving...'
     with st.spinner(spinner):
-        hits, timings = search(query.strip(), mode, tuple(games), top_k, candidates, rerank_candidates, rrf_k)
+        hits, timings = search(query, mode, tuple(games), top_k, candidates, rerank_candidates, rrf_k,
+                               sparse_query, dense_query)
 
     cols = st.columns(len(timings))
     for col, (stage, ms) in zip(cols, timings.items()):
         col.metric(f'{stage} (ms)', f'{ms:,.0f}')
+    render_expansion(expansion, expansion_mode, mode)
 
     if not hits:
         st.warning('No matching reviews. Try other keywords or remove the game filter.')
@@ -192,11 +228,18 @@ def main():
 
     st.subheader(f'Top {len(hits)} reviews')
     export = {
-        'query': query.strip(),
+        'query': query,
         'mode': mode,
         'filters': {'game_name': list(games)} if games else None,
         'params': {'top_k': top_k, 'candidates': candidates,
                    'rerank_candidates': rerank_candidates, 'rrf_k': rrf_k},
+        'expansion': None if expansion is None else {
+            'mode': EXPANSION_MODES[expansion_mode],
+            'aspects': list(expansion.aspects),
+            'subtopics': {aspect: list(topics) for aspect, topics in expansion.subtopics},
+            'sparse_query': expansion.sparse,
+            'dense_query': expansion.dense,
+        },
         'timings_ms': timings,
         'exported_at': datetime.now().isoformat(timespec='seconds'),
         'results': hits,
