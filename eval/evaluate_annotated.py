@@ -1,9 +1,12 @@
-"""Evaluate retrieval on the human-annotated chunk set with the 50-query benchmark.
+"""Evaluate retrieval on the human-annotated chunk set with the query benchmark.
 
 Run from the project root:  python eval/evaluate_annotated.py
 
-Only annotated chunks have labels, so every ranking is condensed: retrievers search
-the full index, then chunks without an annotation are dropped before scoring.
+Only annotated chunks have labels, so every ranking is condensed (Sakai & Kando, 2008): the
+whole pipeline (retrieval, fusion, reranking) runs on the full index, and chunks without an
+annotation are dropped only from its final output, before scoring. Fusion and reranking use an
+evaluation depth (300 / 300 by default) deeper than the app's 20 / 30, so that enough annotated
+chunks remain after condensing (only ~8% of the index is annotated).
 
 Relevance grades for a query with target games G (empty = any game), target aspects A
 and target sentiment S:
@@ -80,6 +83,23 @@ def r_precision(qrels, results, relevant_grade):
     return sum(values) / len(values)
 
 
+def bpref(qrels, results, relevant_grade):
+    """Buckley & Voorhees (2004): only judged chunks count, nonrelevant ones above each relevant hit."""
+    values = []
+    for query_id, labels in qrels.items():
+        relevant = {c for c, g in labels.items() if g >= relevant_grade}
+        nonrelevant = len(labels) - len(relevant)
+        denom = min(len(relevant), nonrelevant)
+        above, total = 0, 0.0
+        for c in results.get(query_id, []):
+            if c in relevant:
+                total += 1 - min(above, len(relevant)) / denom if denom else 1
+            elif c in labels:
+                above += 1
+        values.append(total / len(relevant))
+    return sum(values) / len(values)
+
+
 def md_table(header, rows):
     lines = ['| ' + ' | '.join(header) + ' |', '|' + '---|' * len(header)]
     lines += ['| ' + ' | '.join(row) + ' |' for row in rows]
@@ -91,16 +111,23 @@ def main():
     parser.add_argument('--annotations', type=Path,
                         default=Path('data/steam_annotations_confirmed.json'))
     parser.add_argument('--queries', type=Path, default=Path('eval/queries.jsonl'))
-    parser.add_argument('--candidates', type=int, default=20,
-                        help='Annotated chunks taken from each of BM25 and dense for RRF (as in the app)')
-    parser.add_argument('--rerank-candidates', type=int, default=30,
-                        help='Top RRF-fused chunks passed to the reranker (as in the app)')
+    parser.add_argument('--candidates', type=int, default=300,
+                        help='Chunks taken from each of BM25 and dense for RRF (app: 20; deeper so that '
+                             'enough annotated chunks remain after condensing)')
+    parser.add_argument('--rerank-candidates', type=int, default=300,
+                        help='Top RRF-fused chunks passed to the reranker (app: 30)')
+    parser.add_argument('--device', default='cuda', help='Device for the reranker')
+    parser.add_argument('--batch-size', type=int, default=32, help='Reranker batch size')
     parser.add_argument('--rrf-k', type=float, default=RRF_K)
     parser.add_argument('--k', type=int, nargs='+', default=[5, 10, 20])
     parser.add_argument('--relevant-grade', type=int, choices=[1, 2], default=1)
     parser.add_argument('--out-dir', type=Path, default=Path('eval/results'))
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if args.device.startswith('cuda'):
+        import torch
+        if not torch.cuda.is_available():
+            sys.exit('CUDA is not available; install a CUDA build of torch or pass --device cpu')
 
     annotated = load_annotations(args.annotations)
     with args.queries.open(encoding='utf-8') as f:
@@ -126,7 +153,7 @@ def main():
                     done[record['query_id']] = record
         print(f'Resuming: {len(done)} queries in {checkpoint}')
 
-    reranker = Reranker()
+    reranker = Reranker(device=args.device, batch_size=args.batch_size)
     _ = reranker.model  # load the ~2.2 GB checkpoint before the indexes to keep peak memory low
     retriever = HybridRetriever()
     depth = len(retriever.sparse.chunks)
@@ -144,19 +171,19 @@ def main():
                     filters = {'game_name': games} if '+filter' in variant and games else None
                     sparse_query = expansion.sparse if '+qe' in variant else text
                     dense_query = expansion.dense if '+qe' in variant else text
-                    # Retrieve the whole (filtered) index, then keep only annotated chunks.
+                    # Run the pipeline on the whole (filtered) index; condense only its final outputs.
                     hits = retriever.retrieve(text, top_k=depth, filters=filters,
                                               sparse_query=sparse_query, dense_query=dense_query)
-                    hits = {m: [h for h in hs if h['chunk_id'] in annotated] for m, hs in hits.items()}
                     fused = reciprocal_rank_fusion({m: hs[:args.candidates] for m, hs in hits.items()},
                                                    k=args.rrf_k)
                     reranked = reranker.rerank(text, fused[:args.rerank_candidates], top_k=args.rerank_candidates)
+                    condense = lambda hs: [h['chunk_id'] for h in hs if h['chunk_id'] in annotated]  # noqa: E731
 
-                    record['runs']['bm25' + variant] = [h['chunk_id'] for h in hits['sparse']]
-                    record['runs']['dense' + variant] = [h['chunk_id'] for h in hits['dense']]
-                    record['runs']['hybrid_rrf' + variant] = [h['chunk_id'] for h in fused]
-                    record['runs']['hybrid_rerank' + variant] = [h['chunk_id'] for h in reranked]
-                    pool = {h['chunk_id'] for h in fused[:args.rerank_candidates]}
+                    record['runs']['bm25' + variant] = condense(hits['sparse'])
+                    record['runs']['dense' + variant] = condense(hits['dense'])
+                    record['runs']['hybrid_rrf' + variant] = condense(fused)
+                    record['runs']['hybrid_rerank' + variant] = condense(reranked)
+                    pool = set(condense(fused[:args.rerank_candidates]))
                     record['cand_recall'][variant] = len(pool & relevant) / len(relevant)
                 ckpt.write(json.dumps(record) + '\n')
                 ckpt.flush()
@@ -172,19 +199,28 @@ def main():
     for name, results in runs.items():
         per_query, mean = evaluate(qrels, results, k_values, args.relevant_grade)
         mean['R-Prec'] = r_precision(qrels, results, args.relevant_grade)
+        mean['bpref'] = bpref(qrels, results, args.relevant_grade)
         for query_id, labels in qrels.items():
             per_query[query_id]['R-Prec'] = r_precision({query_id: labels}, results, args.relevant_grade)
+            per_query[query_id]['bpref'] = bpref({query_id: labels}, results, args.relevant_grade)
         table[name] = {'mean': mean, 'per_query': per_query}
 
     names = [c + v for v in VARIANTS for c in CONFIGS]
     kmax = max(k_values)
     metrics = ([f'P@{k}' for k in k_values] + [f'Recall@{k}' for k in k_values] + [f'RR@{kmax}']
-               + [f'nDCG@{k}' for k in k_values] + ['R-Prec'])
+               + [f'nDCG@{k}' for k in k_values] + ['R-Prec', 'bpref'])
+
+    # Condensed lists can be shorter than k; missing ranks then count as nonrelevant (as in trec_eval).
+    lengths = {n: {q: len(runs[n][q]) for q in qrels} for n in names}
+    short = {n: {k: sorted(q for q, length in lengths[n].items() if length < k) for k in k_values} for n in names}
+    for n in names:
+        if short[n][kmax]:
+            print(f"Warning: {n} has fewer than {kmax} annotated chunks for {', '.join(short[n][kmax])}")
     fmt = lambda x: f'{x:.4f}'  # noqa: E731
     report = [
         f'# Retrieval results: {len(queries)} queries, {len(annotated)} annotated chunks',
         '',
-        f'Relevant grade >= {args.relevant_grade} for P / Recall / RR / R-Prec; nDCG uses grades 0-2. '
+        f'Relevant grade >= {args.relevant_grade} for P / Recall / RR / R-Prec / bpref; nDCG uses grades 0-2. '
         f'Candidates per retriever {args.candidates}, reranker candidates {args.rerank_candidates}, '
         f'RRF k {args.rrf_k:g}. `+qe` = hierarchical query expansion, `+filter` = game_name filter on the '
         'target games (cross-game queries are never filtered).',
@@ -195,12 +231,20 @@ def main():
         f"{len({c['document_id'] for c in retriever.sparse.chunks})} reviews of "
         f"{len({c['metadata']['game_name'] for c in retriever.sparse.chunks})} games, not only the annotated set.",
         f'- The {len(annotated)} annotated chunks are a subset of it (same chunk IDs and text).',
-        '- Every retriever ranks the whole knowledge base; unannotated chunks are then dropped from the ranking '
-        '(condensed lists) and only annotated chunks are scored.',
+        '- The whole pipeline runs on the full knowledge base: BM25 and dense rank every chunk, RRF fuses their '
+        f'top {args.candidates} by real rank, and the reranker reorders the fused top {args.rerank_candidates}. '
+        'Unannotated chunks are dropped only from each final ranking (condensed lists, Sakai & Kando 2008), '
+        'and only annotated chunks are scored.',
+        f'- The evaluation depth ({args.candidates} / {args.rerank_candidates}) is deeper than the app '
+        '(20 / 30): only ~8% of the index is annotated, so the app-depth top 30 keeps a median of 3 annotated '
+        'chunks, too few for @10. The reranker scores each chunk independently, so the order of the annotated '
+        'chunks does not depend on the unannotated ones around them.',
         '- So the metrics measure how the annotated chunks are ordered relative to each other in a real, '
         'full-corpus ranking (BM25 statistics and the dense neighbourhood come from all chunks). Unannotated '
         'chunks in between are skipped, neither counted as hits nor as errors, so the scores are not the '
         'exact top-k a user sees in the app.',
+        '- bpref (Buckley & Voorhees 2004) uses only judged chunks by definition, so it is the same on the full '
+        'and the condensed ranking; it is binary and reported next to the graded nDCG.',
         '',
         '## Mean over all queries',
         '',
@@ -210,6 +254,15 @@ def main():
         'Rerank candidate recall (relevant chunks in the RRF top-'
         f'{args.rerank_candidates}): '
         + ', '.join(f"{v or 'base'} {sum(r) / len(r):.4f}" for v, r in cand_recall.items()),
+        '',
+        '## Annotated chunks per condensed ranking',
+        '',
+        'Lists shorter than k count the missing ranks as nonrelevant.',
+        '',
+        md_table(['run', 'min', 'median', *(f'queries < {k}' for k in k_values)],
+                 [[n, str(min(lengths[n].values())), str(sorted(lengths[n].values())[len(qrels) // 2]),
+                   *(f"{len(short[n][k])}" + (f" ({', '.join(short[n][k])})" if 0 < len(short[n][k]) <= 5 else '')
+                     for k in k_values)] for n in names]),
         '',
     ]
     types = [t for t in QUERY_TYPES if any(q['query_type'] == t for q in queries)]
@@ -237,7 +290,8 @@ def main():
         json.dump(runs, f, indent=2)
     with (args.out_dir / 'metrics.json').open('w', encoding='utf-8') as f:
         json.dump({'configs': table,
-                   'rerank_candidate_recall': {v or 'base': sum(r) / len(r) for v, r in cand_recall.items()}},
+                   'rerank_candidate_recall': {v or 'base': sum(r) / len(r) for v, r in cand_recall.items()},
+                   'judged_lengths': lengths},
                   f, indent=2)
     (args.out_dir / 'report.md').write_text('\n'.join(report), encoding='utf-8')
     checkpoint.unlink()
