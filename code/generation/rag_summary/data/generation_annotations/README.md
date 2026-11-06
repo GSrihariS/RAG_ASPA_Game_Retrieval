@@ -1,43 +1,45 @@
-# 最终生成评测数据
+# Final Generation Evaluation Data
 
-## 来源
+## Sources
 
-原始评论、方面标签和问题来自小组仓库 [RAG_ASPA_Game_Retrieval](https://github.com/GSrihariS/RAG_ASPA_Game_Retrieval/tree/34e8675a6af11e6871119d2de264a2487ba9b7b5)，固定提交为 `34e8675a6af11e6871119d2de264a2487ba9b7b5`。
+The source reviews, aspect annotations, and queries come from the group repository [RAG_ASPA_Game_Retrieval](https://github.com/GSrihariS/RAG_ASPA_Game_Retrieval/tree/34e8675a6af11e6871119d2de264a2487ba9b7b5), pinned to commit `34e8675a6af11e6871119d2de264a2487ba9b7b5`.
 
-- `data/steam_annotations_confirmed.json`：1,000 条人工复核评论，每条包含八个方面的情感、主观性和支持摘录。
-- `eval/queries.jsonl`：100 个查询，含目标游戏、方面和情感。
-- `eval/results/runs.json`：保存的检索结果。本实验从 condensed 已标注排名中取每题至多十条证据。
-- `chunks.jsonl`：原始检索片段及来源元数据。
+- `data/steam_annotations_confirmed.json`: 1,000 manually reviewed passages with sentiment, subjectivity, and supporting-quote annotations across eight aspects.
+- `eval/queries.jsonl`: 100 queries with target games, aspects, and sentiments.
+- `eval/results/runs.json`: saved retrieval results. This experiment uses up to ten evidence passages per query from the condensed annotated rankings.
+- `chunks.jsonl`: source retrieval passages and their provenance metadata.
 
-本目录收录生成评测所需的全部 1,000 条标注评论。原始来源文件与本地最终文件的哈希见 `manifest.json`，固定问题的来源审计见 `../../experiments/steam_generation_eval.audit.json`。
+This directory includes all 1,000 annotated passages required for generation evaluation. Hashes of the source and final local files are recorded in `manifest.json`. The source audit for the fixed queries is available in `../../experiments/steam_generation_eval.audit.json`.
 
-## 文件
+## Files
 
-| 文件 | 内容 |
+| File | Contents |
 |---|---|
-| `passages.jsonl` | 1,000 条原文、来源 ID、原始八方面人工标注 |
-| `facts.jsonl` | 2,898 个已提及的评论—方面事实、情感和支持摘录位置 |
-| `query_annotations.jsonl` | 100 个问题的最终必需、可选、排除集合及覆盖分组 |
-| `human_review.json` | 40 项用户逐条判断，包含待评分事实、原文、问题和选择 |
-| `statistics.json` | 数量与最终参考集合统计 |
-| `manifest.json` | 来源版本、文件哈希与参考集合构建方式 |
+| `passages.jsonl` | 1,000 source texts, provenance IDs, and original human annotations for all eight aspects |
+| `facts.jsonl` | 2,898 mentioned review–aspect facts, their sentiments, and supporting-quote offsets |
+| `query_annotations.jsonl` | Final required, optional, and excluded fact sets and coverage groups for 100 queries |
+| `human_review.json` | 40 individual user decisions, including candidate facts, source texts, questions, and choices |
+| `statistics.json` | Dataset counts and final reference-set statistics |
+| `manifest.json` | Source version, file hashes, and reference-construction method |
 
-## 人工复核
+## Human Review
 
-版本为 `human_review_v1`。16 个问题中的 40 项判断分为：
+The reference version is `human_review_v1`. The 40 decisions across 16 queries are divided into:
 
-- A：22 项核心信息，纳入必需参考集合。
-- B：7 项可选补充，不要求覆盖；被选中时从选择精确率的评分分母中移除。
-- C：11 项排除信息，不纳入必需集合；被选中时计为误选。
+- **A: Core information.** 22 facts included in the required reference sets.
+- **B: Optional background.** Seven facts that are not required for coverage. When selected, they are removed from the denominator used to calculate selection precision.
+- **C: Excluded information.** 11 facts excluded from the required sets. Selecting them counts as an incorrect selection.
 
-原始方面标签保留不动。用户批准的明确子观点可以属于整体标为 Mixed 的评论；分组时采用该子观点的情感方向。其余条目保留原来的游戏、方面与情感匹配规则。
+The original aspect annotations remain unchanged. Explicit substatements approved by the user may occur within passages whose overall aspect sentiment is labeled `Mixed`; grouping uses the sentiment of the approved substatement. Other entries retain the original game, aspect, and sentiment matching rules.
 
-最终有 591 个必需问题—事实对、238 个游戏—方面—情感覆盖单元，以及 24 个问题中的 27 个适用正负分歧组。q76 没有必需事实，允许作为背景的最低配置评价单独列入可选集合。
+The final references contain 591 required query–fact pairs, 238 game–aspect–sentiment coverage units, and 27 applicable positive/negative contrast groups across 24 queries. Query `q76` has no required facts. The minimum-requirements assessment permitted as background is listed separately in its optional set.
 
-## 生成输入与评分
+## Generation Input and Scoring
 
-运行器为每条可见评论提供全部八个方面槽位，每项仅有 `fact_id`、`chunk_id`、`aspect`。槽位存在不代表该方面确实出现，人工标签和参考集合不发送给模型。
+For every visible review passage, the runner provides all eight aspect slots. Each candidate contains only `fact_id`, `chunk_id`, and `aspect`. The existence of a slot does not indicate that the aspect is mentioned. Human annotations and reference sets are not sent to the model.
 
-生成观点携带 `fact_ids`。程序从最终保留观点合并选择 ID，再由 `evaluate_fact_selection.py` 统一计算指标。错误或未知 ID 保留在输出中参与扣分。
+Generated claims include `fact_ids`. The program combines the selected IDs from the final retained claims, then computes all metrics through `evaluate_fact_selection.py`. Incorrect or unknown IDs remain in the output and count toward scoring penalties.
 
-覆盖单元选择一个支持事实即算覆盖；正负分歧组需同时选中至少一个正面和一个负面事实。Mixed 不自动算覆盖双方。条件保留和逐句语义支持没有在这次复核中标注，不作为本实验评分。
+A coverage unit is covered when at least one of its supporting facts is selected. A positive/negative contrast group requires at least one selected positive fact and one selected negative fact. A `Mixed` label does not automatically count as covering both sides.
+
+Condition retention and sentence-level semantic support were not annotated in this review and are not scored in this experiment.
