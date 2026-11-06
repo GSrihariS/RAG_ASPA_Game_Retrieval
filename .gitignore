@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Submission packages and local-only leftovers
+dist/
+archive/
+
+# Course material and report draft: not part of the code or data packages
+Assignment*.pdf
+AI6127 NLP/
+AI6127 NLP.zip
+
+# Local tool settings
+.claude/
+
+# Knowledge base: git keeps only its docs and the chunks the indexes are built from.
+# The raw and intermediate files ship in data.zip.
+data/knowledge_base/*
+!data/knowledge_base/*.md
+!data/knowledge_base/processed/
+data/knowledge_base/processed/*
+!data/knowledge_base/processed/chunks.jsonl
+
+# Evaluation checkpoint (deleted automatically when a run finishes)
+data/retrieval_results/eval/checkpoint.jsonl
