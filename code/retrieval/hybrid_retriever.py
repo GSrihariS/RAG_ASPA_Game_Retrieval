@@ -1,0 +1,25 @@
+from paths import DENSE_INDEX_DIR, SPARSE_INDEX_DIR
+from retrieval.dense_retriever import DenseRetriever
+from retrieval.fusion import RRF_K, reciprocal_rank_fusion
+from retrieval.sparse_retriever import SparseRetriever
+
+
+class HybridRetriever:
+    """Send the query to BM25 and dense retrieval; return both ranked lists, or one list fused by RRF."""
+
+    def __init__(self, sparse_dir=SPARSE_INDEX_DIR, dense_dir=DENSE_INDEX_DIR):
+        self.sparse = SparseRetriever(sparse_dir)
+        self.dense = DenseRetriever(dense_dir)
+
+    def retrieve(self, query, top_k=20, filters=None, sparse_query=None, dense_query=None):
+        return {
+            'sparse': self.sparse.retrieve(query if sparse_query is None else sparse_query, top_k=top_k, filters=filters),
+            'dense': self.dense.retrieve(query if dense_query is None else dense_query, top_k=top_k, filters=filters),
+        }
+
+    def retrieve_fused(self, query, top_k=10, candidates=20, filters=None, rrf_k=RRF_K,
+                       sparse_query=None, dense_query=None):
+        """Fuse the top `candidates` of each method with reciprocal rank fusion and keep the best `top_k`."""
+        results = self.retrieve(query, top_k=candidates, filters=filters,
+                                sparse_query=sparse_query, dense_query=dense_query)
+        return reciprocal_rank_fusion(results, k=rrf_k, top_k=top_k)
