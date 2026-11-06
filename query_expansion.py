@@ -32,10 +32,9 @@ ASPECT_TRIGGERS = {
     'Online and Multiplayer': ['online', 'multiplayer', 'co-op', 'coop', 'cooperative', 'pvp', 'server', 'matchmaking', 'cheater', 'community', 'teammate', 'playing with friends', 'play with friends', 'connection', 'disconnect'],
 }
 
-# Specific subtopics are intentionally reusable rather than hardcoded by game/query.
+# Subtopic based query expansion
 # Generic aspect names (e.g. "gameplay", "controls", "multiplayer") are NOT
 # subtopic triggers. Those use the broad fallback unless more specific language appears.
-# Keep short and tightly tied to each information need; adjust using measured ablations.
 SUBTOPICS = {
     'Gameplay': {
         'difficulty': (['difficulty', 'difficult', 'challenging', 'challenge', 'hard', 'easy', 'punishing', 'difficulty level', 'difficulty setting'],
