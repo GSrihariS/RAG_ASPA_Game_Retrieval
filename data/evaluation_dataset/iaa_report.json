@@ -1,0 +1,76 @@
+{
+  "dataset_id": "steam-annotation-1000-1a592433720b",
+  "annotation_stage": "two_review_passes",
+  "recording_method": "retrospective_user_reported_differences",
+  "baseline_source": "records[].human_annotation",
+  "independent_pre_review_annotations": false,
+  "measurement": "label_agreement",
+  "records": 1000,
+  "aspects_per_record": 8,
+  "record_exact_match": {
+    "matching_records": 982,
+    "agreement_percent": 98.2
+  },
+  "sentiment": {
+    "compared_labels": 8000,
+    "matching_labels": 7982,
+    "agreement_percent": 99.775,
+    "cohen_kappa": 0.99585
+  },
+  "mentioned_sentiment": {
+    "compared_labels": 2911,
+    "matching_labels": 2893,
+    "agreement_percent": 99.3817,
+    "cohen_kappa": 0.989812
+  },
+  "per_aspect": {
+    "story": {
+      "compared_labels": 1000,
+      "matching_labels": 996,
+      "agreement_percent": 99.6,
+      "cohen_kappa": 0.993047
+    },
+    "graphics_visuals": {
+      "compared_labels": 1000,
+      "matching_labels": 999,
+      "agreement_percent": 99.9,
+      "cohen_kappa": 0.998141
+    },
+    "gameplay": {
+      "compared_labels": 1000,
+      "matching_labels": 998,
+      "agreement_percent": 99.8,
+      "cohen_kappa": 0.997267
+    },
+    "controls": {
+      "compared_labels": 1000,
+      "matching_labels": 999,
+      "agreement_percent": 99.9,
+      "cohen_kappa": 0.997279
+    },
+    "performance": {
+      "compared_labels": 1000,
+      "matching_labels": 999,
+      "agreement_percent": 99.9,
+      "cohen_kappa": 0.9976
+    },
+    "audio": {
+      "compared_labels": 1000,
+      "matching_labels": 997,
+      "agreement_percent": 99.7,
+      "cohen_kappa": 0.992815
+    },
+    "bugs_stability": {
+      "compared_labels": 1000,
+      "matching_labels": 1000,
+      "agreement_percent": 100.0,
+      "cohen_kappa": 1.0
+    },
+    "online_multiplayer": {
+      "compared_labels": 1000,
+      "matching_labels": 994,
+      "agreement_percent": 99.4,
+      "cohen_kappa": 0.987114
+    }
+  }
+}

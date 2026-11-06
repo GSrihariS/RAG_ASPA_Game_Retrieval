@@ -50,7 +50,8 @@ The two chunk counts differ because 9 chunks have empty text, and the index buil
 | `sentiment` | Positive, Negative, Mixed, Neutral, Unclear or Not mentioned |
 | `evidence` | Text span that supports the label, or empty. Always empty when the aspect is not mentioned; also empty for 406 of the 2,898 mentions |
 
-Per-annotator labels and the inter-annotator agreement: pending (Data group).
+Reported two-pass labels are in `steam_annotations_iaa.json`. Exact passage agreement is
+**98.2% (982/1,000 passages)**; full results are in [iaa_report.json](evaluation_dataset/iaa_report.json).
 
 ## indexes/
 

@@ -97,8 +97,7 @@ python eval/export_eval_xls.py
 
 ## Knowledge-base construction
 
-TODO (Data group): how to run the collection, cleaning, chunking and agreement scripts.
-See [code/data_pipeline/README.md](code/data_pipeline/README.md).
+Collection and preprocessing commands are in [code/data_pipeline/README.md](code/data_pipeline/README.md).
 
 ## Downstream task and generation
 
