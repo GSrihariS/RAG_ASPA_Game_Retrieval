@@ -1,0 +1,85 @@
+{
+  "review_method": "Assistant qualitative inspection of original retrieved text and unmodified predictions; selected observations, not independent gold annotations.",
+  "used_for_model_tuning": false,
+  "formal_accuracy_computed": false,
+  "prediction_edits": false,
+  "observations": [
+    {
+      "case": "hollow_knight_audio",
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "aspect": "audio",
+      "predicted_sentiment": "Positive",
+      "observation": "supported_example",
+      "note": "The Audio/Positive prediction is consistent with the explicit soundtrack praise.",
+      "source_excerpt": "The soundtrack complements the world perfectly.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/"
+    },
+    {
+      "case": "monster_hunter_graphics_performance",
+      "chunk_id": "steam:2246340:237196590:chunk:001",
+      "aspect": "performance",
+      "predicted_sentiment": "Negative",
+      "observation": "supported_example",
+      "note": "The Performance/Negative prediction matches the explicit complaints about frame-rate stutters and optimization.",
+      "source_excerpt": "On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198388689601/recommended/2246340/"
+    },
+    {
+      "case": "monster_hunter_graphics_performance",
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "aspect": "graphics_visuals",
+      "predicted_sentiment": "Positive",
+      "observation": "apparent_sentiment_error",
+      "note": "The model predicts Positive while the excerpt explicitly calls performance and graphics negative aspects.",
+      "source_excerpt": "really the only negative thing i have to say about wilds is the performance and the graphics.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198134631367/recommended/2246340/"
+    },
+    {
+      "case": "monster_hunter_graphics_performance",
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "aspect": "graphics_visuals",
+      "predicted_sentiment": "Positive",
+      "observation": "apparent_sentiment_error",
+      "note": "The model predicts Positive while the excerpt says demanding graphics cause compromises and make the game look bad.",
+      "source_excerpt": "The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198276444806/recommended/2246340/"
+    },
+    {
+      "case": "hollow_knight_audio",
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "aspect": "controls",
+      "predicted_sentiment": "Positive",
+      "observation": "questionable_aspect_presence",
+      "note": "The passage discusses exploration/backtracking, story, visuals and audio without clear input/control evaluation; the excerpt falls back to the whole passage.",
+      "source_excerpt": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "selection_method": "full_passage_fallback",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/"
+    },
+    {
+      "case": "hollow_knight_audio",
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "aspect": "story",
+      "predicted_sentiment": "Positive",
+      "observation": "questionable_sentiment",
+      "note": "Story/Positive is questionable because the passage describes the story as a potential weakness and difficult to understand.",
+      "source_excerpt": "Much of the lore is intentionally vague and hidden inside dialogue and environmental details.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/"
+    },
+    {
+      "case": "monster_hunter_graphics_performance",
+      "chunk_id": "steam:2246340:234810080:chunk:002",
+      "aspect": "performance",
+      "predicted_sentiment": "Positive",
+      "observation": "questionable_sentiment",
+      "note": "Performance/Positive is questionable: the excerpt is a technical complaint, while the full passage also contains a conditional recommendation for high-end PCs.",
+      "source_excerpt": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold.",
+      "selection_method": "aspect_keyword_sentence",
+      "source_url": "https://steamcommunity.com/profiles/76561198196901929/recommended/2246340/"
+    }
+  ]
+}

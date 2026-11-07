@@ -1,0 +1,200 @@
+{
+  "executed_at": "2026-11-07T14:32:07+08:00",
+  "pipeline": "full app: BM25 + bge-small-en-v1.5 + RRF + bge-reranker-v2-m3 + ABSA",
+  "versions": {
+    "sentence-transformers": "6.2.0",
+    "transformers": "5.22.1",
+    "torch": "2.15.0",
+    "faiss-cpu": "1.15.1",
+    "bm25s": "0.3.16",
+    "PyStemmer": "3.1.0",
+    "streamlit": "1.50.0",
+    "scikit-learn": "1.7.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "joblib": "1.5.2"
+  },
+  "corpus_sha256": "6e177b9906f9294daa51cf50d3d5a1a11903e0eef346122eb991cb5f49cdb560",
+  "aspect_model_sha256": "10d8da4ebc22602e29400151d48391f791b008758789a2ced658e05d2fcdf27c",
+  "runtime": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "model_revisions": {
+    "BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "BAAI/bge-reranker-v2-m3": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e"
+  },
+  "not_an_accuracy_benchmark": true,
+  "cases": {
+    "hollow_knight_audio": {
+      "query": "How is the soundtrack in Hollow Knight?",
+      "games": [
+        "Hollow Knight"
+      ],
+      "checks": {
+        "fresh_real_retrieval": true,
+        "retrieval_mocks_used": false,
+        "five_ranked_hits_and_game_filter": "passed",
+        "unique_review_denominators": "passed",
+        "ratios_and_mixed_counts": "passed",
+        "source_ids_urls_offsets": "passed",
+        "display_matches_export": "passed",
+        "absa_and_summary_controls_visible": "passed"
+      },
+      "ranked_chunk_ids": [
+        "steam:367520:235128741:chunk:004",
+        "steam:367520:236128627:chunk:001",
+        "steam:367520:235591978:chunk:001",
+        "steam:367520:236128094:chunk:001",
+        "steam:367520:235484072:chunk:001"
+      ],
+      "annotation_overlap_by_document": {
+        "train": [
+          "steam:367520:235591978"
+        ],
+        "dev": [],
+        "test": [
+          "steam:367520:236128627"
+        ],
+        "unannotated": [
+          "steam:367520:235128741",
+          "steam:367520:235484072",
+          "steam:367520:236128094"
+        ]
+      },
+      "timings_ms": {
+        "BM25": 0.883749991771765,
+        "Dense": 172.2380410064943,
+        "RRF": 0.04483401426114142,
+        "Rerank": 6053.629375004675,
+        "Total": 6226.7960000172025
+      },
+      "aspect_counts": {
+        "story": {
+          "Positive": 3,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "graphics_visuals": {
+          "Positive": 4,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "gameplay": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "controls": {
+          "Positive": 1,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "performance": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "audio": {
+          "Positive": 5,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "bugs_stability": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "online_multiplayer": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        }
+      }
+    },
+    "monster_hunter_graphics_performance": {
+      "query": "Are the graphics of Monster Hunter Wilds worth the performance cost?",
+      "games": [
+        "Monster Hunter Wilds"
+      ],
+      "checks": {
+        "fresh_real_retrieval": true,
+        "retrieval_mocks_used": false,
+        "five_ranked_hits_and_game_filter": "passed",
+        "unique_review_denominators": "passed",
+        "ratios_and_mixed_counts": "passed",
+        "source_ids_urls_offsets": "passed",
+        "display_matches_export": "passed",
+        "absa_and_summary_controls_visible": "passed"
+      },
+      "ranked_chunk_ids": [
+        "steam:2246340:234810080:chunk:002",
+        "steam:2246340:237196590:chunk:001",
+        "steam:2246340:236141299:chunk:001",
+        "steam:2246340:235424623:chunk:001",
+        "steam:2246340:235283196:chunk:001"
+      ],
+      "annotation_overlap_by_document": {
+        "train": [],
+        "dev": [],
+        "test": [],
+        "unannotated": [
+          "steam:2246340:234810080",
+          "steam:2246340:235283196",
+          "steam:2246340:235424623",
+          "steam:2246340:236141299",
+          "steam:2246340:237196590"
+        ]
+      },
+      "timings_ms": {
+        "BM25": 1.4275419962359592,
+        "Dense": 28.180832989164628,
+        "RRF": 0.04904100205749273,
+        "Rerank": 3710.0469169963617,
+        "Total": 3739.7043329838198
+      },
+      "aspect_counts": {
+        "story": {
+          "Positive": 0,
+          "Negative": 2,
+          "Neutral": 0
+        },
+        "graphics_visuals": {
+          "Positive": 0,
+          "Negative": 4,
+          "Neutral": 0
+        },
+        "gameplay": {
+          "Positive": 3,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "controls": {
+          "Positive": 0,
+          "Negative": 1,
+          "Neutral": 0
+        },
+        "performance": {
+          "Positive": 1,
+          "Negative": 3,
+          "Neutral": 0
+        },
+        "audio": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "bugs_stability": {
+          "Positive": 1,
+          "Negative": 0,
+          "Neutral": 0
+        },
+        "online_multiplayer": {
+          "Positive": 0,
+          "Negative": 0,
+          "Neutral": 0
+        }
+      }
+    }
+  }
+}

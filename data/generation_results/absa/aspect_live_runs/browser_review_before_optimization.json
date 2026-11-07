@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-05T14:39:04+08:00",
+  "browser": "Codex in-app browser",
+  "local_url": "http://127.0.0.1:8756",
+  "browser_case": "hollow_knight_audio",
+  "full_real_query_and_game_filter": "passed",
+  "percentage_table_visual_inspection": "passed",
+  "audio_evidence_expansion_ids_excerpts_source_links": "passed",
+  "actual_json_download": "passed",
+  "download_matches_recorded_fields": [
+    "aspects",
+    "evidence",
+    "query",
+    "input_chunk_count",
+    "input_review_count",
+    "model"
+  ],
+  "download_sha256": "0b37e081b0a8dd7d2bdc13ddda57fa00b5af2b1d10057f1db6e5c3a9624d4416",
+  "screenshot": "docs/images/live_aspect_page.jpg",
+  "second_case": "Verified using full unmocked Streamlit AppTest, not a separate browser session."
+}

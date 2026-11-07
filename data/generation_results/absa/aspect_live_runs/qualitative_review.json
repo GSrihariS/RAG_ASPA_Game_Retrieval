@@ -1,0 +1,27 @@
+{
+  "scope": "Known live diagnostic regressions, not independent gold benchmark",
+  "live_examples_added_to_training": false,
+  "sentiment_edits_to_outputs": false,
+  "known_graphics_regressions_corrected": 2,
+  "observations": [
+    {
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "aspect": "graphics_visuals",
+      "before": "Positive",
+      "after": "Negative",
+      "mechanism": "explicit_evaluation_cue",
+      "classifier_sentiment": "Positive",
+      "source_excerpt": "really the only negative thing i have to say about wilds is the performance and the graphics."
+    },
+    {
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "aspect": "graphics_visuals",
+      "before": "Positive",
+      "after": "Negative",
+      "mechanism": "learned_local_context_model",
+      "classifier_sentiment": "Negative",
+      "source_excerpt": "The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad."
+    }
+  ],
+  "limitations": "Neutral remains weak; exact broad accuracy is measured separately on the reused holdout."
+}

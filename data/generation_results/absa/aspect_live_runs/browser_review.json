@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-05T21:13:44+08:00",
+  "url": "http://127.0.0.1:8757",
+  "case": "monster_hunter_graphics_performance",
+  "baseline_switch": "verified; Graphics count=2, Positive=100%",
+  "optimized_switch": "verified; Graphics count=4, Negative=100%",
+  "known_review_ids": [
+    "steam:2246340:235424623:chunk:001",
+    "steam:2246340:235283196:chunk:001"
+  ],
+  "baseline_labels": [
+    "Positive",
+    "Positive"
+  ],
+  "optimized_labels": [
+    "Negative",
+    "Negative"
+  ],
+  "explicit_cue_override_caption_visible": true,
+  "screenshot": "docs/images/optimized_live_page.jpg",
+  "checkpoint_sha256": "10d8da4ebc22602e29400151d48391f791b008758789a2ced658e05d2fcdf27c",
+  "checks": "Two complete real queries also passed unmocked Streamlit AppTest; 11 unit/integration checks passed."
+}
