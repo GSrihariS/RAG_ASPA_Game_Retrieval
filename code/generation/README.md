@@ -4,14 +4,21 @@ This directory contains the downstream modules that consume the ranked Steam rev
 
 | Component | Location | Purpose |
 |---|---|---|
-| Aspect-based Sentiment Analysis | Provided by the classification contributor | Predict aspect-level sentiment from the review evidence |
+| Aspect-based Sentiment Analysis | [ABSA module and setup](ABSA_README.md) | Predict aspect-level sentiment from the review evidence |
 | Evidence-grounded RAG summarization | `generation/rag_summary/` | Answer the user question with review citations |
 
 The two components can use the same retrieved passages. The summarizer reads the review text directly and does not require predicted sentiment labels from the classification component. Its implementation and experiment instructions are documented in `rag_summary/README.md`.
 
+## Report materials
+
+- [Combined Generation report](docs/generation_report.md)
+- [Generation overview paragraph](docs/generation_overview.md)
+- [Section 4.1: Aspect-Based Sentiment Analysis](docs/aspect_report.md)
+- [Section 4.2 supporting results: Evidence-Grounded RAG Summarization](rag_summary/experiments/final/report.md)
+
 ## Connecting to the UI
 
-`code/app.py` already computes `query` and a final ranked `hits` list. Its placeholder titled **"Sentiment analysis / generated answer"** is the integration point. The summarization function is:
+`code/app.py` passes the same `query` and ranked `hits` to the ABSA panel and the evidence-grounded summary. The summarization function is:
 
 ```python
 from generation.rag_summary.rag_generator import generate_summary
@@ -51,67 +58,7 @@ The API must support OpenAI-compatible Chat Completions and JSON object output. 
 
 ### Streamlit integration
 
-Replace the contents of the existing placeholder container with the block below. Keep the classification component's UI alongside the summary. The app already imports `json` and `streamlit as st`, and defines `query` and `hits`.
-
-```python
-import os
-
-from paths import GENERATION_RESULTS_DIR
-from generation.rag_summary.rag_generator import (
-    GenerationError,
-    OpenAICompatibleClient,
-    generate_summary,
-    safe_error,
-)
-
-st.markdown("**Evidence-grounded review summary**")
-evidence_key = (query, tuple((h["chunk_id"], h["text"]) for h in hits))
-
-if st.button("Generate summary", key="rag_summary_generate"):
-    try:
-        with st.spinner("Generating an answer from the retrieved reviews..."):
-            result = generate_summary(
-                query,
-                hits,
-                approach="improved",
-                model=os.getenv("GENERATION_MODEL", "deepseek-v4-pro"),
-                client=OpenAICompatibleClient(
-                    base_url=os.getenv("GENERATION_BASE_URL", "https://api.deepseek.com")
-                ),
-                max_claims=4,
-            )
-        st.session_state["rag_summary_answer"] = (evidence_key, result)
-        output_dir = GENERATION_RESULTS_DIR / "rag_summary"
-        output_dir.mkdir(parents=True, exist_ok=True)
-        (output_dir / "latest_answer.json").write_text(
-            json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-    except GenerationError as error:
-        st.error(safe_error(error)["error_message"])
-
-saved = st.session_state.get("rag_summary_answer")
-if saved is not None and saved[0] == evidence_key:
-    result = saved[1]
-    st.markdown(result["summary"])
-    for citation in result["citations"]:
-        if citation["source_url"]:
-            st.link_button(citation["chunk_id"], citation["source_url"])
-    st.download_button(
-        "Download generated answer",
-        json.dumps(result, ensure_ascii=False, indent=2),
-        file_name="rag_summary.json",
-        mime="application/json",
-        key="rag_summary_download",
-    )
-```
-
-Run the existing search interface from `code/`:
-
-```bash
-streamlit run app.py
-```
-
-Search for reviews, then click **Generate summary**. Only this button initiates generation. Streamlit reruns reuse the saved answer when the question and evidence are unchanged. The example saves the latest answer to `data/generation_results/rag_summary/latest_answer.json` through the shared `paths.py` configuration.
+Run `streamlit run app.py` from `code/` and search for reviews. The ABSA panel runs on the retrieved passages and includes its results in the search export. The adjacent summary panel calls `render_summary(query, hits)` only when you click **Generate summary**. It reuses the saved answer when the question and passages are unchanged and writes a successful answer to `data/generation_results/rag_summary/latest_answer.json`.
 
 ### Generation output
 
@@ -178,7 +125,7 @@ python generation/rag_summary/recompute_results.py generation/rag_summary/experi
 
 Use a new output directory. Full experiment settings, benchmark data, results, and additional commands are described in `rag_summary/README.md`. New questions or changed retrieval contexts need corresponding reference annotations before benchmark selection metrics can be computed.
 
-The classification contributor should document the classification interface, execution commands, and evaluation alongside this summarization interface.
+For the ABSA interface, execution commands, and evaluation, see [ABSA instructions](ABSA_README.md).
 
 ## Conventions
 
