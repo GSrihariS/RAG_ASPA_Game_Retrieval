@@ -1,0 +1,58 @@
+[
+  {
+    "configuration": "whole_shared_C0.5",
+    "C": 0.5,
+    "objective": 0.560226628895184,
+    "end_to_end_micro_f1": 0.6288951841359773,
+    "graphics_negative_end_to_end_f1": 0.4
+  },
+  {
+    "configuration": "whole_shared_C2",
+    "C": 2.0,
+    "objective": 0.5728652751423149,
+    "end_to_end_micro_f1": 0.6166982922201139,
+    "graphics_negative_end_to_end_f1": 0.47058823529411764
+  },
+  {
+    "configuration": "local_per_aspect_C0.5",
+    "C": 0.5,
+    "objective": 0.5234091809071247,
+    "end_to_end_micro_f1": 0.6647780925401322,
+    "graphics_negative_end_to_end_f1": 0.1935483870967742
+  },
+  {
+    "configuration": "local_per_aspect_C2",
+    "C": 2.0,
+    "objective": 0.5409867172675521,
+    "end_to_end_micro_f1": 0.6622390891840607,
+    "graphics_negative_end_to_end_f1": 0.25806451612903225
+  },
+  {
+    "configuration": "local_shared_C0.5",
+    "C": 0.5,
+    "objective": 0.5182419091767533,
+    "end_to_end_micro_f1": 0.6364494806421152,
+    "graphics_negative_end_to_end_f1": 0.24242424242424243
+  },
+  {
+    "configuration": "local_shared_C2",
+    "C": 2.0,
+    "objective": 0.5751423149905123,
+    "end_to_end_micro_f1": 0.6451612903225806,
+    "graphics_negative_end_to_end_f1": 0.4117647058823529
+  },
+  {
+    "configuration": "local_shared_two_stage_C0.5",
+    "C": 0.5,
+    "objective": 0.5161028717435983,
+    "end_to_end_micro_f1": 0.6364494806421152,
+    "graphics_negative_end_to_end_f1": 0.23529411764705882
+  },
+  {
+    "configuration": "local_shared_two_stage_C2",
+    "C": 2.0,
+    "objective": 0.5738140417457305,
+    "end_to_end_micro_f1": 0.6432637571157496,
+    "graphics_negative_end_to_end_f1": 0.4117647058823529
+  }
+]
