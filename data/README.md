@@ -126,3 +126,27 @@ F1 scores and mean input tokens, latency and text retention over completed answe
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Baseline | 79 | 28.41 | 8.63 | 19.05 | 3,277 | 3.96 | 100.0 |
 | Few-shot | 79 | 29.42 | 10.38 | 20.54 | 4,667 | 4.45 | 100.0 |
+| Compression | 78 | 27.63 | 9.04 | 19.15 | 2,972 | 4.00 | 74.8 |
+| Few-shot + compression | 79 | 28.97 | 10.23 | 20.39 | 4,508 | 4.61 | 74.8 |
+
+Few-shot prompting achieves the highest ROUGE scores. Relative to baseline, its paired ROUGE-2 F1
+gain is **1.75 percentage points** (95% bootstrap CI: **0.95 to 2.57**) and its ROUGE-L F1 gain is
+**1.49 points** (95% CI: **0.49 to 2.50**), over 79 paired questions. The intervals use 5,000 bootstrap
+resamples with seed 42.
+
+Compression retains about 74.8% of the evidence text and reduces mean input tokens by **9.4%** over
+the 78 questions completed by both compression and baseline, while ROUGE-2 and ROUGE-L remain close
+to baseline. Combining compression with few-shot prompting retains most of the few-shot gain and
+uses fewer input tokens than few-shot alone. ROUGE precision and recall are also included in `summary.csv`.
+
+### Recompute the final scores
+
+Run from `code/`, using a new output directory:
+
+```bash
+python generation/rag_summary/evaluate_generation.py ../data/generation_results/rouge_results --output ../data/generation_results/rouge_rescored
+```
+
+This validates the saved evidence and recomputes ROUGE without an API key or an evaluation model.
+The generation code and prompts are in `code/generation/rag_summary/`; benchmark data and reviewed
+references are the five `rag_summary_` files in `data/evaluation_dataset/`.
