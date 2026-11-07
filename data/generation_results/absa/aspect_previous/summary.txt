@@ -1,0 +1,30 @@
+ABSA benchmark: repository Confirmed labels; seed 42 by default
+Protocol: {'train': 600, 'dev': 200, 'test': 200}; seed=42
+Deployment selected using DEV end-to-end micro-F1: two_stage_word_char
+P/R/F1 below are on TEST. Sentiment uses gold supported aspect mentions.
+Mixed/Unclear are excluded from sentiment and triplet scoring, not mapped to Neutral.
+
+majority
+  Aspect presence: P=0.8050 R=0.2865 F1=0.4226
+  Sentiment macro: P=0.4415 R=0.4497 F1=0.4442
+  End-to-end triplet micro: P=0.4400 R=0.1481 F1=0.2216
+
+direct_word_char
+  Aspect presence: P=0.8075 R=0.7616 F1=0.7839
+  Sentiment macro: P=0.6125 R=0.5970 F1=0.6024
+  End-to-end triplet micro: P=0.6694 R=0.6346 F1=0.6515
+
+two_stage_word_char
+  Aspect presence: P=0.8214 R=0.7776 F1=0.7989
+  Sentiment macro: P=0.6242 R=0.6021 F1=0.6094
+  End-to-end triplet micro: P=0.6889 R=0.6558 F1=0.6719
+
+direct_word_only
+  Aspect presence: P=0.7853 R=0.7224 F1=0.7525
+  Sentiment macro: P=0.6165 R=0.5957 F1=0.6020
+  End-to-end triplet micro: P=0.6424 R=0.5942 F1=0.6174
+
+Controlled ablation: fixed C=2.0
+  direct_word_char: triplet micro-F1=0.6719; sentiment macro-F1=0.6077
+  two_stage_word_char: triplet micro-F1=0.6719; sentiment macro-F1=0.6094
+  direct_word_only: triplet micro-F1=0.6174; sentiment macro-F1=0.6020
