@@ -23,7 +23,7 @@ data/                     all data and results (data.zip), described in data/REA
   knowledge_base/         the Steam reviews and their chunks
   evaluation_dataset/     annotated chunks (eval.xls), agreement, retrieval queries and label statistics
   indexes/                prebuilt BM25 and FAISS indexes
-  retrieval_results/      sample-query results and the 100-query retrieval evaluation
+  retrieval_results/      the 100-query retrieval evaluation and final pipeline results for 100 queries
   generation_results/     generated answers from the summarization experiment, and their metrics
 ```
 

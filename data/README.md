@@ -7,7 +7,7 @@ through `code/paths.py`.
 |---|---|
 | Knowledge base | `knowledge_base/` |
 | Queries | `evaluation_dataset/queries.jsonl` |
-| Retrieved results | `retrieval_results/sample_queries/`, `retrieval_results/eval/runs.json` |
+| Retrieved results | `retrieval_results/eval/top_10_result_chunks`, `retrieval_results/eval/runs.json` |
 | Evaluation dataset | `evaluation_dataset/eval.xls`, `evaluation_dataset/steam_annotations_confirmed.json` |
 | Annotation agreement (Q4) | `evaluation_dataset/iaa_report.json`, `evaluation_dataset/steam_annotations_iaa.json` |
 | Retrieval metrics (Q3) | `retrieval_results/eval/` |
