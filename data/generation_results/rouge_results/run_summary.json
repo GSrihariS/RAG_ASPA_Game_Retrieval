@@ -1,0 +1,22 @@
+{
+  "execution_protocol": "concurrent_retry_v1",
+  "concurrency": 20,
+  "max_retries": 2,
+  "planned_tasks": 320,
+  "recorded_tasks": 320,
+  "completed": 315,
+  "failed": 5,
+  "stopped": false,
+  "stop_reason": null,
+  "generation_wall_seconds": 73.78909829999975,
+  "answers_per_second": 4.268923286192279,
+  "request_totals": {
+    "model_calls": 333,
+    "retry_count": 13,
+    "prompt_tokens": 1268578,
+    "completion_tokens": 92710,
+    "estimated_cost_usd": null,
+    "observed_prompt_tokens": 1268578,
+    "observed_completion_tokens": 92710
+  }
+}
