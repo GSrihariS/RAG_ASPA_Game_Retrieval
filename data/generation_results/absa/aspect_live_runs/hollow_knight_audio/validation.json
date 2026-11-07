@@ -1,0 +1,10 @@
+{
+  "fresh_real_retrieval": true,
+  "retrieval_mocks_used": false,
+  "five_ranked_hits_and_game_filter": "passed",
+  "unique_review_denominators": "passed",
+  "ratios_and_mixed_counts": "passed",
+  "source_ids_urls_offsets": "passed",
+  "display_matches_export": "passed",
+  "absa_and_summary_controls_visible": "passed"
+}
