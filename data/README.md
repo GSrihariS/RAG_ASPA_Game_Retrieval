@@ -67,7 +67,6 @@ b = 0.75); `dense/` is a FAISS inner-product index over normalized `BAAI/bge-sma
 
 ## retrieval_results/
 
-- `sample_queries/`: top-10 results for 9 test queries from each retrieval configuration, as text.
 - `eval/`: judgments, rankings, metrics and report of the 100-query evaluation.
 
 ## generation_results/
