@@ -1,0 +1,118 @@
+Chunk ID: steam:246090:12914621:chunk:001
+Text:
+Double Fine slapped a "1.0" sticker on this game and abandoned it. Whilst I appreciate that there are times that an Early Access game may not deliver all of the promised features, this game received a small fraction of those features proposed.
+
+But this is a game review, not a review of Double Fine's business practices. So how is the game?
+
+In short, the game is a mess of buggy AI with barely enough gameplay mechanics to sustain more than a couple of hours of play. The character morale system is horribly half-baked, and the game is little more than a series of repetitive busywork tasks.
+
+That Double Fine now has it's greasy mitts out for Early Access funding for Massive Chalice barely a month after abandoning DF-9 is an insult to all of those people who put their faith in the company.
+
+Never again.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:13788769:chunk:001
+Text:
+Don't bother with this game. SBDF-9 a good concept and the game definitely had potential, but it's a flop.
+
+- The game is (and feels) unfinished.
+- Bugs and crashes are common even after "release".
+- Poor user experience, frustrating character AI.
+- As it was left by the developer, the game has a severe lack of depth.
+
+I am extremely disappointed with the developer's choice of abandoning development, but I guess it's a risk one accepts when buying into Early Access.
+
+ADHD Version: DO NOT BUY.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:84359698:chunk:001
+Text:
+[0.5] Controls & Training & Help
+[0.5] Menu & Settings
+[0.4] Sound & Music
+[0.5] Graphics
+[0.5] Game Design
+[0.5] Game Story
+[0.3] Game Content
+[0.4] Time to complete feels ok? (or if the Game can be repeatedly played again)
+[0.3] Enjoyable & Fun?
+[0.2] Could hold spot in Favorites?
+[0] BONUS point: Review for VR
+
+Stars received: 4.1/10 ___ Note: v.2 [0.0 to 1] = personal impressions
+
+Game description key-points: SpaceBase simulator
+Overview: idea is very good and approach, but not for this game unfortunately. Game was abandoned with multiple issues.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:73880295:chunk:001
+Text:
+Appeared in my steam library after redeeming a different game from DF's Humble Bundle (did not use the code I was given, this just showed up out of nowhere). Decided to try it despite the negative reviews, and my partial dislike of management games. Immediately saw why it had negative reviews.
+Never even got past the damn tutorial. UI is a bit confusing to me but I can partially blame myself tbh; I have a bit of a smooth brain :P
+The music is alright though, I'll give it that. There's a dozen different space management building games out there, buy one of those instead of this one.
+Overall 1/5. Not DF's greatest work tbf.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:73777258:chunk:001
+Text:
+Almost good. Everything is there for an enjoyable base-builder survival game. But the interface and menu is unintuitive, and I keep getting more colonists, even though I don't want them. I have never had enough beds for everyone, because they don't stop joining my colony, even if I don't want them.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:105767028:chunk:001
+Text:
+After playing for 7 hours, the game now freezes every time I try to launch it. I have even tried uninstalling and reinstalling, and deleting my saved games. DF-9 is just broken.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:67858406:chunk:001
+Text:
+I must preface this with the fact that I do like the game. It is a cute little sim. However, the game is clearly unfinished. It is rather buggy which makes it difficult to play. There are no clear directions. The controls aren't user friendly. Sometimes you just gotta guess what's wrong. Most of the time it's not something you can fix and you just have to watch everyone on your base suffocate because the game decided you don't have air anymore, or despite knowing how to fix the problem none of your citizens respond to your directions anymore so you just gotta restart.
+
+I love most of Double Fine's other games. I wish they would just finish this one.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:66712100:chunk:001
+Text:
+Unfortunately abandoned unfinished. Could be good, however in the current state lacks of basic management tools, priority queue is missing, few content, AI is lazy (population was idle most of time), lots of bugs (e.g all my crew was killed trying disassembling my own turret gun. Or even, you can sealed the air in the room without sealing the doors.!?!?
+Sorry Steve, you died with air decompression blast for your own sake).
+
+Can't recommend.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:127625770:chunk:001
+Text:
+I found the workings of the game confusing. You never get told how to succeed and most importantly, you can never control the characters, most of the time they are stuck in space until they die from lack of oxygen. And even after creating a room with the seed and an airlock, that leaves scarce ore to create a refinery. And it also does not help that there is no way to save the game. This seems like an early release, so i will gladly revise it when the game is improved, playing it is extremely unfair ton those playing it.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:83972024:chunk:001
+Text:
+Purchased this years ago. It's a rimworld clone with the following exceptions:
+
+* lower performance compute
+
+* characters have one job rather than prioritizing an array of jobs
+
+* no tech tree
+
+* events are totally randomized and uncontrollable
+
+* no game goal
+
+* less than five minutes of music audio
+
+* worse graphics
+
+* no development in years
+
+If I could get my money back, I would. If I could spend those dollars on a gofundme to give butt cancer to the publisher for accepting monies for this scam title it wouldn't bother me to drop the cash right in that project. This is as close to cash rake and tax avoision I've ever seen (yes, it's a word). It's worthy of criminal investigation for fraud
+
+--------------------------------------------------------------------------------
+
