@@ -1,0 +1,899 @@
+{
+  "schema_version": "1.0",
+  "query": "How is the soundtrack in Hollow Knight?",
+  "model": {
+    "mode": "two_stage",
+    "use_char": true,
+    "C": 2.0,
+    "context_mode": "whole",
+    "feature_mode": "lexical",
+    "presence_C": 2.0,
+    "detection_mode": "global",
+    "evidence_supervision": false,
+    "scores_calibrated": false,
+    "training": {
+      "configuration": "two_stage_word_char",
+      "seed": 42,
+      "train_chunks": 600,
+      "dev_chunks": 200,
+      "test_chunks": 200,
+      "trained_on": "train only; no train+dev refit",
+      "selection_metric": "dev end-to-end triplet micro-F1",
+      "annotation_sha256": "f81d19e01a544b772f79e014843b3de814a06f3e82be86a22cb26060d3085af3"
+    }
+  },
+  "input_chunk_count": 5,
+  "input_review_count": 5,
+  "aggregation_unit": "unique document_id per aspect",
+  "ratio_denominator": "classified_review_count (excludes cross-chunk Mixed)",
+  "scope": "Predictions on retrieved reviews only; not all Steam reviews.",
+  "evidence_policy": "Exact source excerpts for inspection; entailment has not been verified.",
+  "aspects": [
+    {
+      "aspect": "story",
+      "mentioned_review_count": 5,
+      "mention_ratio": 1.0,
+      "classified_review_count": 5,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 5,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:367520:235128741",
+            "steam:367520:236128627",
+            "steam:367520:235591978",
+            "steam:367520:236128094",
+            "steam:367520:235484072"
+          ],
+          "evidence_ids": [
+            "steam:367520:235128741:chunk:004",
+            "steam:367520:235484072:chunk:001",
+            "steam:367520:235591978:chunk:001",
+            "steam:367520:236128094:chunk:001",
+            "steam:367520:236128627:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "graphics_visuals",
+      "mentioned_review_count": 4,
+      "mention_ratio": 0.8,
+      "classified_review_count": 4,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 4,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:367520:235128741",
+            "steam:367520:236128627",
+            "steam:367520:236128094",
+            "steam:367520:235484072"
+          ],
+          "evidence_ids": [
+            "steam:367520:235128741:chunk:004",
+            "steam:367520:235484072:chunk:001",
+            "steam:367520:236128094:chunk:001",
+            "steam:367520:236128627:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "gameplay",
+      "mentioned_review_count": 5,
+      "mention_ratio": 1.0,
+      "classified_review_count": 5,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 5,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:367520:235128741",
+            "steam:367520:236128627",
+            "steam:367520:235591978",
+            "steam:367520:236128094",
+            "steam:367520:235484072"
+          ],
+          "evidence_ids": [
+            "steam:367520:235128741:chunk:004",
+            "steam:367520:235484072:chunk:001",
+            "steam:367520:235591978:chunk:001",
+            "steam:367520:236128094:chunk:001",
+            "steam:367520:236128627:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "controls",
+      "mentioned_review_count": 4,
+      "mention_ratio": 0.8,
+      "classified_review_count": 4,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 4,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:367520:235128741",
+            "steam:367520:236128627",
+            "steam:367520:236128094",
+            "steam:367520:235484072"
+          ],
+          "evidence_ids": [
+            "steam:367520:235128741:chunk:004",
+            "steam:367520:235484072:chunk:001",
+            "steam:367520:236128094:chunk:001",
+            "steam:367520:236128627:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "performance",
+      "mentioned_review_count": 0,
+      "mention_ratio": 0.0,
+      "classified_review_count": 0,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "audio",
+      "mentioned_review_count": 5,
+      "mention_ratio": 1.0,
+      "classified_review_count": 5,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 5,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:367520:235128741",
+            "steam:367520:236128627",
+            "steam:367520:235591978",
+            "steam:367520:236128094",
+            "steam:367520:235484072"
+          ],
+          "evidence_ids": [
+            "steam:367520:235128741:chunk:004",
+            "steam:367520:235484072:chunk:001",
+            "steam:367520:235591978:chunk:001",
+            "steam:367520:236128094:chunk:001",
+            "steam:367520:236128627:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "bugs_stability",
+      "mentioned_review_count": 0,
+      "mention_ratio": 0.0,
+      "classified_review_count": 0,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "online_multiplayer",
+      "mentioned_review_count": 0,
+      "mention_ratio": 0.0,
+      "classified_review_count": 0,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "document_id": "steam:367520:235128741",
+      "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.8305358360963128,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7258888977453244,
+        "Negative": 0.17656937504403955,
+        "Neutral": 0.09754172721063605
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Much of the lore is intentionally vague and hidden inside dialogue and environmental details.",
+        "start": 287,
+        "end": 380,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "document_id": "steam:367520:235128741",
+      "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.7703280893019121,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8166388589260692,
+        "Negative": 0.12356406893142353,
+        "Neutral": 0.05979707214250724
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.",
+        "start": 545,
+        "end": 665,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "document_id": "steam:367520:235128741",
+      "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.95666911114921,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8221561938572252,
+        "Negative": 0.13097679013488825,
+        "Neutral": 0.04686701600788649
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+        "start": 873,
+        "end": 1003,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "document_id": "steam:367520:235128741",
+      "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/",
+      "aspect": "controls",
+      "mentioned": true,
+      "presence_score": 0.60349800650506,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7073887291273517,
+        "Negative": 0.22766581563621863,
+        "Neutral": 0.06494545523642958
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+        "start": 0,
+        "end": 1003,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235128741:chunk:004",
+      "document_id": "steam:367520:235128741",
+      "text": "Hollow Knight rarely tells you exactly where to go, which is great for exploration but can occasionally leave you completely lost.\n\nBacktracking can also become tedious, particularly when you are trying to reach a specific location after dying.\n\nThe story is another potential weakness. Much of the lore is intentionally vague and hidden inside dialogue and environmental details. Players who prefer straightforward storytelling may find it difficult to understand what is actually happening.\n\nArt & Sound\n\nVisually, Hollow Knight is fantastic. Its hand-drawn art style gives every area a distinct identity, while the animations make even simple enemies feel alive.\n\nThe soundtrack complements the world perfectly. Quiet exploration themes create a feeling of loneliness and mystery, while boss music makes important encounters feel appropriately dramatic.\n\nFinal Verdict\n\nHollow Knight is an exceptional Metroidvania that combines exploration, combat and atmosphere better than most games in the genre.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198304830325/recommended/367520/",
+      "aspect": "audio",
+      "mentioned": true,
+      "presence_score": 0.9402882771985218,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8192221296269168,
+        "Negative": 0.13558655474069314,
+        "Neutral": 0.045191315632390185
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The soundtrack complements the world perfectly.",
+        "start": 667,
+        "end": 714,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198416553641/recommended/367520/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.732143237767403,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8042162170620941,
+        "Negative": 0.12169357720561017,
+        "Neutral": 0.0740902057322957
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.",
+        "start": 290,
+        "end": 415,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198416553641/recommended/367520/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.8270763786255614,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8542288998890413,
+        "Negative": 0.07448751550547239,
+        "Neutral": 0.07128358460548648
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.",
+        "start": 290,
+        "end": 415,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198416553641/recommended/367520/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.9157575020434785,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8571827995702084,
+        "Negative": 0.09940924455991249,
+        "Neutral": 0.04340795586987911
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.",
+        "start": 203,
+        "end": 289,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198416553641/recommended/367520/",
+      "aspect": "controls",
+      "mentioned": true,
+      "presence_score": 0.5789811344872511,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6572535984182273,
+        "Negative": 0.27981723068159575,
+        "Neutral": 0.06292917090017709
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.",
+        "start": 203,
+        "end": 289,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198416553641/recommended/367520/",
+      "aspect": "audio",
+      "mentioned": true,
+      "presence_score": 0.9540921521431388,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.846299019920124,
+        "Negative": 0.12111401706364322,
+        "Neutral": 0.0325869630162328
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.",
+        "start": 290,
+        "end": 415,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235591978:chunk:001",
+      "document_id": "steam:367520:235591978",
+      "text": "Hollow Knight is a once-in-a-lifetime experience. Its deeply immersive worldbuilding and masterful storytelling come together to create an unforgettable narrative. The phenomenal soundtrack also deserves every bit of praise it receives. Christopher Larkin was truly cooking, and many tracks have found their way into my everyday playlists.\nThe gameplay is equally impressive. Many boss fights feel like a dance as you weave in attacks and spells while dodging each strike. Having 100%ed this game and explored every corner of its world, I can’t recommend it highly enough to anyone looking for a rewarding time sink.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199211212811/recommended/367520/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.8270020402827002,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8061073094997547,
+        "Negative": 0.11911246970675289,
+        "Neutral": 0.07478022079349224
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Its deeply immersive worldbuilding and masterful storytelling come together to create an unforgettable narrative.",
+        "start": 50,
+        "end": 163,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235591978:chunk:001",
+      "document_id": "steam:367520:235591978",
+      "text": "Hollow Knight is a once-in-a-lifetime experience. Its deeply immersive worldbuilding and masterful storytelling come together to create an unforgettable narrative. The phenomenal soundtrack also deserves every bit of praise it receives. Christopher Larkin was truly cooking, and many tracks have found their way into my everyday playlists.\nThe gameplay is equally impressive. Many boss fights feel like a dance as you weave in attacks and spells while dodging each strike. Having 100%ed this game and explored every corner of its world, I can’t recommend it highly enough to anyone looking for a rewarding time sink.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199211212811/recommended/367520/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.885855636432364,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8465218943629784,
+        "Negative": 0.11179223153311327,
+        "Neutral": 0.04168587410390822
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The gameplay is equally impressive.",
+        "start": 340,
+        "end": 375,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235591978:chunk:001",
+      "document_id": "steam:367520:235591978",
+      "text": "Hollow Knight is a once-in-a-lifetime experience. Its deeply immersive worldbuilding and masterful storytelling come together to create an unforgettable narrative. The phenomenal soundtrack also deserves every bit of praise it receives. Christopher Larkin was truly cooking, and many tracks have found their way into my everyday playlists.\nThe gameplay is equally impressive. Many boss fights feel like a dance as you weave in attacks and spells while dodging each strike. Having 100%ed this game and explored every corner of its world, I can’t recommend it highly enough to anyone looking for a rewarding time sink.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199211212811/recommended/367520/",
+      "aspect": "audio",
+      "mentioned": true,
+      "presence_score": 0.8375891379067255,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8134537145883729,
+        "Negative": 0.1309428861326585,
+        "Neutral": 0.05560339927896863
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The phenomenal soundtrack also deserves every bit of praise it receives.",
+        "start": 164,
+        "end": 236,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128094:chunk:001",
+      "document_id": "steam:367520:236128094",
+      "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198652943261/recommended/367520/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.5744767581683733,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7194143752265962,
+        "Negative": 0.1957442810655168,
+        "Neutral": 0.08484134370788711
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+        "start": 0,
+        "end": 460,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128094:chunk:001",
+      "document_id": "steam:367520:236128094",
+      "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198652943261/recommended/367520/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.6503125137705651,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8369697138353644,
+        "Negative": 0.11050458170018537,
+        "Neutral": 0.052525704464450214
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+        "start": 287,
+        "end": 460,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128094:chunk:001",
+      "document_id": "steam:367520:236128094",
+      "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198652943261/recommended/367520/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.865483303602267,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8306662909280987,
+        "Negative": 0.13895886669247207,
+        "Neutral": 0.030374842379429074
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+        "start": 0,
+        "end": 460,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128094:chunk:001",
+      "document_id": "steam:367520:236128094",
+      "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198652943261/recommended/367520/",
+      "aspect": "controls",
+      "mentioned": true,
+      "presence_score": 0.5061023000427457,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.5026251748361203,
+        "Negative": 0.4385853976076411,
+        "Neutral": 0.05878942755623865
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+        "start": 0,
+        "end": 460,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236128094:chunk:001",
+      "document_id": "steam:367520:236128094",
+      "text": "Hollow Knight is a great game that allows you to pick your own path giving you mostly clear instructions as to what to do next. It has its difficult moments but doesn't hold your hand through any of it, although there are fun secretes you can find throughout the game to make it easier. It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561198652943261/recommended/367520/",
+      "aspect": "audio",
+      "mentioned": true,
+      "presence_score": 0.7698426526340771,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7610787429717625,
+        "Negative": 0.19637420210542353,
+        "Neutral": 0.04254705492281406
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "It has the best immersion of any game I've played and with fantastic visuals and lively atmosphere and soundtrack that encourages you to keep exploring I'ts beautiful world.",
+        "start": 287,
+        "end": 460,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235484072:chunk:001",
+      "document_id": "steam:367520:235484072",
+      "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199841049587/recommended/367520/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.7535683143984849,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7608557930717331,
+        "Negative": 0.1857369798048765,
+        "Neutral": 0.05340722712339043
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.",
+        "start": 122,
+        "end": 290,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235484072:chunk:001",
+      "document_id": "steam:367520:235484072",
+      "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199841049587/recommended/367520/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.7428643098674249,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7448149954511379,
+        "Negative": 0.18532370229436868,
+        "Neutral": 0.06986130225449344
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.",
+        "start": 122,
+        "end": 290,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235484072:chunk:001",
+      "document_id": "steam:367520:235484072",
+      "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199841049587/recommended/367520/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.8977135846784604,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.8021604368376541,
+        "Negative": 0.16330942782043448,
+        "Neutral": 0.03453013534191142
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.",
+        "start": 122,
+        "end": 290,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235484072:chunk:001",
+      "document_id": "steam:367520:235484072",
+      "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199841049587/recommended/367520/",
+      "aspect": "controls",
+      "mentioned": true,
+      "presence_score": 0.5834029929136596,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6440087103326325,
+        "Negative": 0.29901365768002375,
+        "Neutral": 0.05697763198734376
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+        "start": 0,
+        "end": 954,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:367520:235484072:chunk:001",
+      "document_id": "steam:367520:235484072",
+      "text": "Hollow Knight is, without a doubt, the best game I have ever played.\n\nEverything about this game feels carefully crafted. The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.\nThe world of Hallownest is something else entirely. Every area feels distinct, mysterious, and worth exploring. You constantly find yourself wondering what is around the next corner, while the environmental storytelling quietly gives you pieces of the bigger picture.\n\nThe combat is simple to understand but incredibly satisfying to master. Every boss feels like a proper test of your skills, and beating one after struggling for hours is an experience that never gets old.\nAnd the music... absolutely beautiful. Christopher Larkin created a soundtrack that gives every location its own identity and makes the world feel alive, even when it feels completely dead.",
+      "game_name": "Hollow Knight",
+      "source_url": "https://steamcommunity.com/profiles/76561199841049587/recommended/367520/",
+      "aspect": "audio",
+      "mentioned": true,
+      "presence_score": 0.882608059263993,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7635860407739283,
+        "Negative": 0.1950009561185105,
+        "Neutral": 0.04141300310756104
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The hand-drawn art style, the haunting music, the atmosphere, the world design, the lore, the exploration, and especially the combat all come together almost perfectly.",
+        "start": 122,
+        "end": 290,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    }
+  ]
+}
