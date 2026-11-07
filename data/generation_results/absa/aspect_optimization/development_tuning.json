@@ -1,0 +1,44 @@
+[
+  {
+    "configuration": "augmented_local_per_aspect_bge_C2",
+    "C": 2.0,
+    "objective": 0.6451905204460966,
+    "end_to_end_micro_f1": 0.7342007434944238,
+    "graphics_negative_end_to_end_f1": 0.4375
+  },
+  {
+    "configuration": "augmented_local_per_aspect_bge_C8",
+    "C": 8.0,
+    "objective": 0.649019939168638,
+    "end_to_end_micro_f1": 0.7453531598513011,
+    "graphics_negative_end_to_end_f1": 0.42424242424242425
+  },
+  {
+    "configuration": "augmented_local_shared_bge_C2",
+    "C": 2.0,
+    "objective": 0.6489861439675566,
+    "end_to_end_micro_f1": 0.7193308550185874,
+    "graphics_negative_end_to_end_f1": 0.48484848484848486
+  },
+  {
+    "configuration": "augmented_local_shared_bge_C8",
+    "C": 8.0,
+    "objective": 0.6437816830010139,
+    "end_to_end_micro_f1": 0.7118959107806692,
+    "graphics_negative_end_to_end_f1": 0.48484848484848486
+  },
+  {
+    "configuration": "augmented_local_shared_hybrid_C2",
+    "C": 2.0,
+    "objective": 0.6639405204460966,
+    "end_to_end_micro_f1": 0.7342007434944238,
+    "graphics_negative_end_to_end_f1": 0.5
+  },
+  {
+    "configuration": "augmented_local_shared_hybrid_C8",
+    "C": 8.0,
+    "objective": 0.6639405204460966,
+    "end_to_end_micro_f1": 0.7342007434944238,
+    "graphics_negative_end_to_end_f1": 0.5
+  }
+]

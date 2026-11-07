@@ -1,0 +1,3153 @@
+{
+  "rule_design": "Engineered after known live failure analysis; not independent test evidence",
+  "selection": "Enable only when DEV objective and end-to-end F1 do not decrease",
+  "selected": true,
+  "base_dev": {
+    "n_chunks": 200,
+    "excluded_sentiment_pairs": {
+      "Mixed": 51
+    },
+    "aspect_detection": {
+      "0": {
+        "precision": 0.9001937984496124,
+        "recall": 0.936491935483871,
+        "f1-score": 0.9179841897233202,
+        "support": 992.0
+      },
+      "1": {
+        "precision": 0.8890845070422535,
+        "recall": 0.8305921052631579,
+        "f1-score": 0.858843537414966,
+        "support": 608.0
+      },
+      "accuracy": 0.89625,
+      "macro avg": {
+        "precision": 0.894639152745933,
+        "recall": 0.8835420203735145,
+        "f1-score": 0.8884138635691431,
+        "support": 1600.0
+      },
+      "weighted avg": {
+        "precision": 0.895972267714816,
+        "recall": 0.89625,
+        "f1-score": 0.8955107418461455,
+        "support": 1600.0
+      }
+    },
+    "sentiment_gold_aspect": {
+      "Positive": {
+        "precision": 0.8473520249221184,
+        "recall": 0.9379310344827586,
+        "f1-score": 0.8903436988543372,
+        "support": 290.0
+      },
+      "Negative": {
+        "precision": 0.8927038626609443,
+        "recall": 0.8776371308016878,
+        "f1-score": 0.8851063829787233,
+        "support": 237.0
+      },
+      "Neutral": {
+        "precision": 0.3333333333333333,
+        "recall": 0.03333333333333333,
+        "f1-score": 0.06060606060606061,
+        "support": 30.0
+      },
+      "accuracy": 0.8635547576301615,
+      "macro avg": {
+        "precision": 0.6911297403054654,
+        "recall": 0.6163004995392599,
+        "f1-score": 0.6120187141463737,
+        "support": 557.0
+      },
+      "weighted avg": {
+        "precision": 0.8389639186320612,
+        "recall": 0.8635547576301615,
+        "f1-score": 0.8434256144558295,
+        "support": 557.0
+      }
+    },
+    "sentiment_confusion_matrix": {
+      "labels": [
+        "Positive",
+        "Negative",
+        "Neutral"
+      ],
+      "rows": "gold",
+      "columns": "predicted",
+      "values": [
+        [
+          272,
+          17,
+          1
+        ],
+        [
+          28,
+          208,
+          1
+        ],
+        [
+          21,
+          8,
+          1
+        ]
+      ]
+    },
+    "subjectivity_gold_aspect": {
+      "Objective": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Opinionated": {
+        "precision": 0.9698996655518395,
+        "recall": 1.0,
+        "f1-score": 0.9847198641765704,
+        "support": 580.0
+      },
+      "accuracy": 0.9698996655518395,
+      "macro avg": {
+        "precision": 0.48494983277591974,
+        "recall": 0.5,
+        "f1-score": 0.4923599320882852,
+        "support": 598.0
+      },
+      "weighted avg": {
+        "precision": 0.9407053612375701,
+        "recall": 0.9698996655518395,
+        "f1-score": 0.9550794669271085,
+        "support": 598.0
+      }
+    },
+    "end_to_end": {
+      "micro": {
+        "precision": 0.7726396917148363,
+        "recall": 0.7199281867145422,
+        "f1": 0.7453531598513011
+      },
+      "per_triplet_class": {
+        "story:Positive": {
+          "precision": 0.8292682926829268,
+          "recall": 0.85,
+          "f1-score": 0.8395061728395061,
+          "support": 40.0
+        },
+        "story:Negative": {
+          "precision": 0.6818181818181818,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.6976744186046512,
+          "support": 21.0
+        },
+        "story:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "graphics_visuals:Positive": {
+          "precision": 0.8679245283018868,
+          "recall": 0.7419354838709677,
+          "f1-score": 0.8,
+          "support": 62.0
+        },
+        "graphics_visuals:Negative": {
+          "precision": 0.5714285714285714,
+          "recall": 0.47058823529411764,
+          "f1-score": 0.5161290322580645,
+          "support": 17.0
+        },
+        "graphics_visuals:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "gameplay:Positive": {
+          "precision": 0.7701149425287356,
+          "recall": 0.8271604938271605,
+          "f1-score": 0.7976190476190477,
+          "support": 81.0
+        },
+        "gameplay:Negative": {
+          "precision": 0.775,
+          "recall": 0.7045454545454546,
+          "f1-score": 0.7380952380952381,
+          "support": 44.0
+        },
+        "gameplay:Neutral": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1-score": 0.2857142857142857,
+          "support": 5.0
+        },
+        "controls:Positive": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 12.0
+        },
+        "controls:Negative": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 20.0
+        },
+        "controls:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "performance:Positive": {
+          "precision": 0.53125,
+          "recall": 0.8095238095238095,
+          "f1-score": 0.6415094339622641,
+          "support": 21.0
+        },
+        "performance:Negative": {
+          "precision": 0.7692307692307693,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7017543859649122,
+          "support": 31.0
+        },
+        "performance:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "audio:Positive": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8478260869565217,
+          "f1-score": 0.8863636363636364,
+          "support": 46.0
+        },
+        "audio:Negative": {
+          "precision": 0.7777777777777778,
+          "recall": 0.7,
+          "f1-score": 0.7368421052631579,
+          "support": 10.0
+        },
+        "audio:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "bugs_stability:Positive": {
+          "precision": 0.6875,
+          "recall": 1.0,
+          "f1-score": 0.8148148148148148,
+          "support": 11.0
+        },
+        "bugs_stability:Negative": {
+          "precision": 0.8958333333333334,
+          "recall": 0.7818181818181819,
+          "f1-score": 0.8349514563106796,
+          "support": 55.0
+        },
+        "bugs_stability:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "online_multiplayer:Positive": {
+          "precision": 0.5294117647058824,
+          "recall": 0.5294117647058824,
+          "f1-score": 0.5294117647058824,
+          "support": 17.0
+        },
+        "online_multiplayer:Negative": {
+          "precision": 0.84375,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.7605633802816901,
+          "support": 39.0
+        },
+        "online_multiplayer:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.7726396917148363,
+          "recall": 0.7199281867145422,
+          "f1-score": 0.7453531598513011,
+          "support": 557.0
+        },
+        "macro avg": {
+          "precision": 0.5197152210277171,
+          "recall": 0.5061623975329756,
+          "f1-score": 0.506257497584525,
+          "support": 557.0
+        },
+        "weighted avg": {
+          "precision": 0.7518838592141982,
+          "recall": 0.7199281867145422,
+          "f1-score": 0.731171947109253,
+          "support": 557.0
+        }
+      }
+    },
+    "per_aspect": {
+      "story": {
+        "presence": {
+          "0": {
+            "precision": 0.905511811023622,
+            "recall": 0.9504132231404959,
+            "f1-score": 0.9274193548387096,
+            "support": 121.0
+          },
+          "1": {
+            "precision": 0.9178082191780822,
+            "recall": 0.8481012658227848,
+            "f1-score": 0.881578947368421,
+            "support": 79.0
+          },
+          "accuracy": 0.91,
+          "macro avg": {
+            "precision": 0.911660015100852,
+            "recall": 0.8992572444816403,
+            "f1-score": 0.9044991511035654,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9103688922446338,
+            "recall": 0.91,
+            "f1-score": 0.9093123938879457,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.8297872340425532,
+            "recall": 0.975,
+            "f1-score": 0.896551724137931,
+            "support": 40.0
+          },
+          "Negative": {
+            "precision": 0.8181818181818182,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8372093023255814,
+            "support": 21.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8.0
+          },
+          "accuracy": 0.8260869565217391,
+          "macro avg": {
+            "precision": 0.5493230174081237,
+            "recall": 0.6107142857142857,
+            "f1-score": 0.5779203421545042,
+            "support": 69.0
+          },
+          "weighted avg": {
+            "precision": 0.7300479354133379,
+            "recall": 0.8260869565217391,
+            "f1-score": 0.7745429610776007,
+            "support": 69.0
+          }
+        },
+        "end_to_end": {
+          "story:Positive": {
+            "precision": 0.8292682926829268,
+            "recall": 0.85,
+            "f1-score": 0.8395061728395061,
+            "support": 40.0
+          },
+          "story:Negative": {
+            "precision": 0.6818181818181818,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.6976744186046512,
+            "support": 21.0
+          },
+          "story:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8.0
+          },
+          "micro avg": {
+            "precision": 0.765625,
+            "recall": 0.7101449275362319,
+            "f1-score": 0.7368421052631579,
+            "support": 69.0
+          },
+          "macro avg": {
+            "precision": 0.5036954915003695,
+            "recall": 0.5214285714285715,
+            "f1-score": 0.5123935304813858,
+            "support": 69.0
+          },
+          "weighted avg": {
+            "precision": 0.6882451235579549,
+            "recall": 0.7101449275362319,
+            "f1-score": 0.6990059377431583,
+            "support": 69.0
+          }
+        }
+      },
+      "graphics_visuals": {
+        "presence": {
+          "0": {
+            "precision": 0.8188976377952756,
+            "recall": 0.9122807017543859,
+            "f1-score": 0.8630705394190872,
+            "support": 114.0
+          },
+          "1": {
+            "precision": 0.863013698630137,
+            "recall": 0.7325581395348837,
+            "f1-score": 0.7924528301886793,
+            "support": 86.0
+          },
+          "accuracy": 0.835,
+          "macro avg": {
+            "precision": 0.8409556682127063,
+            "recall": 0.8224194206446348,
+            "f1-score": 0.8277616848038832,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.837867543954266,
+            "recall": 0.835,
+            "f1-score": 0.8327049244500118,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.921875,
+            "recall": 0.9516129032258065,
+            "f1-score": 0.9365079365079365,
+            "support": 62.0
+          },
+          "Negative": {
+            "precision": 0.7777777777777778,
+            "recall": 0.8235294117647058,
+            "f1-score": 0.8,
+            "support": 17.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3.0
+          },
+          "accuracy": 0.8902439024390244,
+          "macro avg": {
+            "precision": 0.5665509259259259,
+            "recall": 0.5917141049968374,
+            "f1-score": 0.5788359788359788,
+            "support": 82.0
+          },
+          "weighted avg": {
+            "precision": 0.8582740514905149,
+            "recall": 0.8902439024390244,
+            "f1-score": 0.8739450251645374,
+            "support": 82.0
+          }
+        },
+        "end_to_end": {
+          "graphics_visuals:Positive": {
+            "precision": 0.8679245283018868,
+            "recall": 0.7419354838709677,
+            "f1-score": 0.8,
+            "support": 62.0
+          },
+          "graphics_visuals:Negative": {
+            "precision": 0.5714285714285714,
+            "recall": 0.47058823529411764,
+            "f1-score": 0.5161290322580645,
+            "support": 17.0
+          },
+          "graphics_visuals:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3.0
+          },
+          "micro avg": {
+            "precision": 0.782608695652174,
+            "recall": 0.6585365853658537,
+            "f1-score": 0.7152317880794702,
+            "support": 82.0
+          },
+          "macro avg": {
+            "precision": 0.4797843665768194,
+            "recall": 0.4041745730550284,
+            "f1-score": 0.43870967741935485,
+            "support": 82.0
+          },
+          "weighted avg": {
+            "precision": 0.774702517914667,
+            "recall": 0.6585365853658537,
+            "f1-score": 0.7118804091266719,
+            "support": 82.0
+          }
+        }
+      },
+      "gameplay": {
+        "presence": {
+          "0": {
+            "precision": 0.5555555555555556,
+            "recall": 0.5681818181818182,
+            "f1-score": 0.5617977528089888,
+            "support": 44.0
+          },
+          "1": {
+            "precision": 0.8774193548387097,
+            "recall": 0.8717948717948718,
+            "f1-score": 0.8745980707395499,
+            "support": 156.0
+          },
+          "accuracy": 0.805,
+          "macro avg": {
+            "precision": 0.7164874551971326,
+            "recall": 0.7199883449883451,
+            "f1-score": 0.7181979117742694,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8066093189964159,
+            "recall": 0.805,
+            "f1-score": 0.8057820007948265,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.9102564102564102,
+            "recall": 0.8765432098765432,
+            "f1-score": 0.8930817610062893,
+            "support": 81.0
+          },
+          "Negative": {
+            "precision": 0.8,
+            "recall": 0.9090909090909091,
+            "f1-score": 0.851063829787234,
+            "support": 44.0
+          },
+          "Neutral": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1-score": 0.2857142857142857,
+            "support": 5.0
+          },
+          "accuracy": 0.8615384615384616,
+          "macro avg": {
+            "precision": 0.7367521367521368,
+            "recall": 0.6618780396558174,
+            "f1-score": 0.6766199588359364,
+            "support": 130.0
+          },
+          "weighted avg": {
+            "precision": 0.8571597633136094,
+            "recall": 0.8615384615384616,
+            "f1-score": 0.8555000198516859,
+            "support": 130.0
+          }
+        },
+        "end_to_end": {
+          "gameplay:Positive": {
+            "precision": 0.7701149425287356,
+            "recall": 0.8271604938271605,
+            "f1-score": 0.7976190476190477,
+            "support": 81.0
+          },
+          "gameplay:Negative": {
+            "precision": 0.775,
+            "recall": 0.7045454545454546,
+            "f1-score": 0.7380952380952381,
+            "support": 44.0
+          },
+          "gameplay:Neutral": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1-score": 0.2857142857142857,
+            "support": 5.0
+          },
+          "micro avg": {
+            "precision": 0.7674418604651163,
+            "recall": 0.7615384615384615,
+            "f1-score": 0.7644787644787645,
+            "support": 130.0
+          },
+          "macro avg": {
+            "precision": 0.681704980842912,
+            "recall": 0.5772353161242051,
+            "f1-score": 0.6071428571428572,
+            "support": 130.0
+          },
+          "weighted avg": {
+            "precision": 0.7613793103448275,
+            "recall": 0.7615384615384615,
+            "f1-score": 0.7577838827838829,
+            "support": 130.0
+          }
+        }
+      },
+      "controls": {
+        "presence": {
+          "0": {
+            "precision": 0.9759036144578314,
+            "recall": 0.9700598802395209,
+            "f1-score": 0.972972972972973,
+            "support": 167.0
+          },
+          "1": {
+            "precision": 0.8529411764705882,
+            "recall": 0.8787878787878788,
+            "f1-score": 0.8656716417910447,
+            "support": 33.0
+          },
+          "accuracy": 0.955,
+          "macro avg": {
+            "precision": 0.9144223954642098,
+            "recall": 0.9244238795136999,
+            "f1-score": 0.9193223073820089,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9556148121899364,
+            "recall": 0.955,
+            "f1-score": 0.9552682533279548,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.7857142857142857,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.8461538461538461,
+            "support": 12.0
+          },
+          "Negative": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.8787878787878788,
+          "macro avg": {
+            "precision": 0.5776942355889724,
+            "recall": 0.6055555555555555,
+            "f1-score": 0.5897435897435898,
+            "support": 33.0
+          },
+          "weighted avg": {
+            "precision": 0.859876965140123,
+            "recall": 0.8787878787878788,
+            "f1-score": 0.8671328671328672,
+            "support": 33.0
+          }
+        },
+        "end_to_end": {
+          "controls:Positive": {
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.7692307692307693,
+            "support": 12.0
+          },
+          "controls:Negative": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 20.0
+          },
+          "controls:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.7647058823529411,
+            "recall": 0.7878787878787878,
+            "f1-score": 0.7761194029850746,
+            "support": 33.0
+          },
+          "macro avg": {
+            "precision": 0.5047619047619047,
+            "recall": 0.5444444444444444,
+            "f1-score": 0.5230769230769231,
+            "support": 33.0
+          },
+          "weighted avg": {
+            "precision": 0.7445887445887446,
+            "recall": 0.7878787878787878,
+            "f1-score": 0.7645687645687647,
+            "support": 33.0
+          }
+        }
+      },
+      "performance": {
+        "presence": {
+          "0": {
+            "precision": 0.9148936170212766,
+            "recall": 0.9214285714285714,
+            "f1-score": 0.9181494661921709,
+            "support": 140.0
+          },
+          "1": {
+            "precision": 0.8135593220338984,
+            "recall": 0.8,
+            "f1-score": 0.8067226890756303,
+            "support": 60.0
+          },
+          "accuracy": 0.885,
+          "macro avg": {
+            "precision": 0.8642264695275874,
+            "recall": 0.8607142857142858,
+            "f1-score": 0.8624360776339006,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8844933285250631,
+            "recall": 0.885,
+            "f1-score": 0.8847214330572086,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.6666666666666666,
+            "recall": 0.9523809523809523,
+            "f1-score": 0.7843137254901961,
+            "support": 21.0
+          },
+          "Negative": {
+            "precision": 0.9629629629629629,
+            "recall": 0.8387096774193549,
+            "f1-score": 0.896551724137931,
+            "support": 31.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6.0
+          },
+          "accuracy": 0.7931034482758621,
+          "macro avg": {
+            "precision": 0.5432098765432098,
+            "recall": 0.5970302099334357,
+            "f1-score": 0.5602884832093756,
+            "support": 58.0
+          },
+          "weighted avg": {
+            "precision": 0.756066411238825,
+            "recall": 0.7931034482758621,
+            "f1-score": 0.7631670979925858,
+            "support": 58.0
+          }
+        },
+        "end_to_end": {
+          "performance:Positive": {
+            "precision": 0.53125,
+            "recall": 0.8095238095238095,
+            "f1-score": 0.6415094339622641,
+            "support": 21.0
+          },
+          "performance:Negative": {
+            "precision": 0.7692307692307693,
+            "recall": 0.6451612903225806,
+            "f1-score": 0.7017543859649122,
+            "support": 31.0
+          },
+          "performance:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6.0
+          },
+          "micro avg": {
+            "precision": 0.6379310344827587,
+            "recall": 0.6379310344827587,
+            "f1-score": 0.6379310344827587,
+            "support": 58.0
+          },
+          "macro avg": {
+            "precision": 0.4334935897435897,
+            "recall": 0.4848950332821301,
+            "f1-score": 0.4477546066423921,
+            "support": 58.0
+          },
+          "weighted avg": {
+            "precision": 0.6034897214854111,
+            "recall": 0.6379310344827587,
+            "f1-score": 0.6073462772089625,
+            "support": 58.0
+          }
+        }
+      },
+      "audio": {
+        "presence": {
+          "0": {
+            "precision": 0.9455782312925171,
+            "recall": 0.9858156028368794,
+            "f1-score": 0.9652777777777778,
+            "support": 141.0
+          },
+          "1": {
+            "precision": 0.9622641509433962,
+            "recall": 0.864406779661017,
+            "f1-score": 0.9107142857142857,
+            "support": 59.0
+          },
+          "accuracy": 0.95,
+          "macro avg": {
+            "precision": 0.9539211911179566,
+            "recall": 0.9251111912489483,
+            "f1-score": 0.9379960317460317,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9505005775895264,
+            "recall": 0.95,
+            "f1-score": 0.9491815476190476,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.9375,
+            "recall": 0.9782608695652174,
+            "f1-score": 0.9574468085106383,
+            "support": 46.0
+          },
+          "Negative": {
+            "precision": 0.8888888888888888,
+            "recall": 0.8,
+            "f1-score": 0.8421052631578947,
+            "support": 10.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.9298245614035088,
+          "macro avg": {
+            "precision": 0.6087962962962963,
+            "recall": 0.5927536231884059,
+            "f1-score": 0.5998506905561777,
+            "support": 57.0
+          },
+          "weighted avg": {
+            "precision": 0.9125243664717348,
+            "recall": 0.9298245614035088,
+            "f1-score": 0.9204141372468124,
+            "support": 57.0
+          }
+        },
+        "end_to_end": {
+          "audio:Positive": {
+            "precision": 0.9285714285714286,
+            "recall": 0.8478260869565217,
+            "f1-score": 0.8863636363636364,
+            "support": 46.0
+          },
+          "audio:Negative": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7,
+            "f1-score": 0.7368421052631579,
+            "support": 10.0
+          },
+          "audio:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.9019607843137255,
+            "recall": 0.8070175438596491,
+            "f1-score": 0.8518518518518519,
+            "support": 57.0
+          },
+          "macro avg": {
+            "precision": 0.5687830687830688,
+            "recall": 0.5159420289855072,
+            "f1-score": 0.5410685805422647,
+            "support": 57.0
+          },
+          "weighted avg": {
+            "precision": 0.8858256752993595,
+            "recall": 0.8070175438596491,
+            "f1-score": 0.8445815495676993,
+            "support": 57.0
+          }
+        }
+      },
+      "bugs_stability": {
+        "presence": {
+          "0": {
+            "precision": 0.9398496240601504,
+            "recall": 0.9615384615384616,
+            "f1-score": 0.9505703422053232,
+            "support": 130.0
+          },
+          "1": {
+            "precision": 0.9253731343283582,
+            "recall": 0.8857142857142857,
+            "f1-score": 0.9051094890510949,
+            "support": 70.0
+          },
+          "accuracy": 0.935,
+          "macro avg": {
+            "precision": 0.9326113791942543,
+            "recall": 0.9236263736263737,
+            "f1-score": 0.9278399156282091,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9347828526540232,
+            "recall": 0.935,
+            "f1-score": 0.9346590436013433,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.6111111111111112,
+            "recall": 1.0,
+            "f1-score": 0.7586206896551724,
+            "support": 11.0
+          },
+          "Negative": {
+            "precision": 1.0,
+            "recall": 0.8909090909090909,
+            "f1-score": 0.9423076923076923,
+            "support": 55.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.8955223880597015,
+          "macro avg": {
+            "precision": 0.5370370370370371,
+            "recall": 0.6303030303030303,
+            "f1-score": 0.5669761273209549,
+            "support": 67.0
+          },
+          "weighted avg": {
+            "precision": 0.9212271973466003,
+            "recall": 0.8955223880597015,
+            "f1-score": 0.8980858307929847,
+            "support": 67.0
+          }
+        },
+        "end_to_end": {
+          "bugs_stability:Positive": {
+            "precision": 0.6875,
+            "recall": 1.0,
+            "f1-score": 0.8148148148148148,
+            "support": 11.0
+          },
+          "bugs_stability:Negative": {
+            "precision": 0.8958333333333334,
+            "recall": 0.7818181818181819,
+            "f1-score": 0.8349514563106796,
+            "support": 55.0
+          },
+          "bugs_stability:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.84375,
+            "recall": 0.8059701492537313,
+            "f1-score": 0.8244274809160306,
+            "support": 67.0
+          },
+          "macro avg": {
+            "precision": 0.5277777777777778,
+            "recall": 0.5939393939393939,
+            "f1-score": 0.5499220903751648,
+            "support": 67.0
+          },
+          "weighted avg": {
+            "precision": 0.8482587064676618,
+            "recall": 0.8059701492537313,
+            "f1-score": 0.8191834785082139,
+            "support": 67.0
+          }
+        }
+      },
+      "online_multiplayer": {
+        "presence": {
+          "0": {
+            "precision": 0.8904109589041096,
+            "recall": 0.9629629629629629,
+            "f1-score": 0.9252669039145908,
+            "support": 135.0
+          },
+          "1": {
+            "precision": 0.9074074074074074,
+            "recall": 0.7538461538461538,
+            "f1-score": 0.8235294117647058,
+            "support": 65.0
+          },
+          "accuracy": 0.895,
+          "macro avg": {
+            "precision": 0.8989091831557585,
+            "recall": 0.8584045584045583,
+            "f1-score": 0.8743981578396482,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8959348046676814,
+            "recall": 0.895,
+            "f1-score": 0.8922022189658781,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.7272727272727273,
+            "recall": 0.9411764705882353,
+            "f1-score": 0.8205128205128205,
+            "support": 17.0
+          },
+          "Negative": {
+            "precision": 0.8974358974358975,
+            "recall": 0.8974358974358975,
+            "f1-score": 0.8974358974358975,
+            "support": 39.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "accuracy": 0.8360655737704918,
+          "macro avg": {
+            "precision": 0.5415695415695416,
+            "recall": 0.6128707893413776,
+            "f1-score": 0.5726495726495727,
+            "support": 61.0
+          },
+          "weighted avg": {
+            "precision": 0.7764530551415797,
+            "recall": 0.8360655737704918,
+            "f1-score": 0.8024379991593107,
+            "support": 61.0
+          }
+        },
+        "end_to_end": {
+          "online_multiplayer:Positive": {
+            "precision": 0.5294117647058824,
+            "recall": 0.5294117647058824,
+            "f1-score": 0.5294117647058824,
+            "support": 17.0
+          },
+          "online_multiplayer:Negative": {
+            "precision": 0.84375,
+            "recall": 0.6923076923076923,
+            "f1-score": 0.7605633802816901,
+            "support": 39.0
+          },
+          "online_multiplayer:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "micro avg": {
+            "precision": 0.72,
+            "recall": 0.5901639344262295,
+            "f1-score": 0.6486486486486487,
+            "support": 61.0
+          },
+          "macro avg": {
+            "precision": 0.4577205882352941,
+            "recall": 0.40723981900452494,
+            "f1-score": 0.4299917149958575,
+            "support": 61.0
+          },
+          "weighted avg": {
+            "precision": 0.6869877049180327,
+            "recall": 0.5901639344262295,
+            "f1-score": 0.6338028169014085,
+            "support": 61.0
+          }
+        }
+      }
+    },
+    "error_examples": [
+      {
+        "chunk_id": "steam:1030300:235280438:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "to be honest, this game was amazing, i loved the designs, the bosses, the charcters and the music. after nearly 200 hours of gameplay, you start to love these kind of game. overall this was a very fun experience, and i would do it all over again.\n10/10",
+        "gold_evidence": "i loved the designs, the bosses, the charcters and the music"
+      },
+      {
+        "chunk_id": "steam:1056960:221072825:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "BOOORING!!! I don't recommend it for the gameplay overall, just the story... I just played because I was curious of the story.\nIt has nothing to do with previous games, just same universe. Bad jokes....like very bad.\nOnly 6 main missions ... 2 of them at the end.\nYou have to level up character to do main story missions...side quest are boring, repetitive...go there, come back, go again there over and over again ... scaling enemies with your character, stealth it's almost dead, only run and gun.",
+        "gold_evidence": "I don't recommend it for the gameplay overall, just the story... I just played because I was curious of the story.\nIt has nothing to do with previous games, just same universe. Bad jokes....like very bad."
+      },
+      {
+        "chunk_id": "steam:1056960:228137903:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Gameplay is passable up to a point\nNo sensible story\nDoes not hold a candle to previous Wolfenstein titles\n\nCompletionist perspective onwards:\nGame has MP locked achievements while having defect MP (unless you have a dedicated friend to play with)\nConstant stutters and game freezes post lv 50/100\nLittle to none end game content besides farming the maps for weapon mastery / redundant weapon upgrades / achievements\n\nVerdict: Don't bother, play the previous Wolfenstein titles if you're itching for an SP arcade shooter\nDon't spoil your memories of the franchise if you have already",
+        "gold_evidence": "No sensible story"
+      },
+      {
+        "chunk_id": "steam:1056960:230922143:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "I really wanted to give a fair chance to this game and the whole reboot series as well. I was willing to ignore the weak, weird story of Youngblood and the so called \"woke\" elements and I was actually looking forward for some decent graphics and 80's aesthetics, but the game is so poorly optimized that I'm keep crashing with my RX 7800 XT even though I have lowered the graphics to medium and I manually turned off raytracing, so quite frankly, I'm not going to spend an entire evening to try fix a broken code in the text editor that the devs left unpatched, so I watching the recap of this game and... I didn't miss out on a whole lot. So, I'll only consider the first two games canon and that's it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:234021722:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "actual slop thats been disguised as a wolfenstein game.\n\ncrappy story, cringe voicelines, and buggy arcade-style gameplay\n\nthis game is better suited for a dave and busters videogame machine opposed to a downloadable PC game\n\nfurthermore, the enemies are EXTREMELY difficult to solo (you can only play the game solo since multiplayer servers were shut down) and the game is not worth the effort.\n\ndon't buy this game",
+        "gold_evidence": "crappy story, cringe voicelines"
+      },
+      {
+        "chunk_id": "steam:1091500:233597659:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "The game offers such deep immersion that I lose track of missions while simply exploring the detailed urban environment.\n\nHighlights: A living open world, visual and audio details that capture your attention at every turn.\nFreedom of exploration, wandering aimlessly becomes more appealing than following the main storyline to me.\nHigh graphical demands, requires a powerful computer to run with maximum quality and fluidity.\n\nHighly recommended if you have a good PC to play it properly.",
+        "gold_evidence": "more appealing than following the main storyline to me."
+      },
+      {
+        "chunk_id": "steam:1091500:236879075:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "i wish the open work was better free play\nlike just do as you like ....1).Story mode 2) Free play mode ....A true free world play with a story\ni could build my own story with in the game diff then it all together",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1091500:236979029:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Negative",
+        "text": "This is everything a game should be. I never played this back when it released in 2020, but got it discounted here in 2026 and think it's maybe the best money I've ever spent on a game. I haven't cared this much about a game story since Baldur's Gate 3. Terrific in all aspects, good performance and no bugs (6 years after release...), and a total joy to play. This is why we love games.",
+        "gold_evidence": "I haven't cared this much about a game story since Baldur's Gate 3."
+      },
+      {
+        "chunk_id": "steam:1145350:236577767:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Lots of fun,\nlots of content (i just finished main story and am at around 40hrs of gameplay),\nlots of variety in builds,\nART IS BEAUTIFUL, so is the music\nGameplay loop can get a bit repetitive at times but if you pace yourself you should be fine...\nWould recommend point blank.",
+        "gold_evidence": "i just finished main story"
+      },
+      {
+        "chunk_id": "steam:1174180:237135002:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "Enjoyed playing the multiplayer as a single player game better than I did following the story.\n\nDutch's plan all along was to gatekeep the good content away whilst you faff around following failed actors gibbering on whilst slowly riding horses to a set-piece shoot-out.",
+        "gold_evidence": "following failed actors gibbering on"
+      },
+      {
+        "chunk_id": "steam:1249970:232679217:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "If developres won't fix optimization this game worth nothing\nMost drawbacks are random ctd's and connection issues\nThis game have beatufil and interesting map to discover especially if u turn off interface and use cockpit view\nPhysics is pretty decent especially with tweaks\nEnough good cars\nBut not interesting at all plot and no feeling of competition\nOnly competition available is vs other real players but u can get disconnected any f random moment or get error and ctd and this making me go insane especially on some long runs like crown jewels",
+        "gold_evidence": "not interesting at all plot"
+      },
+      {
+        "chunk_id": "steam:1294810:168177694:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "The game is a lot better after Arkane's death throes patch, RIP Arkane Austin. I would still wait for a sale on this, but it's a fun bit of vamp slaying and with 4 unique characters it offers some replayability. Definitely good fun with friends!",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1294810:173102896:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "It hurts to play this in this state. The only other titles that managed to evoke this feeling are The Secret World and maybe Generation Zero.\nThe environment is great, encountering vampires is too.\nThe first blatant things you'll notice are the terrible human enemy a.i., and your character's out of place voice lines.\n\nBut I'm having a good time. Around every corner you'll see the intentions of the team for the final product, and you might still be able to get close to it with a group of friends.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1903340:235090178:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "One of the worst games I've played. The combat is boring and uneventful, the dialoges can't be partially skipped (you either skip the whole thing or watch all of it), the \"open world\" sucks. You basicly feel like trapped, with only one way to go forward. I tried to come back to this game many times but each and every one I get the same feelings. There are things that this game does well too: amazing graphics, chsrming ambiance and top tier music.\nOverall tho the experiance is lacking compared to the hype.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:2246340:236878486:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "The music, art direction, and gameplay are peak imo. Some of the most fun I've had playing with friends (we're all big Monster Hunter fans since World/Iceborne).\n\nI love the ecology/speculative evolution aspect of the Monster Hunter games, and it feels like they really fleshed that out here. The environments and ecosystems feel alive and it's beautiful.",
+        "gold_evidence": "I love the ecology/speculative evolution aspect of the Monster Hunter games, and it feels like they really fleshed that out here."
+      },
+      {
+        "chunk_id": "steam:2246340:237120588:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Not Recommended to Non-Monster Hunter Players, for now. It isn't very coop friendly like previous titles, requiring massive hurdles to jump through only to be denied because someone is a few steps ahead in the main storyline. Haven't gotten to end of Base game at time of posting. With the Expansion coming out, may want to give this one a pass until there is a sale for the whole product or a massive overhaul on how connecting to your friends work",
+        "gold_evidence": "a few steps ahead in the main storyline."
+      },
+      {
+        "chunk_id": "steam:246090:127625770:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I found the workings of the game confusing. You never get told how to succeed and most importantly, you can never control the characters, most of the time they are stuck in space until they die from lack of oxygen. And even after creating a room with the seed and an airlock, that leaves scarce ore to create a refinery. And it also does not help that there is no way to save the game. This seems like an early release, so i will gladly revise it when the game is improved, playing it is extremely unfair ton those playing it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:271590:234664875:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Negative",
+        "text": "As someone who has played this game, even though I wouldn't normally spend this much time on games in this genre, it's really fun to mess around with other people. I haven't finished the story yet; I won't be judging it in my review 8/10",
+        "gold_evidence": "I haven't finished the story yet; I won't be judging it in my review"
+      },
+      {
+        "chunk_id": "steam:285190:228705014:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "Graphics: Good\n\nGameplay: It's just gameplay\n\nAudio: Good\n\nAudience: Teens; Adults\n\nPC Requirements: Decent\n\nDifficulty: Easy to learn / Hard to master\n\nGrind: Only if u care about leaderboards/ranks\n\nStory: Average\n\nGame Time: Average\n\nPrice: If u have some spare money left\n\nBugs: Never heard of\n\n? / 10: 7",
+        "gold_evidence": "Story: Average"
+      },
+      {
+        "chunk_id": "steam:285190:232007516:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "Graphics: Decent\n\nGameplay: Watch paint dry instead\n\nAudio: Good\n\nAudience: Adults\n\nPC Requirements: Potato\n\nGame Size: Workable\n\nDifficulty: Easy to learn / Hard to master\n\nGrind: Nothing to grind\n\nStory: Average\n\nGame Time: Short\n\nPrice: You could also just burn your money\n\nBugs: Can get annoying\n\n2 / 10: 2",
+        "gold_evidence": "Story: Average"
+      },
+      {
+        "chunk_id": "steam:285190:232603946:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "It's pretty but shallow. almost 10 years old at the time of me writing this and there are still insanely inconvenient bugs associated with even just single player experience.\n\nWhenever you beat a Campaign mission, you get rewards for it but the rewards arent shown to you until the next time you launch the game, and the pop up that shows you what you unlocked is hard stuck on the screen without allowing you to do anything else unless you Alt+F4 out of the game and relaunch. An absurd absurd bug that absolutely should not exist in a game with this much obvious budget allocated to it. This is the thing that RTS devs just don't understand. We don't want \"production value\" from RTS. we want Clear visuals, Clean responsive controls over our units, and a solid connection to multiplayer.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:367520:236368691:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Hollow Knight is not just a game; it is a descent into a haunting, melancholic dream.\n\nTeam Cherry didn't just build a world; they unearthed a vast, forgotten kingdom. Hallownest is a masterclass in atmospheric storytelling, where every rain-soaked ruin in the City of Tears and every shadow in Deepnest echoes with lost glory, backed by Christopher Larkin’s achingly gorgeous score.\n\nThe gameplay is surgical perfection. Tight, responsive controls, the hypnotic satisfaction of nail-pogoing, and boss fights that demand absolute respect and rhythm. You get lost, you adapt, you overcome.\n\nAn untouchable monument of the Metroidvania genre and an absolute work of art. 10/10.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:367520:236538934:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "100s of hours on this game on console, replaying it just for the achivements on steam. What can I say other than \"this is masterpiece.\"\n\nIt is a genuine brilliant combination of art, game design, visual storytelling, mechanical complexity, and difficulty. There is no doubt this is a work of Art that has and will continue to inspire so many more games in this genre.",
+        "gold_evidence": "brilliant combination of art, game design, visual storytelling, mechanical complexity, and difficulty"
+      },
+      {
+        "chunk_id": "steam:3764200:236943409:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "My amazing Girlfriend bought this for me yesterday for National Boyfriends day! I finished it already and I'm starting an Insane Difficulty Run... but to be fair i am a Resident Evil Veteran lol. The story is okay i guess, it's really nostalgic the further you go. my advice is buy the game, and take it slow.",
+        "gold_evidence": "The story is okay i guess, it's really nostalgic the further you go."
+      },
+      {
+        "chunk_id": "steam:3764200:237152944:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Well done Capcom!! The RE Engine gets better with every Resident Evil. Liking Grace she really sales the terror of horror. Angela Sant'Albano voice actress for Grace Ashcroft did an outstanding job capturing the paralyzing fear with in the Rhodes Hill Chronic Care Center. Gameplay gets better with each installment as well.It is a slightly reboot in my opinion.",
+        "gold_evidence": "Liking Grace she really sales the terror of horror."
+      },
+      {
+        "chunk_id": "steam:952070:215584784:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Negative",
+        "text": "Firstly it is not a story game, and it is not even a cool arcade zombie game, it is a coop multiplayer game with bad graphics and boring gameplay , so boring you might want to delete it after your first game or even before finishing it. So simply, waste of money. Go buy resident evil 2 instead.",
+        "gold_evidence": "it is not a story game"
+      },
+      {
+        "chunk_id": "steam:1030300:235280438:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "to be honest, this game was amazing, i loved the designs, the bosses, the charcters and the music. after nearly 200 hours of gameplay, you start to love these kind of game. overall this was a very fun experience, and i would do it all over again.\n10/10",
+        "gold_evidence": "i loved the designs, the bosses, the charcters and the music"
+      },
+      {
+        "chunk_id": "steam:1030300:235789701:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "AMAZING game, this game has openend up my eyes. the way the world is so colorfoul the movement is so smooth and the weapons are so easy to use makes this game amazing, it has a balance between hard bosses and easy to beat bosses. the map is huge and there is so much to do with so many hidden areas.\n10/10",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1030300:236420875:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Halh way through the game, fantastic gameplay, visuals and plays like butter smooth in my potato PC\nTeam cherry has made another masterpiece!!!!",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:230922143:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I really wanted to give a fair chance to this game and the whole reboot series as well. I was willing to ignore the weak, weird story of Youngblood and the so called \"woke\" elements and I was actually looking forward for some decent graphics and 80's aesthetics, but the game is so poorly optimized that I'm keep crashing with my RX 7800 XT even though I have lowered the graphics to medium and I manually turned off raytracing, so quite frankly, I'm not going to spend an entire evening to try fix a broken code in the text editor that the devs left unpatched, so I watching the recap of this game and... I didn't miss out on a whole lot. So, I'll only consider the first two games canon and that's it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:233087617:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Positives:\nIt runs well enough on my linux system.\nIt looks and sounds decent.\n\nNegatives:\n\nProtagonist characters are particully unlikeable ... and thats theb most G rated way I can describe them.\n\nThe game has been game-ified giving every character levels so I can see higher level enemys becoming bullet sponges and starts early on with the rock paper sissiors mechanic to deal with differt types of armor.\n\nIf you are not playing in co-op (which is paid DLC because if course it is) then expect to deal with a potentionally stupid robot partner.\n\nIt's a full priced game with premium currency ... yeah, no. I should not need to explain why that is bad.\n\nThe only time I would suggest a purchase is if you are a fan of the series + completed all the other options + this has a large discount and even then maybe sleep on it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1091500:237099475:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Probably in my top five favorite games of all time. I've played through this game over 5 times on my Xbox One and finally got a pc a few days ago and- WHEW! what a difference! like playing the game for the first time all over again! (except without crashing at the end of the prologue this time haha!)\n\nI had always seen videos of the newer updates but i never quite understood just how different it really is. The game is also beautiful on what from I understand is a relatively outdated pc. It really puts Xbox to shame. It makes me sad that I wasted so many years playing an inferior version of what my dream game has always been!",
+        "gold_evidence": "The game is also beautiful"
+      },
+      {
+        "chunk_id": "steam:1091500:237166160:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Very hard to get into, so much neon its disorienting. Slang makes the conversations hard to understand at first. User interface is not intuitive - had to google how to buy ammo and how to fit a silencer. Still not sure what quick-hack components are for.\n\nHaving said all that, once you get the hang of things its a great game. Very good story, worth playing.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1145350:234572664:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "Great music, great characters, great gameplay.\n\nThere were a couple places where the story and gameplay pulled from Hades in ways that made sense in the original game and less sense here, but it's still a fabulous game.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1145350:236577767:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Lots of fun,\nlots of content (i just finished main story and am at around 40hrs of gameplay),\nlots of variety in builds,\nART IS BEAUTIFUL, so is the music\nGameplay loop can get a bit repetitive at times but if you pace yourself you should be fine...\nWould recommend point blank.",
+        "gold_evidence": "ART IS BEAUTIFUL"
+      },
+      {
+        "chunk_id": "steam:1145350:236931592:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "absolute masterclass in game design. every level, mechanic, illustration, music note, and line of dialogue was so intentionally crafted to make hades ii the perfect sequel to a perfect game. supergiant has done it again!",
+        "gold_evidence": "every level, mechanic, illustration, music note, and line of dialogue was so intentionally crafted"
+      },
+      {
+        "chunk_id": "steam:1174180:233991469:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "I recommend the game but I disagree with the contention that the game is a masterpiece. It's a *cinematic* masterpiece but the gameplay and controls leave a lot to be desired.",
+        "gold_evidence": "It's a *cinematic* masterpiece"
+      },
+      {
+        "chunk_id": "steam:1174180:237058469:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "It's very fun and its a great open world game and runs well on lower end gaming computers (I have all the graphics on ultra). It's more of a learning curve and definitly not a western GTA",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:209982995:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Awesome game, love the driving, the open world is so incredibly detailed which is amazing. So much cool stuff to find. Better than expected considering the negativity against it. The physics and sound is best in house of the open world racers imo.",
+        "gold_evidence": "the open world is so incredibly detailed"
+      },
+      {
+        "chunk_id": "steam:1249970:216208157:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I have a very good computer, and the game without ray tracing performs worse than games with ray tracing at maximum settings. The gameplay is okay, but due to optimization, it's unplayable unless you don't mind lag, maximum GPU usage, or minimum graphics settings.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:222243806:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "I would really like to play this game but it keeps crashing all the time and its really frustraiting when the game crashes in the middle of a 250k delivery. The game runs over all very poorly and doesnt look that good. Some of the car sounds are really good some are really bad. In the few hours I saw 3 or 4 other drivers on the map so doing a multiplayer race is impossible. Needs quite a lot of fixing so i would still wait with a potentional purchase.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:229061501:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Yea there isn't much to say other than that this game is bad.\n\n-The game doesn't look that great, and the optimization is terrible.\n-Uninteresting and confusing UI.\n-Some car models are reused from older TDU games, which are just incorrect and look horrible.\n-No properties to buy.\n-Open world that feels so dead.\n-A soundtrack that ends up becoming background.\n-Battle Pass and digital currency? WTF!\n\nI can't say this is all KT Racing's fault since Nacon is a really ♥♥♥♥♥♥ publisher, but what I can say is to avoid this game. Its just not worth it at all.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:232679217:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "If developres won't fix optimization this game worth nothing\nMost drawbacks are random ctd's and connection issues\nThis game have beatufil and interesting map to discover especially if u turn off interface and use cockpit view\nPhysics is pretty decent especially with tweaks\nEnough good cars\nBut not interesting at all plot and no feeling of competition\nOnly competition available is vs other real players but u can get disconnected any f random moment or get error and ctd and this making me go insane especially on some long runs like crown jewels",
+        "gold_evidence": "This game have beatufil and interesting map to discover"
+      },
+      {
+        "chunk_id": "steam:1272080:232722299:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Credit where credit is due because Payday 3 has had such a turnaround from when it released.\n\nIt brings all the adrenaline and edge of your seat action of Payday 2 with EXTREMELY satisfying gunplay. It looks beautiful, it runs well, it's polished, the difficulty is rewarding, the music is brilliant, stealth is miles above PD2 in terms of complexity. And the talents and level reworks they've been doing have hit the sweet spot.\n\nIt feels unfair to compare the amount of content in this to its predecessor, when 2 has a solid 10 years worth of releases over Payday 3.\n\nFor a game that's been out nearly 3 years and had a rocky start, it's in a good place right now.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1272080:237168239:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Broken junk. Still has bugs that render it unplayable years after launch.\nExtremely limited DLC-locked pool of guns.\nThe skill system is atrocious with no depth for builds.\nIt looks and plays like a parody of Payday 2.",
+        "gold_evidence": "It looks and plays like a parody of Payday 2"
+      },
+      {
+        "chunk_id": "steam:1294810:173102896:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "It hurts to play this in this state. The only other titles that managed to evoke this feeling are The Secret World and maybe Generation Zero.\nThe environment is great, encountering vampires is too.\nThe first blatant things you'll notice are the terrible human enemy a.i., and your character's out of place voice lines.\n\nBut I'm having a good time. Around every corner you'll see the intentions of the team for the final product, and you might still be able to get close to it with a group of friends.",
+        "gold_evidence": "The environment is great"
+      },
+      {
+        "chunk_id": "steam:1294810:177887688:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "The game is actually decent. I've only played a little bit though. Plan on playing more.\n\nIts Bethesda's version of Far Cry and Generation Zero with Dishonored artwork. Has generic FPS looter/shooter formula, but it works. I have gotten a couple crashes, but nothing gamebreaking. Combat is somewhat fluid, story is generic.\n\nI do wish we still got the DLC's :(",
+        "gold_evidence": "with Dishonored artwork"
+      },
+      {
+        "chunk_id": "steam:1294810:183662160:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "These are the guys who made Dishonored and Prey, both games with some of the best exploration and environmental storytelling there is, especially Prey. This game still has all those things: a great atmosphere, great exploration that rewards you with well written lore, great soundtrack, etc. It's definitely worth it if you liked their previous games for that reason. I think only Arkane could make a vampire game actually well written and not cringe. Is it a masterpiece like Prey? No. But its closer to it than any other game out there, even if it was originally meant to be a co-op game...\n\nNow Microsoft has one less studio, a studio who could have released a console-selling game for them, no longer contributing to their still pathetic excuse of a game library.",
+        "gold_evidence": "a great atmosphere"
+      },
+      {
+        "chunk_id": "steam:1294810:222148648:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Negative",
+        "text": "Visually incredible, but besides that it's clearly unfinished. Plus the writing is awful & the music is obnoxious.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1903340:235947969:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Overrated af honestly. I was forcing myself through several hours thinking it will get better. But it just remains stale and repetitive. Throwing in some difficult encounters and platforming to excuse it's playtime outside of cutscenes and combat. Fine game. it runs well, has nice music and it's pretty. That's about the only positives I can think of.\n\n\"I did not care for it\" - Peter Griffin",
+        "gold_evidence": "it's pretty"
+      },
+      {
+        "chunk_id": "steam:1903340:237483005:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "The game looks like it was made for the PS2 when played on the Steam Deck. It also runs worse than a PS2 game. The game stutters, the frame rate was all over the place, the camera tracking was jittery... Whoever decided to label this game as SteamDeck compatible must be on something because it's far from playable.",
+        "gold_evidence": "looks like it was made for the PS2"
+      },
+      {
+        "chunk_id": "steam:1962663:220381719:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "One of the worst FPS shooter games i have ever played. Shaders fail to load, sound glitches, full of cheaters, overall buggy and utter ♥♥♥♥♥. Oh and to put the icing on the cake, the total size is 161 GB, 161!!!!! Personally that alone is ♥♥♥♥♥♥♥ astonishing for a FPS. If you want to play a decent free FPS, download CSGO, it will save your hard drive 100 GB.",
+        "gold_evidence": "Shaders fail to load"
+      },
+      {
+        "chunk_id": "steam:1962663:224451447:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "love the game but the updates and the amount of times this game crashes my pc is disappointing. especially since Im on minimum graphics but I can run rust for 10 hours straight on high settings.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:2246340:235870680:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "This gets a recommendation just on the basis of being a fun action combat game.\n\nAs a Monster Hunter game though, definitely a step down from Monster Hunter World. Looks worse, runs worse and still no seamless co-op.\n\nIf you haven't already, play MHWorld without the DLC then add the Iceborne DLC after.",
+        "gold_evidence": "Looks worse"
+      },
+      {
+        "chunk_id": "steam:2246340:236279511:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Horrible optimization.\nGame thinks I should play it on ultra, but without Frame Generation, the game doesn't reach 30 fps.\nEven on the Lowest Settings it still can't reach 60 fps.\nIt \"easily\" reaches stable ~90 fps with Frame Generation on both ultra and Lowest, but it causes the game to look horrible and it causes me to have a headache after half an hour of playing.\nI sincerly hoped for the updates to make the game \"playable\" for me, but I still need a break every 30 or so minutes.\n\nIt can be a fun game, but please download the demo first and see if you can enjoy the game despite the need for frame generation.",
+        "gold_evidence": "it causes the game to look horrible"
+      },
+      {
+        "chunk_id": "steam:271590:235181495:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "I don't know what it is, but the music, the scripting of the characters, it all feels very real. From something made in 2013, even in 2026, it just feels like a roller coaster of emotion.\n\nWould recommend even 13 years since release (sept 17)",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:282560:156635377:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "The Graphics on this game are nuts and crash the game all the time. I currently have all settings to the lowest possible and still spikes. Too much going on in this roller coaster game.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:285190:215854594:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "Bad core mechanics, constant bugs, horrible UX/UI, painfully slow pacing, a detrimental plot, and terrible voice acting. An absolute mess.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:285190:228456024:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "Sometimes the game is great but I have a high end PC and struggle through some of the campaign missions unless I put the graphics on lowest 1080p and save every couple minutes. First 9 missions rarely crashed, 10+11 so far crashed many times, but low settings seem to help.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:390340:193108492:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "I write this review nearly six years after playing it.\nWhy?\nBecause the pain lingers.....\n\nWhat is good? You can launch it! The game can be launched! 🤯👍\nWhat is bad? Oh boy, everything! 🤬\nWhat is ugly? The graphics. Like someone dipped a PS2 game in Vaseline and said \"Ship it.\" 😒",
+        "gold_evidence": "The graphics. Like someone dipped a PS2 game in Vaseline"
+      }
+    ]
+  },
+  "guarded_dev": {
+    "n_chunks": 200,
+    "excluded_sentiment_pairs": {
+      "Mixed": 51
+    },
+    "aspect_detection": {
+      "0": {
+        "precision": 0.9001937984496124,
+        "recall": 0.936491935483871,
+        "f1-score": 0.9179841897233202,
+        "support": 992.0
+      },
+      "1": {
+        "precision": 0.8890845070422535,
+        "recall": 0.8305921052631579,
+        "f1-score": 0.858843537414966,
+        "support": 608.0
+      },
+      "accuracy": 0.89625,
+      "macro avg": {
+        "precision": 0.894639152745933,
+        "recall": 0.8835420203735145,
+        "f1-score": 0.8884138635691431,
+        "support": 1600.0
+      },
+      "weighted avg": {
+        "precision": 0.895972267714816,
+        "recall": 0.89625,
+        "f1-score": 0.8955107418461455,
+        "support": 1600.0
+      }
+    },
+    "sentiment_gold_aspect": {
+      "Positive": {
+        "precision": 0.8473520249221184,
+        "recall": 0.9379310344827586,
+        "f1-score": 0.8903436988543372,
+        "support": 290.0
+      },
+      "Negative": {
+        "precision": 0.8927038626609443,
+        "recall": 0.8776371308016878,
+        "f1-score": 0.8851063829787233,
+        "support": 237.0
+      },
+      "Neutral": {
+        "precision": 0.3333333333333333,
+        "recall": 0.03333333333333333,
+        "f1-score": 0.06060606060606061,
+        "support": 30.0
+      },
+      "accuracy": 0.8635547576301615,
+      "macro avg": {
+        "precision": 0.6911297403054654,
+        "recall": 0.6163004995392599,
+        "f1-score": 0.6120187141463737,
+        "support": 557.0
+      },
+      "weighted avg": {
+        "precision": 0.8389639186320612,
+        "recall": 0.8635547576301615,
+        "f1-score": 0.8434256144558295,
+        "support": 557.0
+      }
+    },
+    "sentiment_confusion_matrix": {
+      "labels": [
+        "Positive",
+        "Negative",
+        "Neutral"
+      ],
+      "rows": "gold",
+      "columns": "predicted",
+      "values": [
+        [
+          272,
+          17,
+          1
+        ],
+        [
+          28,
+          208,
+          1
+        ],
+        [
+          21,
+          8,
+          1
+        ]
+      ]
+    },
+    "subjectivity_gold_aspect": {
+      "Objective": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Opinionated": {
+        "precision": 0.9698996655518395,
+        "recall": 1.0,
+        "f1-score": 0.9847198641765704,
+        "support": 580.0
+      },
+      "accuracy": 0.9698996655518395,
+      "macro avg": {
+        "precision": 0.48494983277591974,
+        "recall": 0.5,
+        "f1-score": 0.4923599320882852,
+        "support": 598.0
+      },
+      "weighted avg": {
+        "precision": 0.9407053612375701,
+        "recall": 0.9698996655518395,
+        "f1-score": 0.9550794669271085,
+        "support": 598.0
+      }
+    },
+    "end_to_end": {
+      "micro": {
+        "precision": 0.7726396917148363,
+        "recall": 0.7199281867145422,
+        "f1": 0.7453531598513011
+      },
+      "per_triplet_class": {
+        "story:Positive": {
+          "precision": 0.8292682926829268,
+          "recall": 0.85,
+          "f1-score": 0.8395061728395061,
+          "support": 40.0
+        },
+        "story:Negative": {
+          "precision": 0.6818181818181818,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.6976744186046512,
+          "support": 21.0
+        },
+        "story:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "graphics_visuals:Positive": {
+          "precision": 0.8679245283018868,
+          "recall": 0.7419354838709677,
+          "f1-score": 0.8,
+          "support": 62.0
+        },
+        "graphics_visuals:Negative": {
+          "precision": 0.5714285714285714,
+          "recall": 0.47058823529411764,
+          "f1-score": 0.5161290322580645,
+          "support": 17.0
+        },
+        "graphics_visuals:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "gameplay:Positive": {
+          "precision": 0.7701149425287356,
+          "recall": 0.8271604938271605,
+          "f1-score": 0.7976190476190477,
+          "support": 81.0
+        },
+        "gameplay:Negative": {
+          "precision": 0.775,
+          "recall": 0.7045454545454546,
+          "f1-score": 0.7380952380952381,
+          "support": 44.0
+        },
+        "gameplay:Neutral": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1-score": 0.2857142857142857,
+          "support": 5.0
+        },
+        "controls:Positive": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 12.0
+        },
+        "controls:Negative": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 20.0
+        },
+        "controls:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "performance:Positive": {
+          "precision": 0.53125,
+          "recall": 0.8095238095238095,
+          "f1-score": 0.6415094339622641,
+          "support": 21.0
+        },
+        "performance:Negative": {
+          "precision": 0.7692307692307693,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7017543859649122,
+          "support": 31.0
+        },
+        "performance:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "audio:Positive": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8478260869565217,
+          "f1-score": 0.8863636363636364,
+          "support": 46.0
+        },
+        "audio:Negative": {
+          "precision": 0.7777777777777778,
+          "recall": 0.7,
+          "f1-score": 0.7368421052631579,
+          "support": 10.0
+        },
+        "audio:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "bugs_stability:Positive": {
+          "precision": 0.6875,
+          "recall": 1.0,
+          "f1-score": 0.8148148148148148,
+          "support": 11.0
+        },
+        "bugs_stability:Negative": {
+          "precision": 0.8958333333333334,
+          "recall": 0.7818181818181819,
+          "f1-score": 0.8349514563106796,
+          "support": 55.0
+        },
+        "bugs_stability:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "online_multiplayer:Positive": {
+          "precision": 0.5294117647058824,
+          "recall": 0.5294117647058824,
+          "f1-score": 0.5294117647058824,
+          "support": 17.0
+        },
+        "online_multiplayer:Negative": {
+          "precision": 0.84375,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.7605633802816901,
+          "support": 39.0
+        },
+        "online_multiplayer:Neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.7726396917148363,
+          "recall": 0.7199281867145422,
+          "f1-score": 0.7453531598513011,
+          "support": 557.0
+        },
+        "macro avg": {
+          "precision": 0.5197152210277171,
+          "recall": 0.5061623975329756,
+          "f1-score": 0.506257497584525,
+          "support": 557.0
+        },
+        "weighted avg": {
+          "precision": 0.7518838592141982,
+          "recall": 0.7199281867145422,
+          "f1-score": 0.731171947109253,
+          "support": 557.0
+        }
+      }
+    },
+    "per_aspect": {
+      "story": {
+        "presence": {
+          "0": {
+            "precision": 0.905511811023622,
+            "recall": 0.9504132231404959,
+            "f1-score": 0.9274193548387096,
+            "support": 121.0
+          },
+          "1": {
+            "precision": 0.9178082191780822,
+            "recall": 0.8481012658227848,
+            "f1-score": 0.881578947368421,
+            "support": 79.0
+          },
+          "accuracy": 0.91,
+          "macro avg": {
+            "precision": 0.911660015100852,
+            "recall": 0.8992572444816403,
+            "f1-score": 0.9044991511035654,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9103688922446338,
+            "recall": 0.91,
+            "f1-score": 0.9093123938879457,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.8297872340425532,
+            "recall": 0.975,
+            "f1-score": 0.896551724137931,
+            "support": 40.0
+          },
+          "Negative": {
+            "precision": 0.8181818181818182,
+            "recall": 0.8571428571428571,
+            "f1-score": 0.8372093023255814,
+            "support": 21.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8.0
+          },
+          "accuracy": 0.8260869565217391,
+          "macro avg": {
+            "precision": 0.5493230174081237,
+            "recall": 0.6107142857142857,
+            "f1-score": 0.5779203421545042,
+            "support": 69.0
+          },
+          "weighted avg": {
+            "precision": 0.7300479354133379,
+            "recall": 0.8260869565217391,
+            "f1-score": 0.7745429610776007,
+            "support": 69.0
+          }
+        },
+        "end_to_end": {
+          "story:Positive": {
+            "precision": 0.8292682926829268,
+            "recall": 0.85,
+            "f1-score": 0.8395061728395061,
+            "support": 40.0
+          },
+          "story:Negative": {
+            "precision": 0.6818181818181818,
+            "recall": 0.7142857142857143,
+            "f1-score": 0.6976744186046512,
+            "support": 21.0
+          },
+          "story:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8.0
+          },
+          "micro avg": {
+            "precision": 0.765625,
+            "recall": 0.7101449275362319,
+            "f1-score": 0.7368421052631579,
+            "support": 69.0
+          },
+          "macro avg": {
+            "precision": 0.5036954915003695,
+            "recall": 0.5214285714285715,
+            "f1-score": 0.5123935304813858,
+            "support": 69.0
+          },
+          "weighted avg": {
+            "precision": 0.6882451235579549,
+            "recall": 0.7101449275362319,
+            "f1-score": 0.6990059377431583,
+            "support": 69.0
+          }
+        }
+      },
+      "graphics_visuals": {
+        "presence": {
+          "0": {
+            "precision": 0.8188976377952756,
+            "recall": 0.9122807017543859,
+            "f1-score": 0.8630705394190872,
+            "support": 114.0
+          },
+          "1": {
+            "precision": 0.863013698630137,
+            "recall": 0.7325581395348837,
+            "f1-score": 0.7924528301886793,
+            "support": 86.0
+          },
+          "accuracy": 0.835,
+          "macro avg": {
+            "precision": 0.8409556682127063,
+            "recall": 0.8224194206446348,
+            "f1-score": 0.8277616848038832,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.837867543954266,
+            "recall": 0.835,
+            "f1-score": 0.8327049244500118,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.921875,
+            "recall": 0.9516129032258065,
+            "f1-score": 0.9365079365079365,
+            "support": 62.0
+          },
+          "Negative": {
+            "precision": 0.7777777777777778,
+            "recall": 0.8235294117647058,
+            "f1-score": 0.8,
+            "support": 17.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3.0
+          },
+          "accuracy": 0.8902439024390244,
+          "macro avg": {
+            "precision": 0.5665509259259259,
+            "recall": 0.5917141049968374,
+            "f1-score": 0.5788359788359788,
+            "support": 82.0
+          },
+          "weighted avg": {
+            "precision": 0.8582740514905149,
+            "recall": 0.8902439024390244,
+            "f1-score": 0.8739450251645374,
+            "support": 82.0
+          }
+        },
+        "end_to_end": {
+          "graphics_visuals:Positive": {
+            "precision": 0.8679245283018868,
+            "recall": 0.7419354838709677,
+            "f1-score": 0.8,
+            "support": 62.0
+          },
+          "graphics_visuals:Negative": {
+            "precision": 0.5714285714285714,
+            "recall": 0.47058823529411764,
+            "f1-score": 0.5161290322580645,
+            "support": 17.0
+          },
+          "graphics_visuals:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3.0
+          },
+          "micro avg": {
+            "precision": 0.782608695652174,
+            "recall": 0.6585365853658537,
+            "f1-score": 0.7152317880794702,
+            "support": 82.0
+          },
+          "macro avg": {
+            "precision": 0.4797843665768194,
+            "recall": 0.4041745730550284,
+            "f1-score": 0.43870967741935485,
+            "support": 82.0
+          },
+          "weighted avg": {
+            "precision": 0.774702517914667,
+            "recall": 0.6585365853658537,
+            "f1-score": 0.7118804091266719,
+            "support": 82.0
+          }
+        }
+      },
+      "gameplay": {
+        "presence": {
+          "0": {
+            "precision": 0.5555555555555556,
+            "recall": 0.5681818181818182,
+            "f1-score": 0.5617977528089888,
+            "support": 44.0
+          },
+          "1": {
+            "precision": 0.8774193548387097,
+            "recall": 0.8717948717948718,
+            "f1-score": 0.8745980707395499,
+            "support": 156.0
+          },
+          "accuracy": 0.805,
+          "macro avg": {
+            "precision": 0.7164874551971326,
+            "recall": 0.7199883449883451,
+            "f1-score": 0.7181979117742694,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8066093189964159,
+            "recall": 0.805,
+            "f1-score": 0.8057820007948265,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.9102564102564102,
+            "recall": 0.8765432098765432,
+            "f1-score": 0.8930817610062893,
+            "support": 81.0
+          },
+          "Negative": {
+            "precision": 0.8,
+            "recall": 0.9090909090909091,
+            "f1-score": 0.851063829787234,
+            "support": 44.0
+          },
+          "Neutral": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1-score": 0.2857142857142857,
+            "support": 5.0
+          },
+          "accuracy": 0.8615384615384616,
+          "macro avg": {
+            "precision": 0.7367521367521368,
+            "recall": 0.6618780396558174,
+            "f1-score": 0.6766199588359364,
+            "support": 130.0
+          },
+          "weighted avg": {
+            "precision": 0.8571597633136094,
+            "recall": 0.8615384615384616,
+            "f1-score": 0.8555000198516859,
+            "support": 130.0
+          }
+        },
+        "end_to_end": {
+          "gameplay:Positive": {
+            "precision": 0.7701149425287356,
+            "recall": 0.8271604938271605,
+            "f1-score": 0.7976190476190477,
+            "support": 81.0
+          },
+          "gameplay:Negative": {
+            "precision": 0.775,
+            "recall": 0.7045454545454546,
+            "f1-score": 0.7380952380952381,
+            "support": 44.0
+          },
+          "gameplay:Neutral": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1-score": 0.2857142857142857,
+            "support": 5.0
+          },
+          "micro avg": {
+            "precision": 0.7674418604651163,
+            "recall": 0.7615384615384615,
+            "f1-score": 0.7644787644787645,
+            "support": 130.0
+          },
+          "macro avg": {
+            "precision": 0.681704980842912,
+            "recall": 0.5772353161242051,
+            "f1-score": 0.6071428571428572,
+            "support": 130.0
+          },
+          "weighted avg": {
+            "precision": 0.7613793103448275,
+            "recall": 0.7615384615384615,
+            "f1-score": 0.7577838827838829,
+            "support": 130.0
+          }
+        }
+      },
+      "controls": {
+        "presence": {
+          "0": {
+            "precision": 0.9759036144578314,
+            "recall": 0.9700598802395209,
+            "f1-score": 0.972972972972973,
+            "support": 167.0
+          },
+          "1": {
+            "precision": 0.8529411764705882,
+            "recall": 0.8787878787878788,
+            "f1-score": 0.8656716417910447,
+            "support": 33.0
+          },
+          "accuracy": 0.955,
+          "macro avg": {
+            "precision": 0.9144223954642098,
+            "recall": 0.9244238795136999,
+            "f1-score": 0.9193223073820089,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9556148121899364,
+            "recall": 0.955,
+            "f1-score": 0.9552682533279548,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.7857142857142857,
+            "recall": 0.9166666666666666,
+            "f1-score": 0.8461538461538461,
+            "support": 12.0
+          },
+          "Negative": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.8787878787878788,
+          "macro avg": {
+            "precision": 0.5776942355889724,
+            "recall": 0.6055555555555555,
+            "f1-score": 0.5897435897435898,
+            "support": 33.0
+          },
+          "weighted avg": {
+            "precision": 0.859876965140123,
+            "recall": 0.8787878787878788,
+            "f1-score": 0.8671328671328672,
+            "support": 33.0
+          }
+        },
+        "end_to_end": {
+          "controls:Positive": {
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.7692307692307693,
+            "support": 12.0
+          },
+          "controls:Negative": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 20.0
+          },
+          "controls:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.7647058823529411,
+            "recall": 0.7878787878787878,
+            "f1-score": 0.7761194029850746,
+            "support": 33.0
+          },
+          "macro avg": {
+            "precision": 0.5047619047619047,
+            "recall": 0.5444444444444444,
+            "f1-score": 0.5230769230769231,
+            "support": 33.0
+          },
+          "weighted avg": {
+            "precision": 0.7445887445887446,
+            "recall": 0.7878787878787878,
+            "f1-score": 0.7645687645687647,
+            "support": 33.0
+          }
+        }
+      },
+      "performance": {
+        "presence": {
+          "0": {
+            "precision": 0.9148936170212766,
+            "recall": 0.9214285714285714,
+            "f1-score": 0.9181494661921709,
+            "support": 140.0
+          },
+          "1": {
+            "precision": 0.8135593220338984,
+            "recall": 0.8,
+            "f1-score": 0.8067226890756303,
+            "support": 60.0
+          },
+          "accuracy": 0.885,
+          "macro avg": {
+            "precision": 0.8642264695275874,
+            "recall": 0.8607142857142858,
+            "f1-score": 0.8624360776339006,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8844933285250631,
+            "recall": 0.885,
+            "f1-score": 0.8847214330572086,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.6666666666666666,
+            "recall": 0.9523809523809523,
+            "f1-score": 0.7843137254901961,
+            "support": 21.0
+          },
+          "Negative": {
+            "precision": 0.9629629629629629,
+            "recall": 0.8387096774193549,
+            "f1-score": 0.896551724137931,
+            "support": 31.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6.0
+          },
+          "accuracy": 0.7931034482758621,
+          "macro avg": {
+            "precision": 0.5432098765432098,
+            "recall": 0.5970302099334357,
+            "f1-score": 0.5602884832093756,
+            "support": 58.0
+          },
+          "weighted avg": {
+            "precision": 0.756066411238825,
+            "recall": 0.7931034482758621,
+            "f1-score": 0.7631670979925858,
+            "support": 58.0
+          }
+        },
+        "end_to_end": {
+          "performance:Positive": {
+            "precision": 0.53125,
+            "recall": 0.8095238095238095,
+            "f1-score": 0.6415094339622641,
+            "support": 21.0
+          },
+          "performance:Negative": {
+            "precision": 0.7692307692307693,
+            "recall": 0.6451612903225806,
+            "f1-score": 0.7017543859649122,
+            "support": 31.0
+          },
+          "performance:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6.0
+          },
+          "micro avg": {
+            "precision": 0.6379310344827587,
+            "recall": 0.6379310344827587,
+            "f1-score": 0.6379310344827587,
+            "support": 58.0
+          },
+          "macro avg": {
+            "precision": 0.4334935897435897,
+            "recall": 0.4848950332821301,
+            "f1-score": 0.4477546066423921,
+            "support": 58.0
+          },
+          "weighted avg": {
+            "precision": 0.6034897214854111,
+            "recall": 0.6379310344827587,
+            "f1-score": 0.6073462772089625,
+            "support": 58.0
+          }
+        }
+      },
+      "audio": {
+        "presence": {
+          "0": {
+            "precision": 0.9455782312925171,
+            "recall": 0.9858156028368794,
+            "f1-score": 0.9652777777777778,
+            "support": 141.0
+          },
+          "1": {
+            "precision": 0.9622641509433962,
+            "recall": 0.864406779661017,
+            "f1-score": 0.9107142857142857,
+            "support": 59.0
+          },
+          "accuracy": 0.95,
+          "macro avg": {
+            "precision": 0.9539211911179566,
+            "recall": 0.9251111912489483,
+            "f1-score": 0.9379960317460317,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9505005775895264,
+            "recall": 0.95,
+            "f1-score": 0.9491815476190476,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.9375,
+            "recall": 0.9782608695652174,
+            "f1-score": 0.9574468085106383,
+            "support": 46.0
+          },
+          "Negative": {
+            "precision": 0.8888888888888888,
+            "recall": 0.8,
+            "f1-score": 0.8421052631578947,
+            "support": 10.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.9298245614035088,
+          "macro avg": {
+            "precision": 0.6087962962962963,
+            "recall": 0.5927536231884059,
+            "f1-score": 0.5998506905561777,
+            "support": 57.0
+          },
+          "weighted avg": {
+            "precision": 0.9125243664717348,
+            "recall": 0.9298245614035088,
+            "f1-score": 0.9204141372468124,
+            "support": 57.0
+          }
+        },
+        "end_to_end": {
+          "audio:Positive": {
+            "precision": 0.9285714285714286,
+            "recall": 0.8478260869565217,
+            "f1-score": 0.8863636363636364,
+            "support": 46.0
+          },
+          "audio:Negative": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7,
+            "f1-score": 0.7368421052631579,
+            "support": 10.0
+          },
+          "audio:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.9019607843137255,
+            "recall": 0.8070175438596491,
+            "f1-score": 0.8518518518518519,
+            "support": 57.0
+          },
+          "macro avg": {
+            "precision": 0.5687830687830688,
+            "recall": 0.5159420289855072,
+            "f1-score": 0.5410685805422647,
+            "support": 57.0
+          },
+          "weighted avg": {
+            "precision": 0.8858256752993595,
+            "recall": 0.8070175438596491,
+            "f1-score": 0.8445815495676993,
+            "support": 57.0
+          }
+        }
+      },
+      "bugs_stability": {
+        "presence": {
+          "0": {
+            "precision": 0.9398496240601504,
+            "recall": 0.9615384615384616,
+            "f1-score": 0.9505703422053232,
+            "support": 130.0
+          },
+          "1": {
+            "precision": 0.9253731343283582,
+            "recall": 0.8857142857142857,
+            "f1-score": 0.9051094890510949,
+            "support": 70.0
+          },
+          "accuracy": 0.935,
+          "macro avg": {
+            "precision": 0.9326113791942543,
+            "recall": 0.9236263736263737,
+            "f1-score": 0.9278399156282091,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.9347828526540232,
+            "recall": 0.935,
+            "f1-score": 0.9346590436013433,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.6111111111111112,
+            "recall": 1.0,
+            "f1-score": 0.7586206896551724,
+            "support": 11.0
+          },
+          "Negative": {
+            "precision": 1.0,
+            "recall": 0.8909090909090909,
+            "f1-score": 0.9423076923076923,
+            "support": 55.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "accuracy": 0.8955223880597015,
+          "macro avg": {
+            "precision": 0.5370370370370371,
+            "recall": 0.6303030303030303,
+            "f1-score": 0.5669761273209549,
+            "support": 67.0
+          },
+          "weighted avg": {
+            "precision": 0.9212271973466003,
+            "recall": 0.8955223880597015,
+            "f1-score": 0.8980858307929847,
+            "support": 67.0
+          }
+        },
+        "end_to_end": {
+          "bugs_stability:Positive": {
+            "precision": 0.6875,
+            "recall": 1.0,
+            "f1-score": 0.8148148148148148,
+            "support": 11.0
+          },
+          "bugs_stability:Negative": {
+            "precision": 0.8958333333333334,
+            "recall": 0.7818181818181819,
+            "f1-score": 0.8349514563106796,
+            "support": 55.0
+          },
+          "bugs_stability:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1.0
+          },
+          "micro avg": {
+            "precision": 0.84375,
+            "recall": 0.8059701492537313,
+            "f1-score": 0.8244274809160306,
+            "support": 67.0
+          },
+          "macro avg": {
+            "precision": 0.5277777777777778,
+            "recall": 0.5939393939393939,
+            "f1-score": 0.5499220903751648,
+            "support": 67.0
+          },
+          "weighted avg": {
+            "precision": 0.8482587064676618,
+            "recall": 0.8059701492537313,
+            "f1-score": 0.8191834785082139,
+            "support": 67.0
+          }
+        }
+      },
+      "online_multiplayer": {
+        "presence": {
+          "0": {
+            "precision": 0.8904109589041096,
+            "recall": 0.9629629629629629,
+            "f1-score": 0.9252669039145908,
+            "support": 135.0
+          },
+          "1": {
+            "precision": 0.9074074074074074,
+            "recall": 0.7538461538461538,
+            "f1-score": 0.8235294117647058,
+            "support": 65.0
+          },
+          "accuracy": 0.895,
+          "macro avg": {
+            "precision": 0.8989091831557585,
+            "recall": 0.8584045584045583,
+            "f1-score": 0.8743981578396482,
+            "support": 200.0
+          },
+          "weighted avg": {
+            "precision": 0.8959348046676814,
+            "recall": 0.895,
+            "f1-score": 0.8922022189658781,
+            "support": 200.0
+          }
+        },
+        "sentiment_gold_aspect": {
+          "Positive": {
+            "precision": 0.7272727272727273,
+            "recall": 0.9411764705882353,
+            "f1-score": 0.8205128205128205,
+            "support": 17.0
+          },
+          "Negative": {
+            "precision": 0.8974358974358975,
+            "recall": 0.8974358974358975,
+            "f1-score": 0.8974358974358975,
+            "support": 39.0
+          },
+          "Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "accuracy": 0.8360655737704918,
+          "macro avg": {
+            "precision": 0.5415695415695416,
+            "recall": 0.6128707893413776,
+            "f1-score": 0.5726495726495727,
+            "support": 61.0
+          },
+          "weighted avg": {
+            "precision": 0.7764530551415797,
+            "recall": 0.8360655737704918,
+            "f1-score": 0.8024379991593107,
+            "support": 61.0
+          }
+        },
+        "end_to_end": {
+          "online_multiplayer:Positive": {
+            "precision": 0.5294117647058824,
+            "recall": 0.5294117647058824,
+            "f1-score": 0.5294117647058824,
+            "support": 17.0
+          },
+          "online_multiplayer:Negative": {
+            "precision": 0.84375,
+            "recall": 0.6923076923076923,
+            "f1-score": 0.7605633802816901,
+            "support": 39.0
+          },
+          "online_multiplayer:Neutral": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "micro avg": {
+            "precision": 0.72,
+            "recall": 0.5901639344262295,
+            "f1-score": 0.6486486486486487,
+            "support": 61.0
+          },
+          "macro avg": {
+            "precision": 0.4577205882352941,
+            "recall": 0.40723981900452494,
+            "f1-score": 0.4299917149958575,
+            "support": 61.0
+          },
+          "weighted avg": {
+            "precision": 0.6869877049180327,
+            "recall": 0.5901639344262295,
+            "f1-score": 0.6338028169014085,
+            "support": 61.0
+          }
+        }
+      }
+    },
+    "error_examples": [
+      {
+        "chunk_id": "steam:1030300:235280438:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "to be honest, this game was amazing, i loved the designs, the bosses, the charcters and the music. after nearly 200 hours of gameplay, you start to love these kind of game. overall this was a very fun experience, and i would do it all over again.\n10/10",
+        "gold_evidence": "i loved the designs, the bosses, the charcters and the music"
+      },
+      {
+        "chunk_id": "steam:1056960:221072825:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "BOOORING!!! I don't recommend it for the gameplay overall, just the story... I just played because I was curious of the story.\nIt has nothing to do with previous games, just same universe. Bad jokes....like very bad.\nOnly 6 main missions ... 2 of them at the end.\nYou have to level up character to do main story missions...side quest are boring, repetitive...go there, come back, go again there over and over again ... scaling enemies with your character, stealth it's almost dead, only run and gun.",
+        "gold_evidence": "I don't recommend it for the gameplay overall, just the story... I just played because I was curious of the story.\nIt has nothing to do with previous games, just same universe. Bad jokes....like very bad."
+      },
+      {
+        "chunk_id": "steam:1056960:228137903:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Gameplay is passable up to a point\nNo sensible story\nDoes not hold a candle to previous Wolfenstein titles\n\nCompletionist perspective onwards:\nGame has MP locked achievements while having defect MP (unless you have a dedicated friend to play with)\nConstant stutters and game freezes post lv 50/100\nLittle to none end game content besides farming the maps for weapon mastery / redundant weapon upgrades / achievements\n\nVerdict: Don't bother, play the previous Wolfenstein titles if you're itching for an SP arcade shooter\nDon't spoil your memories of the franchise if you have already",
+        "gold_evidence": "No sensible story"
+      },
+      {
+        "chunk_id": "steam:1056960:230922143:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "I really wanted to give a fair chance to this game and the whole reboot series as well. I was willing to ignore the weak, weird story of Youngblood and the so called \"woke\" elements and I was actually looking forward for some decent graphics and 80's aesthetics, but the game is so poorly optimized that I'm keep crashing with my RX 7800 XT even though I have lowered the graphics to medium and I manually turned off raytracing, so quite frankly, I'm not going to spend an entire evening to try fix a broken code in the text editor that the devs left unpatched, so I watching the recap of this game and... I didn't miss out on a whole lot. So, I'll only consider the first two games canon and that's it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:234021722:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "actual slop thats been disguised as a wolfenstein game.\n\ncrappy story, cringe voicelines, and buggy arcade-style gameplay\n\nthis game is better suited for a dave and busters videogame machine opposed to a downloadable PC game\n\nfurthermore, the enemies are EXTREMELY difficult to solo (you can only play the game solo since multiplayer servers were shut down) and the game is not worth the effort.\n\ndon't buy this game",
+        "gold_evidence": "crappy story, cringe voicelines"
+      },
+      {
+        "chunk_id": "steam:1091500:233597659:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "The game offers such deep immersion that I lose track of missions while simply exploring the detailed urban environment.\n\nHighlights: A living open world, visual and audio details that capture your attention at every turn.\nFreedom of exploration, wandering aimlessly becomes more appealing than following the main storyline to me.\nHigh graphical demands, requires a powerful computer to run with maximum quality and fluidity.\n\nHighly recommended if you have a good PC to play it properly.",
+        "gold_evidence": "more appealing than following the main storyline to me."
+      },
+      {
+        "chunk_id": "steam:1091500:236879075:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "i wish the open work was better free play\nlike just do as you like ....1).Story mode 2) Free play mode ....A true free world play with a story\ni could build my own story with in the game diff then it all together",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1091500:236979029:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Negative",
+        "text": "This is everything a game should be. I never played this back when it released in 2020, but got it discounted here in 2026 and think it's maybe the best money I've ever spent on a game. I haven't cared this much about a game story since Baldur's Gate 3. Terrific in all aspects, good performance and no bugs (6 years after release...), and a total joy to play. This is why we love games.",
+        "gold_evidence": "I haven't cared this much about a game story since Baldur's Gate 3."
+      },
+      {
+        "chunk_id": "steam:1145350:236577767:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Lots of fun,\nlots of content (i just finished main story and am at around 40hrs of gameplay),\nlots of variety in builds,\nART IS BEAUTIFUL, so is the music\nGameplay loop can get a bit repetitive at times but if you pace yourself you should be fine...\nWould recommend point blank.",
+        "gold_evidence": "i just finished main story"
+      },
+      {
+        "chunk_id": "steam:1174180:237135002:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "Enjoyed playing the multiplayer as a single player game better than I did following the story.\n\nDutch's plan all along was to gatekeep the good content away whilst you faff around following failed actors gibbering on whilst slowly riding horses to a set-piece shoot-out.",
+        "gold_evidence": "following failed actors gibbering on"
+      },
+      {
+        "chunk_id": "steam:1249970:232679217:chunk:001",
+        "aspect": "story",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "If developres won't fix optimization this game worth nothing\nMost drawbacks are random ctd's and connection issues\nThis game have beatufil and interesting map to discover especially if u turn off interface and use cockpit view\nPhysics is pretty decent especially with tweaks\nEnough good cars\nBut not interesting at all plot and no feeling of competition\nOnly competition available is vs other real players but u can get disconnected any f random moment or get error and ctd and this making me go insane especially on some long runs like crown jewels",
+        "gold_evidence": "not interesting at all plot"
+      },
+      {
+        "chunk_id": "steam:1294810:168177694:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "The game is a lot better after Arkane's death throes patch, RIP Arkane Austin. I would still wait for a sale on this, but it's a fun bit of vamp slaying and with 4 unique characters it offers some replayability. Definitely good fun with friends!",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1294810:173102896:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "It hurts to play this in this state. The only other titles that managed to evoke this feeling are The Secret World and maybe Generation Zero.\nThe environment is great, encountering vampires is too.\nThe first blatant things you'll notice are the terrible human enemy a.i., and your character's out of place voice lines.\n\nBut I'm having a good time. Around every corner you'll see the intentions of the team for the final product, and you might still be able to get close to it with a group of friends.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1903340:235090178:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "One of the worst games I've played. The combat is boring and uneventful, the dialoges can't be partially skipped (you either skip the whole thing or watch all of it), the \"open world\" sucks. You basicly feel like trapped, with only one way to go forward. I tried to come back to this game many times but each and every one I get the same feelings. There are things that this game does well too: amazing graphics, chsrming ambiance and top tier music.\nOverall tho the experiance is lacking compared to the hype.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:2246340:236878486:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "The music, art direction, and gameplay are peak imo. Some of the most fun I've had playing with friends (we're all big Monster Hunter fans since World/Iceborne).\n\nI love the ecology/speculative evolution aspect of the Monster Hunter games, and it feels like they really fleshed that out here. The environments and ecosystems feel alive and it's beautiful.",
+        "gold_evidence": "I love the ecology/speculative evolution aspect of the Monster Hunter games, and it feels like they really fleshed that out here."
+      },
+      {
+        "chunk_id": "steam:2246340:237120588:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Not Recommended to Non-Monster Hunter Players, for now. It isn't very coop friendly like previous titles, requiring massive hurdles to jump through only to be denied because someone is a few steps ahead in the main storyline. Haven't gotten to end of Base game at time of posting. With the Expansion coming out, may want to give this one a pass until there is a sale for the whole product or a massive overhaul on how connecting to your friends work",
+        "gold_evidence": "a few steps ahead in the main storyline."
+      },
+      {
+        "chunk_id": "steam:246090:127625770:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I found the workings of the game confusing. You never get told how to succeed and most importantly, you can never control the characters, most of the time they are stuck in space until they die from lack of oxygen. And even after creating a room with the seed and an airlock, that leaves scarce ore to create a refinery. And it also does not help that there is no way to save the game. This seems like an early release, so i will gladly revise it when the game is improved, playing it is extremely unfair ton those playing it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:271590:234664875:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Negative",
+        "text": "As someone who has played this game, even though I wouldn't normally spend this much time on games in this genre, it's really fun to mess around with other people. I haven't finished the story yet; I won't be judging it in my review 8/10",
+        "gold_evidence": "I haven't finished the story yet; I won't be judging it in my review"
+      },
+      {
+        "chunk_id": "steam:285190:228705014:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "Graphics: Good\n\nGameplay: It's just gameplay\n\nAudio: Good\n\nAudience: Teens; Adults\n\nPC Requirements: Decent\n\nDifficulty: Easy to learn / Hard to master\n\nGrind: Only if u care about leaderboards/ranks\n\nStory: Average\n\nGame Time: Average\n\nPrice: If u have some spare money left\n\nBugs: Never heard of\n\n? / 10: 7",
+        "gold_evidence": "Story: Average"
+      },
+      {
+        "chunk_id": "steam:285190:232007516:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "Graphics: Decent\n\nGameplay: Watch paint dry instead\n\nAudio: Good\n\nAudience: Adults\n\nPC Requirements: Potato\n\nGame Size: Workable\n\nDifficulty: Easy to learn / Hard to master\n\nGrind: Nothing to grind\n\nStory: Average\n\nGame Time: Short\n\nPrice: You could also just burn your money\n\nBugs: Can get annoying\n\n2 / 10: 2",
+        "gold_evidence": "Story: Average"
+      },
+      {
+        "chunk_id": "steam:285190:232603946:chunk:001",
+        "aspect": "story",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "It's pretty but shallow. almost 10 years old at the time of me writing this and there are still insanely inconvenient bugs associated with even just single player experience.\n\nWhenever you beat a Campaign mission, you get rewards for it but the rewards arent shown to you until the next time you launch the game, and the pop up that shows you what you unlocked is hard stuck on the screen without allowing you to do anything else unless you Alt+F4 out of the game and relaunch. An absurd absurd bug that absolutely should not exist in a game with this much obvious budget allocated to it. This is the thing that RTS devs just don't understand. We don't want \"production value\" from RTS. we want Clear visuals, Clean responsive controls over our units, and a solid connection to multiplayer.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:367520:236368691:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Hollow Knight is not just a game; it is a descent into a haunting, melancholic dream.\n\nTeam Cherry didn't just build a world; they unearthed a vast, forgotten kingdom. Hallownest is a masterclass in atmospheric storytelling, where every rain-soaked ruin in the City of Tears and every shadow in Deepnest echoes with lost glory, backed by Christopher Larkin’s achingly gorgeous score.\n\nThe gameplay is surgical perfection. Tight, responsive controls, the hypnotic satisfaction of nail-pogoing, and boss fights that demand absolute respect and rhythm. You get lost, you adapt, you overcome.\n\nAn untouchable monument of the Metroidvania genre and an absolute work of art. 10/10.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:367520:236538934:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "100s of hours on this game on console, replaying it just for the achivements on steam. What can I say other than \"this is masterpiece.\"\n\nIt is a genuine brilliant combination of art, game design, visual storytelling, mechanical complexity, and difficulty. There is no doubt this is a work of Art that has and will continue to inspire so many more games in this genre.",
+        "gold_evidence": "brilliant combination of art, game design, visual storytelling, mechanical complexity, and difficulty"
+      },
+      {
+        "chunk_id": "steam:3764200:236943409:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "My amazing Girlfriend bought this for me yesterday for National Boyfriends day! I finished it already and I'm starting an Insane Difficulty Run... but to be fair i am a Resident Evil Veteran lol. The story is okay i guess, it's really nostalgic the further you go. my advice is buy the game, and take it slow.",
+        "gold_evidence": "The story is okay i guess, it's really nostalgic the further you go."
+      },
+      {
+        "chunk_id": "steam:3764200:237152944:chunk:001",
+        "aspect": "story",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Well done Capcom!! The RE Engine gets better with every Resident Evil. Liking Grace she really sales the terror of horror. Angela Sant'Albano voice actress for Grace Ashcroft did an outstanding job capturing the paralyzing fear with in the Rhodes Hill Chronic Care Center. Gameplay gets better with each installment as well.It is a slightly reboot in my opinion.",
+        "gold_evidence": "Liking Grace she really sales the terror of horror."
+      },
+      {
+        "chunk_id": "steam:952070:215584784:chunk:001",
+        "aspect": "story",
+        "gold": "Neutral",
+        "predicted": "Negative",
+        "text": "Firstly it is not a story game, and it is not even a cool arcade zombie game, it is a coop multiplayer game with bad graphics and boring gameplay , so boring you might want to delete it after your first game or even before finishing it. So simply, waste of money. Go buy resident evil 2 instead.",
+        "gold_evidence": "it is not a story game"
+      },
+      {
+        "chunk_id": "steam:1030300:235280438:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "to be honest, this game was amazing, i loved the designs, the bosses, the charcters and the music. after nearly 200 hours of gameplay, you start to love these kind of game. overall this was a very fun experience, and i would do it all over again.\n10/10",
+        "gold_evidence": "i loved the designs, the bosses, the charcters and the music"
+      },
+      {
+        "chunk_id": "steam:1030300:235789701:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "AMAZING game, this game has openend up my eyes. the way the world is so colorfoul the movement is so smooth and the weapons are so easy to use makes this game amazing, it has a balance between hard bosses and easy to beat bosses. the map is huge and there is so much to do with so many hidden areas.\n10/10",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1030300:236420875:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Halh way through the game, fantastic gameplay, visuals and plays like butter smooth in my potato PC\nTeam cherry has made another masterpiece!!!!",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:230922143:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I really wanted to give a fair chance to this game and the whole reboot series as well. I was willing to ignore the weak, weird story of Youngblood and the so called \"woke\" elements and I was actually looking forward for some decent graphics and 80's aesthetics, but the game is so poorly optimized that I'm keep crashing with my RX 7800 XT even though I have lowered the graphics to medium and I manually turned off raytracing, so quite frankly, I'm not going to spend an entire evening to try fix a broken code in the text editor that the devs left unpatched, so I watching the recap of this game and... I didn't miss out on a whole lot. So, I'll only consider the first two games canon and that's it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1056960:233087617:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Positives:\nIt runs well enough on my linux system.\nIt looks and sounds decent.\n\nNegatives:\n\nProtagonist characters are particully unlikeable ... and thats theb most G rated way I can describe them.\n\nThe game has been game-ified giving every character levels so I can see higher level enemys becoming bullet sponges and starts early on with the rock paper sissiors mechanic to deal with differt types of armor.\n\nIf you are not playing in co-op (which is paid DLC because if course it is) then expect to deal with a potentionally stupid robot partner.\n\nIt's a full priced game with premium currency ... yeah, no. I should not need to explain why that is bad.\n\nThe only time I would suggest a purchase is if you are a fan of the series + completed all the other options + this has a large discount and even then maybe sleep on it.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1091500:237099475:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Probably in my top five favorite games of all time. I've played through this game over 5 times on my Xbox One and finally got a pc a few days ago and- WHEW! what a difference! like playing the game for the first time all over again! (except without crashing at the end of the prologue this time haha!)\n\nI had always seen videos of the newer updates but i never quite understood just how different it really is. The game is also beautiful on what from I understand is a relatively outdated pc. It really puts Xbox to shame. It makes me sad that I wasted so many years playing an inferior version of what my dream game has always been!",
+        "gold_evidence": "The game is also beautiful"
+      },
+      {
+        "chunk_id": "steam:1091500:237166160:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Neutral",
+        "predicted": "Not mentioned",
+        "text": "Very hard to get into, so much neon its disorienting. Slang makes the conversations hard to understand at first. User interface is not intuitive - had to google how to buy ammo and how to fit a silencer. Still not sure what quick-hack components are for.\n\nHaving said all that, once you get the hang of things its a great game. Very good story, worth playing.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1145350:234572664:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "Great music, great characters, great gameplay.\n\nThere were a couple places where the story and gameplay pulled from Hades in ways that made sense in the original game and less sense here, but it's still a fabulous game.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1145350:236577767:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Lots of fun,\nlots of content (i just finished main story and am at around 40hrs of gameplay),\nlots of variety in builds,\nART IS BEAUTIFUL, so is the music\nGameplay loop can get a bit repetitive at times but if you pace yourself you should be fine...\nWould recommend point blank.",
+        "gold_evidence": "ART IS BEAUTIFUL"
+      },
+      {
+        "chunk_id": "steam:1145350:236931592:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "absolute masterclass in game design. every level, mechanic, illustration, music note, and line of dialogue was so intentionally crafted to make hades ii the perfect sequel to a perfect game. supergiant has done it again!",
+        "gold_evidence": "every level, mechanic, illustration, music note, and line of dialogue was so intentionally crafted"
+      },
+      {
+        "chunk_id": "steam:1174180:233991469:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "I recommend the game but I disagree with the contention that the game is a masterpiece. It's a *cinematic* masterpiece but the gameplay and controls leave a lot to be desired.",
+        "gold_evidence": "It's a *cinematic* masterpiece"
+      },
+      {
+        "chunk_id": "steam:1174180:237058469:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "It's very fun and its a great open world game and runs well on lower end gaming computers (I have all the graphics on ultra). It's more of a learning curve and definitly not a western GTA",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:209982995:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Awesome game, love the driving, the open world is so incredibly detailed which is amazing. So much cool stuff to find. Better than expected considering the negativity against it. The physics and sound is best in house of the open world racers imo.",
+        "gold_evidence": "the open world is so incredibly detailed"
+      },
+      {
+        "chunk_id": "steam:1249970:216208157:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "I have a very good computer, and the game without ray tracing performs worse than games with ray tracing at maximum settings. The gameplay is okay, but due to optimization, it's unplayable unless you don't mind lag, maximum GPU usage, or minimum graphics settings.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:222243806:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "I would really like to play this game but it keeps crashing all the time and its really frustraiting when the game crashes in the middle of a 250k delivery. The game runs over all very poorly and doesnt look that good. Some of the car sounds are really good some are really bad. In the few hours I saw 3 or 4 other drivers on the map so doing a multiplayer race is impossible. Needs quite a lot of fixing so i would still wait with a potentional purchase.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:229061501:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Yea there isn't much to say other than that this game is bad.\n\n-The game doesn't look that great, and the optimization is terrible.\n-Uninteresting and confusing UI.\n-Some car models are reused from older TDU games, which are just incorrect and look horrible.\n-No properties to buy.\n-Open world that feels so dead.\n-A soundtrack that ends up becoming background.\n-Battle Pass and digital currency? WTF!\n\nI can't say this is all KT Racing's fault since Nacon is a really ♥♥♥♥♥♥ publisher, but what I can say is to avoid this game. Its just not worth it at all.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1249970:232679217:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "If developres won't fix optimization this game worth nothing\nMost drawbacks are random ctd's and connection issues\nThis game have beatufil and interesting map to discover especially if u turn off interface and use cockpit view\nPhysics is pretty decent especially with tweaks\nEnough good cars\nBut not interesting at all plot and no feeling of competition\nOnly competition available is vs other real players but u can get disconnected any f random moment or get error and ctd and this making me go insane especially on some long runs like crown jewels",
+        "gold_evidence": "This game have beatufil and interesting map to discover"
+      },
+      {
+        "chunk_id": "steam:1272080:232722299:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Credit where credit is due because Payday 3 has had such a turnaround from when it released.\n\nIt brings all the adrenaline and edge of your seat action of Payday 2 with EXTREMELY satisfying gunplay. It looks beautiful, it runs well, it's polished, the difficulty is rewarding, the music is brilliant, stealth is miles above PD2 in terms of complexity. And the talents and level reworks they've been doing have hit the sweet spot.\n\nIt feels unfair to compare the amount of content in this to its predecessor, when 2 has a solid 10 years worth of releases over Payday 3.\n\nFor a game that's been out nearly 3 years and had a rocky start, it's in a good place right now.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1272080:237168239:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Broken junk. Still has bugs that render it unplayable years after launch.\nExtremely limited DLC-locked pool of guns.\nThe skill system is atrocious with no depth for builds.\nIt looks and plays like a parody of Payday 2.",
+        "gold_evidence": "It looks and plays like a parody of Payday 2"
+      },
+      {
+        "chunk_id": "steam:1294810:173102896:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "It hurts to play this in this state. The only other titles that managed to evoke this feeling are The Secret World and maybe Generation Zero.\nThe environment is great, encountering vampires is too.\nThe first blatant things you'll notice are the terrible human enemy a.i., and your character's out of place voice lines.\n\nBut I'm having a good time. Around every corner you'll see the intentions of the team for the final product, and you might still be able to get close to it with a group of friends.",
+        "gold_evidence": "The environment is great"
+      },
+      {
+        "chunk_id": "steam:1294810:177887688:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Neutral",
+        "predicted": "Positive",
+        "text": "The game is actually decent. I've only played a little bit though. Plan on playing more.\n\nIts Bethesda's version of Far Cry and Generation Zero with Dishonored artwork. Has generic FPS looter/shooter formula, but it works. I have gotten a couple crashes, but nothing gamebreaking. Combat is somewhat fluid, story is generic.\n\nI do wish we still got the DLC's :(",
+        "gold_evidence": "with Dishonored artwork"
+      },
+      {
+        "chunk_id": "steam:1294810:183662160:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "These are the guys who made Dishonored and Prey, both games with some of the best exploration and environmental storytelling there is, especially Prey. This game still has all those things: a great atmosphere, great exploration that rewards you with well written lore, great soundtrack, etc. It's definitely worth it if you liked their previous games for that reason. I think only Arkane could make a vampire game actually well written and not cringe. Is it a masterpiece like Prey? No. But its closer to it than any other game out there, even if it was originally meant to be a co-op game...\n\nNow Microsoft has one less studio, a studio who could have released a console-selling game for them, no longer contributing to their still pathetic excuse of a game library.",
+        "gold_evidence": "a great atmosphere"
+      },
+      {
+        "chunk_id": "steam:1294810:222148648:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Negative",
+        "text": "Visually incredible, but besides that it's clearly unfinished. Plus the writing is awful & the music is obnoxious.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:1903340:235947969:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Positive",
+        "predicted": "Not mentioned",
+        "text": "Overrated af honestly. I was forcing myself through several hours thinking it will get better. But it just remains stale and repetitive. Throwing in some difficult encounters and platforming to excuse it's playtime outside of cutscenes and combat. Fine game. it runs well, has nice music and it's pretty. That's about the only positives I can think of.\n\n\"I did not care for it\" - Peter Griffin",
+        "gold_evidence": "it's pretty"
+      },
+      {
+        "chunk_id": "steam:1903340:237483005:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "The game looks like it was made for the PS2 when played on the Steam Deck. It also runs worse than a PS2 game. The game stutters, the frame rate was all over the place, the camera tracking was jittery... Whoever decided to label this game as SteamDeck compatible must be on something because it's far from playable.",
+        "gold_evidence": "looks like it was made for the PS2"
+      },
+      {
+        "chunk_id": "steam:1962663:220381719:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "One of the worst FPS shooter games i have ever played. Shaders fail to load, sound glitches, full of cheaters, overall buggy and utter ♥♥♥♥♥. Oh and to put the icing on the cake, the total size is 161 GB, 161!!!!! Personally that alone is ♥♥♥♥♥♥♥ astonishing for a FPS. If you want to play a decent free FPS, download CSGO, it will save your hard drive 100 GB.",
+        "gold_evidence": "Shaders fail to load"
+      },
+      {
+        "chunk_id": "steam:1962663:224451447:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "love the game but the updates and the amount of times this game crashes my pc is disappointing. especially since Im on minimum graphics but I can run rust for 10 hours straight on high settings.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:2246340:235870680:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "This gets a recommendation just on the basis of being a fun action combat game.\n\nAs a Monster Hunter game though, definitely a step down from Monster Hunter World. Looks worse, runs worse and still no seamless co-op.\n\nIf you haven't already, play MHWorld without the DLC then add the Iceborne DLC after.",
+        "gold_evidence": "Looks worse"
+      },
+      {
+        "chunk_id": "steam:2246340:236279511:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Not mentioned",
+        "text": "Horrible optimization.\nGame thinks I should play it on ultra, but without Frame Generation, the game doesn't reach 30 fps.\nEven on the Lowest Settings it still can't reach 60 fps.\nIt \"easily\" reaches stable ~90 fps with Frame Generation on both ultra and Lowest, but it causes the game to look horrible and it causes me to have a headache after half an hour of playing.\nI sincerly hoped for the updates to make the game \"playable\" for me, but I still need a break every 30 or so minutes.\n\nIt can be a fun game, but please download the demo first and see if you can enjoy the game despite the need for frame generation.",
+        "gold_evidence": "it causes the game to look horrible"
+      },
+      {
+        "chunk_id": "steam:271590:235181495:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Positive",
+        "text": "I don't know what it is, but the music, the scripting of the characters, it all feels very real. From something made in 2013, even in 2026, it just feels like a roller coaster of emotion.\n\nWould recommend even 13 years since release (sept 17)",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:282560:156635377:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "The Graphics on this game are nuts and crash the game all the time. I currently have all settings to the lowest possible and still spikes. Too much going on in this roller coaster game.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:285190:215854594:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Negative",
+        "text": "Bad core mechanics, constant bugs, horrible UX/UI, painfully slow pacing, a detrimental plot, and terrible voice acting. An absolute mess.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:285190:228456024:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Not mentioned",
+        "predicted": "Neutral",
+        "text": "Sometimes the game is great but I have a high end PC and struggle through some of the campaign missions unless I put the graphics on lowest 1080p and save every couple minutes. First 9 missions rarely crashed, 10+11 so far crashed many times, but low settings seem to help.",
+        "gold_evidence": ""
+      },
+      {
+        "chunk_id": "steam:390340:193108492:chunk:001",
+        "aspect": "graphics_visuals",
+        "gold": "Negative",
+        "predicted": "Positive",
+        "text": "I write this review nearly six years after playing it.\nWhy?\nBecause the pain lingers.....\n\nWhat is good? You can launch it! The game can be launched! 🤯👍\nWhat is bad? Oh boy, everything! 🤬\nWhat is ugly? The graphics. Like someone dipped a PS2 game in Vaseline and said \"Ship it.\" 😒",
+        "gold_evidence": "The graphics. Like someone dipped a PS2 game in Vaseline"
+      }
+    ]
+  }
+}

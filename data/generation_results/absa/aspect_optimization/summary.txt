@@ -1,0 +1,3 @@
+Previous deployment: aspect F1=0.7989; sentiment Macro-F1=0.6094; end-to-end F1=0.6719; Graphics/Negative recall=0.7143
+Local-context hybrid: aspect F1=0.8791; sentiment Macro-F1=0.6412; end-to-end F1=0.7515; Graphics/Negative recall=0.9286
+Optimized deployment: aspect F1=0.8791; sentiment Macro-F1=0.5905; end-to-end F1=0.7748; Graphics/Negative recall=0.9286
