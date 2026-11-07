@@ -14,7 +14,7 @@ def main():
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     from generation.aspect_analysis import MODEL_DIR, RESULTS_DIR, AspectAnalyzer
-    from paths import ANNOTATIONS_PATH
+    from paths import ANNOTATIONS_PATH, GENERATION_RESULTS_DIR
     from generation.evaluate_aspect import load_records, split_records
 
     out = RESULTS_DIR / 'aspect_optimization'
@@ -109,7 +109,7 @@ With the retrieved passages fixed, both previously identified graphics errors ch
     overview_body = overview.partition('\n')[2].strip()
     absa_section = '\n'.join('#' + line if line.startswith('#') else line
                              for line in report.strip().splitlines())
-    summary_path = ROOT/'rag_summary/experiments/final/report.md'
+    summary_path = GENERATION_RESULTS_DIR / 'rouge_results/report.md'
     summary_report = summary_path.read_text(encoding='utf-8')
     summary_section = '\n'.join('### ' + line.lstrip('# ') if line.startswith('#') else line
                                 for line in summary_report.strip().splitlines())
@@ -117,7 +117,7 @@ With the retrieved passages fixed, both previously identified graphics errors ch
         '# 4 Generation\n\n' + overview_body + '\n\n' + absa_section + '\n\n'
         '## 4.2 Evidence-Grounded RAG Summarization\n\n'
         'See the [summarization method and experiment setup](../rag_summary/README.md) and '
-        '[per-method scores](../rag_summary/experiments/final/summary.csv).\n\n'
+        '[per-method scores](../../../data/generation_results/rouge_results/summary.csv).\n\n'
         + summary_section + '\n'
     )
     (ROOT/'docs/generation_report.md').write_text(combined_report, encoding='utf-8')
