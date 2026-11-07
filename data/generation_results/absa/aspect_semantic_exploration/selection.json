@@ -1,0 +1,30 @@
+{
+  "selected": "previous_deployment",
+  "eligible": [
+    "previous_deployment",
+    "local_per_aspect_bge_C2",
+    "local_per_aspect_bge_C8",
+    "local_shared_bge_C2",
+    "local_shared_hybrid_C2",
+    "local_shared_hybrid_C8",
+    "local_shared_hybrid_two_stage_C2",
+    "local_shared_hybrid_two_stage_C8"
+  ],
+  "guardrail_threshold": 0.6579316888045541,
+  "protocol": {
+    "split": "Original document-grouped, game-stratified 600/200/200; seed 42; unchanged IDs",
+    "development_objective": "0.7 * end-to-end micro-F1 + 0.3 * Graphics/Negative end-to-end F1",
+    "guardrail": "Development end-to-end micro-F1 >= previous deployment minus 0.01",
+    "c_values": [
+      2.0,
+      8.0
+    ],
+    "presence_C": 2.0,
+    "training_data": "600 train reviews only",
+    "development_iteration": "Semantic-feature phase after lexical DEV results; same objective/guardrail. Earlier exploration retained.",
+    "test_status": "Previously inspected holdout, reused for comparison; not a new blind benchmark",
+    "known_live_cases": "Diagnostic regression cases only; no labels/text added to training",
+    "annotation_sha256": "f81d19e01a544b772f79e014843b3de814a06f3e82be86a22cb26060d3085af3",
+    "original_split_manifest": "../aspect_previous/split_manifest.json"
+  }
+}

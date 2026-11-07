@@ -1,0 +1,72 @@
+[
+  {
+    "configuration": "whole_shared_bge_C2",
+    "C": 2.0,
+    "objective": 0.538899430740038,
+    "end_to_end_micro_f1": 0.618595825426945,
+    "graphics_negative_end_to_end_f1": 0.35294117647058826
+  },
+  {
+    "configuration": "whole_shared_bge_C8",
+    "C": 8.0,
+    "objective": 0.5335863377609108,
+    "end_to_end_micro_f1": 0.6110056925996205,
+    "graphics_negative_end_to_end_f1": 0.35294117647058826
+  },
+  {
+    "configuration": "local_per_aspect_bge_C2",
+    "C": 2.0,
+    "objective": 0.5850094876660341,
+    "end_to_end_micro_f1": 0.6698292220113852,
+    "graphics_negative_end_to_end_f1": 0.3870967741935484
+  },
+  {
+    "configuration": "local_per_aspect_bge_C8",
+    "C": 8.0,
+    "objective": 0.590678368121442,
+    "end_to_end_micro_f1": 0.683111954459203,
+    "graphics_negative_end_to_end_f1": 0.375
+  },
+  {
+    "configuration": "local_shared_bge_C2",
+    "C": 2.0,
+    "objective": 0.5934890891840607,
+    "end_to_end_micro_f1": 0.6603415559772297,
+    "graphics_negative_end_to_end_f1": 0.4375
+  },
+  {
+    "configuration": "local_shared_bge_C8",
+    "C": 8.0,
+    "objective": 0.5868477229601518,
+    "end_to_end_micro_f1": 0.650853889943074,
+    "graphics_negative_end_to_end_f1": 0.4375
+  },
+  {
+    "configuration": "local_shared_hybrid_C2",
+    "C": 2.0,
+    "objective": 0.6056925996204934,
+    "end_to_end_micro_f1": 0.6717267552182163,
+    "graphics_negative_end_to_end_f1": 0.45161290322580644
+  },
+  {
+    "configuration": "local_shared_hybrid_C8",
+    "C": 8.0,
+    "objective": 0.604115275142315,
+    "end_to_end_micro_f1": 0.6755218216318786,
+    "graphics_negative_end_to_end_f1": 0.4375
+  },
+  {
+    "configuration": "local_shared_hybrid_two_stage_C2",
+    "C": 2.0,
+    "objective": 0.5988021821631878,
+    "end_to_end_micro_f1": 0.6679316888045541,
+    "graphics_negative_end_to_end_f1": 0.4375
+  },
+  {
+    "configuration": "local_shared_hybrid_two_stage_C8",
+    "C": 8.0,
+    "objective": 0.6027870018975332,
+    "end_to_end_micro_f1": 0.6736242884250474,
+    "graphics_negative_end_to_end_f1": 0.4375
+  }
+]
