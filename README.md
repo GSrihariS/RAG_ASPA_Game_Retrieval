@@ -1,3 +1,67 @@
+# Aspect-Based Opinion RAG over Steam Game Reviews
+
+AI6127 group project. A retrieval-augmented generation system that finds what players say about a
+specific aspect of a game (story, performance, controls, ...) in 10,000 Steam reviews from 20 games,
+and answers from that evidence.
+
+## Layout
+
+The repository has two top-level folders, one for each submission package.
+
+```
+code/                     source code (code.zip, together with this README)
+  app.py                  Streamlit UI
+  paths.py                locations of everything under data/
+  requirements.txt
+  data_pipeline/          knowledge-base construction: collection, cleaning, chunking, agreement
+  retrieval/              BM25, dense, RRF fusion, reranking, query expansion, index builders
+  generation/             evidence-grounded RAG summarization (rag_summary/), prompts and experiments
+  eval/                   retrieval evaluation and annotation-set tools
+  scripts/                batch runs and submission packaging
+  docs/UI.md              UI guide
+data/                     all data and results (data.zip), described in data/README.md
+  knowledge_base/         the Steam reviews and their chunks
+  evaluation_dataset/     annotated chunks (eval.xls), agreement, retrieval queries and label statistics
+  indexes/                prebuilt BM25 and FAISS indexes
+  retrieval_results/      the 100-query retrieval evaluation and final pipeline results for 100 queries
+  generation_results/     generated answers from the summarization experiment, and their metrics
+```
+
+| Assignment part | Code | Data and results |
+|---|---|---|
+| Knowledge base (20 points) | `code/data_pipeline/` | `data/knowledge_base/` |
+| Retrieval (40 points) | `code/retrieval/`, `code/eval/`, `code/app.py` | `data/indexes/`, `data/evaluation_dataset/`, `data/retrieval_results/` |
+| Downstream task and generation (40 points) | `code/generation/` | `data/evaluation_dataset/`, `data/generation_results/` |
+
+## Setup
+
+Tested with Python 3.13 on Windows 11.
+
+1. Unpack `code.zip` and `data.zip` into the same folder, so that `code/` and `data/` sit side by side.
+   In a git clone, unpack `data.zip` over the repository instead: git holds only part of `data/`.
+2. For GPU acceleration, install the CUDA build of torch first. Without this step, `requirements.txt`
+   installs the default build for your platform.
+
+   ```bash
+   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   cd code
+   pip install -r requirements.txt
+   ```
+
+There is nothing to compile. The models download from Hugging Face on first use:
+`BAAI/bge-small-en-v1.5` (about 130 MB) and `BAAI/bge-reranker-v2-m3` (about 2.2 GB).
+
+## Run
+
+Run every command from the `code/` folder.
+
+**Search UI**, then open http://localhost:8501 (see [docs/UI.md](code/docs/UI.md)):
+
 ```bash
 streamlit run app.py
 ```
