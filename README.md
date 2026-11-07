@@ -15,16 +15,16 @@ code/                     source code (code.zip, together with this README)
   requirements.txt
   data_pipeline/          knowledge-base construction: collection, cleaning, chunking, agreement
   retrieval/              BM25, dense, RRF fusion, reranking, query expansion, index builders
-  generation/             downstream task and answer generation
+  generation/             downstream task: RAG summarization (rag_summary/), experiments and tests
   eval/                   retrieval evaluation and annotation-set tools
   scripts/                batch runs and submission packaging
   docs/UI.md              UI guide
 data/                     all data and results (data.zip), described in data/README.md
   knowledge_base/         the Steam reviews and their chunks
-  evaluation_dataset/     annotated chunks (eval.xls), retrieval queries and label statistics
+  evaluation_dataset/     annotated chunks (eval.xls), agreement, retrieval queries and label statistics
   indexes/                prebuilt BM25 and FAISS indexes
-  retrieval_results/      sample-query results and the 100-query retrieval evaluation
-  generation_results/     generated answers or classification results, and their metrics
+  retrieval_results/      the 100-query retrieval evaluation and final pipeline results for 100 queries
+  generation_results/     generated answers from the summarization experiment, and their metrics
 ```
 
 | Assignment part | Code | Data and results |
@@ -97,25 +97,48 @@ python eval/export_eval_xls.py
 
 ## Knowledge-base construction
 
-TODO (Data group): how to run the collection, cleaning, chunking and agreement scripts.
-See [code/data_pipeline/README.md](code/data_pipeline/README.md).
+`data.zip` already contains the built knowledge base, so these steps are only needed to rebuild it. Run them
+from `code/`; [code/data_pipeline/README.md](code/data_pipeline/README.md) has the details and output files.
+
+```bash
+python -m data_pipeline.collect_steam_reviews
+python -m data_pipeline.process_steam_reviews
+```
+
+Collection calls the Steam API and writes to a new folder, `data/knowledge_base_all_365_500/`. Processing reads
+`data/knowledge_base/all_reviews.json` and overwrites `data/knowledge_base/processed/`. If the chunks change,
+rebuild the indexes as well.
+
+**Annotation agreement.** This writes `data/evaluation_dataset/iaa_report.json`:
+
+```bash
+python -m data_pipeline.calculate_iaa
+```
 
 ## Downstream task and generation
 
-TODO (Generation group): how to run generation, classification and their evaluation.
-See [code/generation/README.md](code/generation/README.md).
+The downstream task is evidence-grounded RAG summarization: answer a question from the retrieved reviews, with
+citations. The experiment compares four methods (`baseline`, `improved`, `verify_delete`, `verify_revise`) on
+100 fixed questions. Run these commands from `code/`.
 
-## Packaging
-
-This writes `code.zip` and `data.zip` to `dist/`:
+**Generate an answer in the UI.** This needs an API key for an OpenAI-compatible service. Set the key, start the
+UI, search, then click **Generate summary**. On Windows PowerShell, use `$env:GENERATION_API_KEY = "your-key"`.
 
 ```bash
-python scripts/package_submission.py
+export GENERATION_API_KEY=your-key
+streamlit run app.py
 ```
 
-## Notes for contributors
+The service defaults to `https://api.deepseek.com` and the model to `deepseek-v4-pro`. To change them, set
+`GENERATION_BASE_URL` and `GENERATION_MODEL`.
 
-- Modules import each other from the `code/` root, for example `from retrieval.fusion import merge`.
-  That is why modules with imports run as `python -m retrieval.query_hybrid` from `code/`.
-- Take data locations from `paths.py` rather than writing relative paths.
-- Do not add an `__init__.py` to `code/` itself: it would shadow the standard library's `code` module.
+**Reproduce the final scores.** This rescores the saved answers and needs no API key. Use a new output folder:
+
+```bash
+python generation/rag_summary/recompute_results.py generation/rag_summary/experiments/final/generation_results.json --output ../data/generation_results/rag_summary/report_reproduction
+```
+
+The final scores are listed in [data/README.md](data/README.md). Python usage and the UI integration are in
+[code/generation/README.md](code/generation/README.md); the method descriptions and the commands for rerunning
+the experiment are in [rag_summary/README.md](code/generation/rag_summary/README.md).
+

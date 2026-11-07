@@ -1,0 +1,124 @@
+Chunk ID: steam:246090:12914621:chunk:001
+Text:
+Double Fine slapped a "1.0" sticker on this game and abandoned it. Whilst I appreciate that there are times that an Early Access game may not deliver all of the promised features, this game received a small fraction of those features proposed.
+
+But this is a game review, not a review of Double Fine's business practices. So how is the game?
+
+In short, the game is a mess of buggy AI with barely enough gameplay mechanics to sustain more than a couple of hours of play. The character morale system is horribly half-baked, and the game is little more than a series of repetitive busywork tasks.
+
+That Double Fine now has it's greasy mitts out for Early Access funding for Massive Chalice barely a month after abandoning DF-9 is an insult to all of those people who put their faith in the company.
+
+Never again.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:13788769:chunk:001
+Text:
+Don't bother with this game. SBDF-9 a good concept and the game definitely had potential, but it's a flop.
+
+- The game is (and feels) unfinished.
+- Bugs and crashes are common even after "release".
+- Poor user experience, frustrating character AI.
+- As it was left by the developer, the game has a severe lack of depth.
+
+I am extremely disappointed with the developer's choice of abandoning development, but I guess it's a risk one accepts when buying into Early Access.
+
+ADHD Version: DO NOT BUY.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:73777258:chunk:001
+Text:
+Almost good. Everything is there for an enjoyable base-builder survival game. But the interface and menu is unintuitive, and I keep getting more colonists, even though I don't want them. I have never had enough beds for everyone, because they don't stop joining my colony, even if I don't want them.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:105767028:chunk:001
+Text:
+After playing for 7 hours, the game now freezes every time I try to launch it. I have even tried uninstalling and reinstalling, and deleting my saved games. DF-9 is just broken.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:84359698:chunk:001
+Text:
+[0.5] Controls & Training & Help
+[0.5] Menu & Settings
+[0.4] Sound & Music
+[0.5] Graphics
+[0.5] Game Design
+[0.5] Game Story
+[0.3] Game Content
+[0.4] Time to complete feels ok? (or if the Game can be repeatedly played again)
+[0.3] Enjoyable & Fun?
+[0.2] Could hold spot in Favorites?
+[0] BONUS point: Review for VR
+
+Stars received: 4.1/10 ___ Note: v.2 [0.0 to 1] = personal impressions
+
+Game description key-points: SpaceBase simulator
+Overview: idea is very good and approach, but not for this game unfortunately. Game was abandoned with multiple issues.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:73880295:chunk:001
+Text:
+Appeared in my steam library after redeeming a different game from DF's Humble Bundle (did not use the code I was given, this just showed up out of nowhere). Decided to try it despite the negative reviews, and my partial dislike of management games. Immediately saw why it had negative reviews.
+Never even got past the damn tutorial. UI is a bit confusing to me but I can partially blame myself tbh; I have a bit of a smooth brain :P
+The music is alright though, I'll give it that. There's a dozen different space management building games out there, buy one of those instead of this one.
+Overall 1/5. Not DF's greatest work tbf.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:15712358:chunk:001
+Text:
+Unfortunately this game is a bit of a disaster. DoubleFine supposedly had to cancel this game and release a final version early after finding this game to be uneconomical. A shame.
+
+Time for the good/bad/ugly.
+
+The Good:
+
+- The art style is nice
+
+- Oxygen simulation works well
+
+- Characters have moods and these change according to what happens
+
+The Bad:
+
+- General lack of features; boredom does not take long.
+
+- Building a large base is not difficult, merely very time-consuming.
+
+The Ugly:
+
+- The AI. DEAR GOD.
+
+- Seriously, half of the time people don't do their &!€$@# jobs.
+
+- I'm not kidding. Characters manage to kill themselves REGULARLY.
+
+Don't buy this unless you love bad games (also source code is now free according to comments)
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:125071581:chunk:001
+Text:
+the mechanics of this game are awful. no matter what you do, there will be some freak event where one bad guy randomly appears on your base and singlehandedly kills two thirds of your crew. 1/10 would not recommend
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:13294465:chunk:001
+Text:
+Unfortunately I can't recommend this game. I personally like it but since the developer decided to leave the game unfinished and incomplete, I can't recommend it. What you have is a fun Spacestation simulator that minus the bugs and glitches would be good enough on its own. However these bugs and glitches are often game breaking and could even destroy your save. That being said, don't buy this game unless you have a high tolerance for pain.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:66712100:chunk:001
+Text:
+Unfortunately abandoned unfinished. Could be good, however in the current state lacks of basic management tools, priority queue is missing, few content, AI is lazy (population was idle most of time), lots of bugs (e.g all my crew was killed trying disassembling my own turret gun. Or even, you can sealed the air in the room without sealing the doors.!?!?
+Sorry Steve, you died with air decompression blast for your own sake).
+
+Can't recommend.
+
+--------------------------------------------------------------------------------
+

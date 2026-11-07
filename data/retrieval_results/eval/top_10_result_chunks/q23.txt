@@ -1,0 +1,103 @@
+Chunk ID: steam:246090:13788769:chunk:001
+Text:
+Don't bother with this game. SBDF-9 a good concept and the game definitely had potential, but it's a flop.
+
+- The game is (and feels) unfinished.
+- Bugs and crashes are common even after "release".
+- Poor user experience, frustrating character AI.
+- As it was left by the developer, the game has a severe lack of depth.
+
+I am extremely disappointed with the developer's choice of abandoning development, but I guess it's a risk one accepts when buying into Early Access.
+
+ADHD Version: DO NOT BUY.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:12914621:chunk:001
+Text:
+Double Fine slapped a "1.0" sticker on this game and abandoned it. Whilst I appreciate that there are times that an Early Access game may not deliver all of the promised features, this game received a small fraction of those features proposed.
+
+But this is a game review, not a review of Double Fine's business practices. So how is the game?
+
+In short, the game is a mess of buggy AI with barely enough gameplay mechanics to sustain more than a couple of hours of play. The character morale system is horribly half-baked, and the game is little more than a series of repetitive busywork tasks.
+
+That Double Fine now has it's greasy mitts out for Early Access funding for Massive Chalice barely a month after abandoning DF-9 is an insult to all of those people who put their faith in the company.
+
+Never again.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:13294465:chunk:001
+Text:
+Unfortunately I can't recommend this game. I personally like it but since the developer decided to leave the game unfinished and incomplete, I can't recommend it. What you have is a fun Spacestation simulator that minus the bugs and glitches would be good enough on its own. However these bugs and glitches are often game breaking and could even destroy your save. That being said, don't buy this game unless you have a high tolerance for pain.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:105767028:chunk:001
+Text:
+After playing for 7 hours, the game now freezes every time I try to launch it. I have even tried uninstalling and reinstalling, and deleting my saved games. DF-9 is just broken.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:84359698:chunk:001
+Text:
+[0.5] Controls & Training & Help
+[0.5] Menu & Settings
+[0.4] Sound & Music
+[0.5] Graphics
+[0.5] Game Design
+[0.5] Game Story
+[0.3] Game Content
+[0.4] Time to complete feels ok? (or if the Game can be repeatedly played again)
+[0.3] Enjoyable & Fun?
+[0.2] Could hold spot in Favorites?
+[0] BONUS point: Review for VR
+
+Stars received: 4.1/10 ___ Note: v.2 [0.0 to 1] = personal impressions
+
+Game description key-points: SpaceBase simulator
+Overview: idea is very good and approach, but not for this game unfortunately. Game was abandoned with multiple issues.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:102805151:chunk:001
+Text:
+This game is just way too buggy, even with the unofficial patch that's supposed to fix a lot of things. I'm continually stuck in crisis mode, trying to get a functional base, while people die of things they need, but won't build them, or the airlock gets stuck randomly and decides it's not an airlock anymore so I have to build a second airlock in order to build a room for oxygen in order to prevent my people from suffocating. Then raiders attack and kill my workers who won't work anyway. It might be a fun game if it worked as expected, but due to its buggy nature and terrible UI I wouldn't recommend anyone even starting to try it.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:123894709:chunk:001
+Text:
+This game is currenty being sold as part of Humble Bundle's Day of the Dev bundle, despite the fact that it's been abandoned in a terrible state by a dev who beforehand had never showed signs of just throwing away a game. Nowadays the unofficial patch hardly works and the game is plagued with crashes on newer hardware, making it a nightmare to play.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:12702459:chunk:003
+Text:
+I understand the reasons behind it, and the bug fixing is ongoing. However in its current state it is still very very difficult to play smoothly, and I don't mean that the game is hard, I mean the game visibly holds you back when you want to play it and a single bug can be a game breaker.
+
+If you like the look of this game, feel free to get it, back up your saves MANUALY on a regular basis, and don't be surprised if a sudden bug/glitch wrecks your experience. However please don't buy this game if you are thinking it will be epic. It's epic until a bug kills it.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:13438084:chunk:003
+Text:
+So mad i start trashing my own Oxygen tanks thereby killing myself. What? You wouldn't do that? Well the AI in this game does that. Yep, if they aren't living in luxury they decide life just ain't worth living.
+
+-Not Worth the price
+If Double Fine Games was going to keep working on this, i would say this is worth the price, however they aren't so really there is no point in spending cash on it. Its not going to get better, its not going to get fixed, and its not a good game.
+
+-bugs and glitches that will never be fixed
+Not being able to build, Oxygen not being produced despite the fact i have Oxygen tanks and more, these are bugs and glitches that will never be fixed.
+
+--------------------------------------------------------------------------------
+
+Chunk ID: steam:246090:66712100:chunk:001
+Text:
+Unfortunately abandoned unfinished. Could be good, however in the current state lacks of basic management tools, priority queue is missing, few content, AI is lazy (population was idle most of time), lots of bugs (e.g all my crew was killed trying disassembling my own turret gun. Or even, you can sealed the air in the room without sealing the doors.!?!?
+Sorry Steve, you died with air decompression blast for your own sake).
+
+Can't recommend.
+
+--------------------------------------------------------------------------------
+

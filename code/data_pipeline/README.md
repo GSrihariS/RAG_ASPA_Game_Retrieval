@@ -1,27 +1,62 @@
 # Knowledge-base construction
 
-Pending (Data group). The data itself is already in `data/knowledge_base/`, but the scripts that
-produced it are not in the repository yet.
+Run these commands from `code/` after installing `requirements.txt`.
 
-## What belongs here
+## Collect reviews
 
-- The scripts that collect the Steam reviews, and clean, filter and chunk them.
-- The script that computes inter-annotator agreement. The assignment requires at least 80% over at
-  least 1,000 records.
+```bash
+python -m data_pipeline.collect_steam_reviews
+```
 
-## What belongs in `data/`
+Requests 500 English reviews per game for the 20 games in the script, using helpfulness order and
+`day_range=365`, both recommendation outcomes, and all purchase types. The default output is
+`data/knowledge_base_all_365_500/`, containing `all_reviews.json`, per-game records, raw API responses,
+and a collection manifest. Use `--output` to choose another directory.
 
-- The labels of **each annotator**, in `data/evaluation_dataset/`. The current
-  `steam_annotations_confirmed.json` holds one merged label per chunk, so agreement cannot be computed
-  from it.
+## Process reviews
 
-## Conventions
+```bash
+python -m data_pipeline.process_steam_reviews
+```
 
-- Run from `code/` and take locations from `paths.py`, for example
-  `from paths import KNOWLEDGE_BASE_DIR, CHUNKS_PATH`.
-- Keep the chunk fields (`id`, `document_id`, `source`, `title`, `text`, `metadata`): the retrieval code
-  and the indexes depend on them.
-- If you regenerate `chunks.jsonl`, rebuild the indexes and tell the retrieval group, because the
-  evaluation results depend on them.
-- Add your dependencies to `code/requirements.txt` with pinned versions.
-- Describe how to run your scripts here, and replace the TODO in the root `README.md`.
+The default input is `data/knowledge_base/all_reviews.json`; the output directory is
+`data/knowledge_base/processed/`.
+
+Input can be a JSON object with a `reviews` array, a JSON array, or JSONL. Each review contains
+`review_id`, `appid`, `game_name`, `review_text`, and `steam_recommended`, plus its source metadata.
+See [DATA_FORMAT.md](../../data/knowledge_base/DATA_FORMAT.md) for the fields.
+
+To process the newly collected reviews, set the input and output explicitly:
+
+```bash
+python -m data_pipeline.process_steam_reviews --input ../data/knowledge_base_all_365_500/all_reviews.json --output ../data/knowledge_base_all_365_500/processed
+```
+
+The pipeline cleans Steam formatting and checkbox templates, checks language, and removes duplicate
+review texts within each game. Reviews up to 150 words stay whole; longer reviews target 120 words
+per passage, with optional overlap of one sentence of up to 30 words.
+
+Main output files:
+
+| File | Content |
+|---|---|
+| `clean_reviews.jsonl` | All source reviews with cleaned text |
+| `filtered_reviews.jsonl` | Retained reviews and their retrieval text |
+| `excluded_reviews.jsonl` | Excluded reviews with their reasons |
+| `chunks.jsonl` | Passages with IDs, source metadata, and character offsets |
+| `processing_report.json` | Corpus counts, processing settings, and validation checks |
+
+## Agreement calculation
+
+```bash
+python -m data_pipeline.calculate_iaa
+```
+
+Reads `data/evaluation_dataset/steam_annotations_iaa.json` and writes `iaa_report.json` in the same
+folder. Each review record contains `annotator_1` and `annotator_2` alongside its final labels.
+The eight-character codes use the shared `aspect_order` and `sentiment_codes`; `=` refers to the first annotator's codes.
+The compact codes include the data team's retrospectively supplied differences between two review
+passes. The script reports label agreement, exact passage agreement, and Cohen's kappa.
+
+The reported two-pass exact passage agreement is **98.2% (982/1,000 passages)**.
+Full results are in [iaa_report.json](../../data/evaluation_dataset/iaa_report.json).
