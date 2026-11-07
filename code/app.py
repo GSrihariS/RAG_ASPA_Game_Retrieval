@@ -47,24 +47,36 @@ def game_names(retriever):
     return sorted({chunk['metadata']['game_name'] for chunk in retriever.sparse.chunks})
 
 
+def restrict_to_games(hits, games):
+    if not games:
+        raise ValueError('Select at least one target game.')
+    allowed = set(games)
+    return [hit for hit in hits if isinstance(hit.get('metadata'), dict)
+            and hit['metadata'].get('game_name') in allowed]
+
+
 @st.cache_data(max_entries=64, show_spinner=False)
 def search(query, mode, games, top_k, candidates, rerank_candidates, rrf_k, sparse_query, dense_query):
     """Run one query and return (hits, per-stage timings in ms). Cached so reruns keep the measured timings.
 
     `sparse_query` / `dense_query` are the (possibly expanded) retriever inputs; the reranker scores the original query.
     """
+    if not games:
+        raise ValueError('Select at least one target game.')
     retriever = load_retriever()
-    filters = {'game_name': list(games)} if games else None
+    filters = {'game_name': list(games)}
     timings = {}
     results = {}
 
     if mode in ('BM25', 'Hybrid (RRF)', 'Hybrid + Rerank'):
         start = time.perf_counter()
-        results['sparse'] = retriever.sparse.retrieve(sparse_query, top_k=candidates, filters=filters)
+        results['sparse'] = restrict_to_games(
+            retriever.sparse.retrieve(sparse_query, top_k=candidates, filters=filters), games)
         timings['BM25'] = (time.perf_counter() - start) * 1000
     if mode in ('Dense', 'Hybrid (RRF)', 'Hybrid + Rerank'):
         start = time.perf_counter()
-        results['dense'] = retriever.dense.retrieve(dense_query, top_k=candidates, filters=filters)
+        results['dense'] = restrict_to_games(
+            retriever.dense.retrieve(dense_query, top_k=candidates, filters=filters), games)
         timings['Dense'] = (time.perf_counter() - start) * 1000
 
     if mode in ('BM25', 'Dense'):
@@ -85,7 +97,7 @@ def search(query, mode, games, top_k, candidates, rerank_candidates, rrf_k, spar
             timings['Rerank'] = (time.perf_counter() - start) * 1000
 
     timings['Total'] = sum(timings.values())
-    return hits, timings
+    return restrict_to_games(hits, games), timings
 
 
 def use_sample(sample):
@@ -154,17 +166,26 @@ def render_hit(rank, hit, mode):
             st.json({'chunk_id': hit['chunk_id'], **meta})
 
 
-def render_summary(query, hits):
-    evidence_key = (query, tuple(
-        (h['chunk_id'], h['text'], (h.get('metadata') or {}).get('game_name'),
-         (h.get('metadata') or {}).get('source_url')) for h in hits
+def render_summary(query, hits, games):
+    if not games:
+        st.session_state.pop('rag_summary_answer', None)
+        st.info('Select at least one target game before generating a summary.')
+        return
+    hits = restrict_to_games(hits, games)
+    if not hits:
+        st.session_state.pop('rag_summary_answer', None)
+        st.warning('No reviews match the selected games. Try other keywords or target games.')
+        return
+    evidence_key = (query, tuple(sorted(games)), tuple(
+        (h['chunk_id'], h['text'], json.dumps(h.get('metadata') or {}, sort_keys=True))
+        for h in hits
     ))
     if st.button('Generate summary', key='rag_summary_generate'):
         st.session_state.pop('rag_summary_answer', None)
         try:
             with st.spinner('Generating an answer from the retrieved reviews...'):
                 result = generate_summary(
-                    query, hits, approach='improved', max_claims=4,
+                    query, hits, max_claims=4,
                     model=os.getenv('GENERATION_MODEL', 'deepseek-v4-pro'),
                     client=OpenAICompatibleClient(
                         base_url=os.getenv('GENERATION_BASE_URL', 'https://api.deepseek.com')
@@ -173,6 +194,7 @@ def render_summary(query, hits):
         except (GenerationError, ValueError) as error:
             st.error(safe_error(error)['error_message'])
         else:
+            result['retrieval_filters'] = {'game_name': list(games)}
             st.session_state.rag_summary_answer = (evidence_key, result)
             try:
                 output_dir = GENERATION_RESULTS_DIR / 'rag_summary'
@@ -204,7 +226,7 @@ def main():
         st.header('Search settings')
         mode = st.radio('Retrieval mode', MODES, help='Hybrid modes fuse BM25 and dense results with RRF')
         games = st.multiselect('Filter by game', games_all, key='games',
-                               help='Leave empty to search all games')
+                               help='Required. Select one game, or multiple games to compare.')
         top_k = st.slider('Results to show (top-k)', 1, 30, 5)
         expansion_mode = st.radio('Query expansion', list(EXPANSION_MODES), horizontal=True,
                                   help='Add aspect keywords to the BM25 and dense queries. Hierarchical only adds '
@@ -238,6 +260,11 @@ def main():
         st.info('Enter a query or pick a sample query to start.')
         return
 
+    if not games:
+        st.session_state.pop('rag_summary_answer', None)
+        st.info('Select at least one target game in the sidebar before searching.')
+        return
+
     query = query.strip()
     expansion = expand_query(query, mode=EXPANSION_MODES[expansion_mode]) if EXPANSION_MODES[expansion_mode] else None
     sparse_query = query if expansion is None else expansion.sparse
@@ -254,7 +281,7 @@ def main():
     render_expansion(expansion, expansion_mode, mode)
 
     if not hits:
-        st.warning('No matching reviews. Try other keywords or remove the game filter.')
+        st.warning('No matching reviews. Try other keywords or choose different target games.')
         return
 
     st.subheader('Overview')
@@ -262,13 +289,13 @@ def main():
     aspect_result = render_aspect_analysis(hits, query)
     with st.container(border=True):
         st.markdown('**Evidence-grounded review summary**')
-        render_summary(query, hits)
+        render_summary(query, hits, games)
 
     st.subheader(f'Top {len(hits)} reviews')
     export = {
         'query': query,
         'mode': mode,
-        'filters': {'game_name': list(games)} if games else None,
+        'filters': {'game_name': list(games)},
         'params': {'top_k': top_k, 'candidates': candidates,
                    'rerank_candidates': rerank_candidates, 'rrf_k': rrf_k},
         'expansion': None if expansion is None else {

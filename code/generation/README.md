@@ -14,16 +14,16 @@ The two components can use the same retrieved passages. The summarizer reads the
 - [Combined Generation report](docs/generation_report.md)
 - [Generation overview paragraph](docs/generation_overview.md)
 - [Section 4.1: Aspect-Based Sentiment Analysis](docs/aspect_report.md)
-- [Section 4.2 supporting results: Evidence-Grounded RAG Summarization](rag_summary/experiments/final/report.md)
+- [Section 4.2 supporting results: Evidence-Grounded RAG Summarization](../../data/generation_results/rouge_results/report.md)
 
 ## Connecting to the UI
 
-`code/app.py` passes the same `query` and ranked `hits` to the ABSA panel and the evidence-grounded summary. The summarization function is:
+`code/app.py` passes the original `query` and final game-filtered `hits` to both panels. The ABSA panel analyzes these hits and adds `aspect_analysis` to the search JSON export. The summarization function is:
 
 ```python
 from generation.rag_summary.rag_generator import generate_summary
 
-result = generate_summary(query, hits, approach="improved", max_claims=4)
+result = generate_summary(query, hits, max_claims=4)
 ```
 
 Configure the API environment variables below before making this call. Run integration commands from **`code/`**, so imports from `generation`, `retrieval`, and `paths` resolve.
@@ -32,6 +32,8 @@ Configure the API environment variables below before making this call. Run integ
 
 Pass the original question and the same final `hits` list displayed by the app. Each hit is a dictionary with:
 
+The updated app requires at least one explicitly selected game before retrieval or generation. It passes the selected games as a `game_name` filter to both sparse and dense search, restricts candidates before fusion/reranking, and checks final evidence again before generation. Multiple selected games support comparisons. `metadata.game_name` is required at this app boundary; missing or out-of-scope game identities are excluded. Saved answers record `retrieval_filters`.
+
 | Key | Content and use |
 |---|---|
 | `chunk_id` | Required. Original passage ID, retained in citations |
@@ -39,8 +41,17 @@ Pass the original question and the same final `hits` list displayed by the app. 
 | `metadata` | Optional dictionary containing source information |
 | `metadata.game_name` | Game identity used when interpreting the passage |
 | `metadata.source_url` | Original review URL retained in the output citations |
+| `metadata.created_at_utc`, `metadata.updated_at_utc` | Review timestamps; Unix `timestamp_created`/`timestamp_updated` are also accepted |
+| `metadata.helpful_votes` or `metadata.votes_up` | Helpful vote count used for vote-aware attribution and the publication-age weight |
+| `metadata.review_id`, `appid`, `document_id`, `chunk_index`, `char_start` | Optional identity and chunk-position information for temporal selection |
 
-Additional metadata such as `document_id`, `source`, and `title` can remain in the hit. Rank and score fields such as `retrieved_by`, `sparse_rank`, `dense_rank`, `rrf_rank`, `rrf_score`, and `score` are not added to the model context. The ranked list order is preserved, duplicate passage IDs are removed, and the original user question is used rather than the expanded retrieval query.
+Additional metadata such as `source` and `title` can remain in the hit. Rank and score fields such as `retrieved_by`, `sparse_rank`, `dense_rank`, `rrf_rank`, `rrf_score`, and `score` are not added to the model context. The ranked list order is preserved, duplicate passage IDs are removed, and the original user question is used rather than the expanded retrieval query.
+
+Live generation defaults to `context_policy="latest_update"`: among multiple snapshots of one review, only the newest available snapshot is retained. Explicit substantive `Edit:`/`Update:` sections are reduced to the latest visible update and continuation, including updates spanning multiple supplied chunks. Earlier opinions are excluded from the model context. Wording-only edit notes do not replace the review. If update boundaries are absent, the latest full snapshot is used. Available review timestamps and an `evidence_scope` field accompany the text. Original stored reviews and citation IDs are preserved. Update the complete `rag_summary/` module, including `review_context.py`, when installing this behavior.
+
+The same live context includes recorded `helpful_votes`, `review_age_days`, and `helpful_votes_per_day` when available. The weight is `helpful_votes / max(days_since_first_publication, 1)`. Last-edit timestamps do not reset review age. Missing or invalid inputs leave the weight unavailable. One shared `as_of_utc` is used across generation and self-check stages. `is_high_helpfulness` marks reviews meeting both a ten-vote minimum and the nearest-rank upper quartile of distinct visible reviews. Answer prose may call these reviews “highly upvoted” but omits raw counts and rates; lower-vote sources are blended into the answer without vote attribution. Votes do not establish consensus. Retrieval order is unchanged.
+
+The prompt asks for a coherent answer organized around the question. Overlapping information is merged and the `claims` array follows paragraph order, rather than allocating one mini-summary to each review. Source citations, important conditions and disagreements remain required. No background, popularity, recency or mod-development facts are added just to improve the prose.
 
 No conversion is required between the app's final `hits` list and the summarizer. BM25-only, dense-only, fused, and reranked results use the same input contract.
 
@@ -58,7 +69,77 @@ The API must support OpenAI-compatible Chat Completions and JSON object output. 
 
 ### Streamlit integration
 
-Run `streamlit run app.py` from `code/` and search for reviews. The ABSA panel runs on the retrieved passages and includes its results in the search export. The adjacent summary panel calls `render_summary(query, hits)` only when you click **Generate summary**. It reuses the saved answer when the question and passages are unchanged and writes a successful answer to `data/generation_results/rag_summary/latest_answer.json`.
+The shared `code/app.py` includes both panels. For a manual integration, require a game selection before search and pass the `game_name` filter to both retrievers. The block below shows how to render the summary alongside the ABSA panel. It assumes the app imports `json` and `streamlit as st`, and defines `query`, `hits`, and the selected `games`.
+
+```python
+import os
+
+from paths import GENERATION_RESULTS_DIR
+from generation.rag_summary.rag_generator import (
+    GenerationError,
+    OpenAICompatibleClient,
+    generate_summary,
+    safe_error,
+)
+
+st.markdown("**Evidence-grounded review summary**")
+if not games:
+    st.info("Select at least one target game before generating a summary.")
+    st.stop()
+hits = [h for h in hits if (h.get("metadata") or {}).get("game_name") in games]
+if not hits:
+    st.warning("No reviews match the selected games.")
+    st.stop()
+evidence_key = (query, tuple(sorted(games)), tuple(
+    (h["chunk_id"], h["text"], json.dumps(h.get("metadata") or {}, sort_keys=True))
+    for h in hits
+))
+
+if st.button("Generate summary", key="rag_summary_generate"):
+    try:
+        with st.spinner("Generating an answer from the retrieved reviews..."):
+            result = generate_summary(
+                query,
+                hits,
+                model=os.getenv("GENERATION_MODEL", "deepseek-v4-pro"),
+                client=OpenAICompatibleClient(
+                    base_url=os.getenv("GENERATION_BASE_URL", "https://api.deepseek.com")
+                ),
+                max_claims=4,
+            )
+        result["retrieval_filters"] = {"game_name": list(games)}
+        st.session_state["rag_summary_answer"] = (evidence_key, result)
+        output_dir = GENERATION_RESULTS_DIR / "rag_summary"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "latest_answer.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    except GenerationError as error:
+        st.error(safe_error(error)["error_message"])
+
+saved = st.session_state.get("rag_summary_answer")
+if saved is not None and saved[0] == evidence_key:
+    result = saved[1]
+    st.markdown(result["summary"])
+    for citation in result["citations"]:
+        if citation["source_url"]:
+            st.link_button(citation["chunk_id"], citation["source_url"])
+    st.download_button(
+        "Download generated answer",
+        json.dumps(result, ensure_ascii=False, indent=2),
+        file_name="rag_summary.json",
+        mime="application/json",
+        key="rag_summary_download",
+    )
+```
+
+Run the existing search interface from `code/`:
+
+```bash
+streamlit run app.py
+```
+
+Select the target game or games, search for reviews, then click **Generate summary**. Only this button initiates generation. Streamlit reruns reuse the saved answer when the question, game scope and evidence are unchanged. The example saves the latest answer to `data/generation_results/rag_summary/latest_answer.json` through the shared `paths.py` configuration.
 
 ### Generation output
 
@@ -67,14 +148,17 @@ The returned dictionary contains:
 | Field | Content |
 |---|---|
 | `summary` | Answer text with inline `[chunk_id]` citations |
-| `claims` | Retained claims, supporting `chunk_ids`, and evidence quotes for B/C/D |
+| `claims` | Answer sentences and supporting `chunk_ids` |
 | `citations` | Unique cited passage IDs and available source URLs |
 | `status` | `ok`, `abstained`, or `no_evidence` |
 | `usage` | Available input/output token counts |
 | `latency_seconds` | Generation workflow time |
-| `stage_calls`, `claim_audit` | Generation and self-verification records |
+| `stage_calls`, `claim_audit` | Generation and citation-validation records |
+| `context_policy`, `context_evidence` | The selected policy and actual latest-update context used by the model |
+| `context_as_of_utc`, `review_weight_formula` | Reference time and formula used to calculate live review weights |
+| `retrieval_filters` | Selected game scope recorded by the integrated app |
 
-The `improved` configuration requires verbatim evidence quotes and validates them against the supplied passages. The other available configurations are `baseline`, `verify_delete`, and `verify_revise`. The latter two use the generation model for internal self-checking. Live generation uses the original chunk IDs for citations and does not require the benchmark's `fact_candidates`.
+Generation uses one model call. Optional `few_shot_examples` and `compression_ratio` arguments enable demonstrations and local sentence extraction; `approach` in the returned result records the inferred configuration. Source IDs are checked against the actual model context.
 
 ## Using retrieval directly
 
@@ -97,7 +181,7 @@ fused = HybridRetriever().retrieve_fused(
     dense_query=expansion.dense,
 )
 hits = Reranker().rerank(query, fused, top_k=5)
-result = generate_summary(query, hits, approach="improved", max_claims=4)
+result = generate_summary(query, hits, max_claims=4)
 ```
 
 `HybridRetriever.retrieve()` returns separate sparse and dense lists. Use the final list from fusion or reranking as the generation input.
@@ -108,24 +192,40 @@ The search interface's **Download results (JSON)** button produces `search_resul
 
 ```bash
 python -c "from paths import GENERATION_RESULTS_DIR; (GENERATION_RESULTS_DIR / 'rag_summary').mkdir(parents=True, exist_ok=True)"
-python generation/rag_summary/rag_generator.py ../data/retrieval_results/search_results.json --approach improved --max-claims 4 --output ../data/generation_results/rag_summary/answer.json
+python generation/rag_summary/rag_generator.py ../data/retrieval_results/search_results.json --max-claims 4 --output ../data/generation_results/rag_summary/answer.json
 ```
 
 Fields such as `mode`, `filters`, `params`, `expansion`, and `timings_ms` remain in the retrieval export and are not passed to the model as review evidence.
 
 ## Evaluation
 
-The live integration above answers questions using the current retrieval results. The summarization experiment uses a separate fixed 100-question benchmark with saved contexts and human-reviewed reference sets. It measures fact-selection Precision/Recall/F1, coverage-unit recall, and polarity-contrast coverage using deterministic code. Final scoring does not call an evaluator model.
+The summarization experiment compares four independent generation methods: `baseline`, `few_shot`, `compressed`, and `combined`. They share the baseline prompt and citation schema. The web experiment does not run the historical self-check methods.
 
-To reproduce the saved summarization results without API calls, run from `code/`:
+The fixed 100-question benchmark has a frozen stratified split: 20 development questions (q06 and q24 are demonstrations; 18 questions remain for tuning) and 80 test questions. Few-shot methods receive only the two development demonstrations. The current question's reference answer is used solely for local ROUGE-1/2/L scoring. All nine precision/recall/F1 scores, actual API tokens, latency, text retention and optional cost are exported.
+
+The original evidence uses `context_policy="full_review"` and `include_review_metadata=True`. Compression methods locally select related sentences with TF-IDF and redundancy reduction, preferring adjacent sentences within a configurable text budget (default 0.6). Original IDs, metadata and exact selected text remain traceable through character spans. The live app's selected-game and latest-update policies operate separately.
+
+From `code/`, after configuring the generation API:
 
 ```bash
-python generation/rag_summary/recompute_results.py generation/rag_summary/experiments/final/generation_results.json --output ../data/generation_results/rag_summary/report_reproduction
+python generation/rag_summary/run_generation_experiments.py --output ../data/generation_results/rag_summary/fewshot_compression_test --split test --limit 80 --compression-ratio 0.6 --concurrency 20 --max-retries 2 --repeats 1 --max-claims 4 --base-url https://api.deepseek.com --model deepseek-v4-pro
 ```
 
-Use a new output directory. Full experiment settings, benchmark data, results, and additional commands are described in `rag_summary/README.md`. New questions or changed retrieval contexts need corresponding reference annotations before benchmark selection metrics can be computed.
+Web and CLI experiments default to 20 concurrent tasks (configurable 1–500) and two retries after the initial request. Retries use the same prompt for transient failures, invalid JSON/claims or invalid source IDs. Valid abstention is not retried. Per-task latency and usage include attempts; attempt histories and run totals are exported. Configuration/account errors stop new requests; other final failures do not stop the run.
 
-For the ABSA interface, execution commands, and evaluation, see [ABSA instructions](ABSA_README.md).
+Use `--split development --limit 18` to try settings. Run the same workflow with progress and ZIP download through `python generation/rag_summary/launch_web.py`. Restart an older server and refresh after updating.
+
+Rescore a result ZIP without API calls:
+
+```bash
+python generation/rag_summary/evaluate_generation.py generation-experiment.zip --output ../data/generation_results/rag_summary/rouge_rescored
+```
+
+Outputs include the exact data split, demonstrations, original and actual evidence, all ROUGE scores, execution metrics, five paired comparisons and the two-factor interaction. Earlier result files remain available in [`data/generation_results/llm_judge_results/`](../../data/generation_results/llm_judge_results/); the old evaluation code and compatibility entry points have been removed.
+
+Use new output directories. Upload the updated complete `rag_summary/` module, including `experiment_execution.py`, `context_compression.py`, `generation_experiment_design.py`, `prompts/few_shot.txt`, `data/generation_experiment/` and the reviewed references. Full settings are in `rag_summary/README.md`.
+
+For the classification interface, execution commands, and evaluation, see the [ABSA instructions](ABSA_README.md).
 
 ## Conventions
 
