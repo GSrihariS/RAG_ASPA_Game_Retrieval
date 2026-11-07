@@ -71,6 +71,14 @@ b = 0.75); `dense/` is a FAISS inner-product index over normalized `BAAI/bge-sma
 
 ## generation_results/
 
+### Aspect-based sentiment analysis
+
+- [Model comparison](generation_results/absa/aspect_optimization/summary.txt) and [full evaluation metrics](generation_results/absa/aspect_optimization/metrics.json).
+- [Live retrieval manifest](generation_results/absa/aspect_live_runs/manifest.json) and [example ABSA output](generation_results/absa/aspect_live_runs/monster_hunter_graphics_performance/aspect_results.json).
+- `absa/models/`: previous and optimized checkpoints used by the UI.
+
+### Evidence-grounded summarization
+
 Outputs of the RAG summarization experiment: 100 fixed questions answered with `deepseek-v4-pro` by
 four methods (`baseline`, `improved`, `verify_delete`, `verify_revise`). 398 of the 400 tasks completed;
 `verify_delete` and `verify_revise` each failed one.
