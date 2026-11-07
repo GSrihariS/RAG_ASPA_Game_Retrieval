@@ -1,4 +1,4 @@
-# AI6127: Evidence-grounded Review Summarization
+# Evidence-grounded Review Summarization
 
 Experiment code for a 2 × 2 study of few-shot prompting and extractive context compression, evaluated with ROUGE-1/2/L, token usage, latency and cost. The 100 reviewed questions are split into 20 development questions and 80 test questions.
 
