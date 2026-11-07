@@ -83,9 +83,16 @@ b = 0.75); `dense/` is a FAISS inner-product index over normalized `BAAI/bge-sma
 
 | Directory or file | Content |
 |---|---|
+| [`absa/`](generation_results/absa/) | Aspect sentiment model comparisons, checkpoints and live retrieval examples |
 | `rouge_results/` | Final few-shot and context-compression experiment, evaluated against human-reviewed reference summaries |
 | `llm_judge_results/` | Earlier experiment outputs for `baseline`, `improved`, `verify_delete` and `verify_revise` |
 | `input.jsonl` | Original 100-question input retained with the earlier experiment |
+
+### Aspect-based sentiment analysis
+
+- [Model comparison](generation_results/absa/aspect_optimization/summary.txt) and [full evaluation metrics](generation_results/absa/aspect_optimization/metrics.json).
+- [Live retrieval manifest](generation_results/absa/aspect_live_runs/manifest.json) and [example ABSA output](generation_results/absa/aspect_live_runs/monster_hunter_graphics_performance/aspect_results.json).
+- `absa/models/` contains the previous and optimized checkpoints used by the app.
 
 ### Final experiment: `rouge_results/`
 

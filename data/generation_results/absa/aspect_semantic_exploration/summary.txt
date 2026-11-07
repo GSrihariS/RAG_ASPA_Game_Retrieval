@@ -1,0 +1,13 @@
+Selected using development data only: previous_deployment
+Test below is the reused original holdout, not a new blind test.
+previous_deployment: end-to-end micro-F1=0.6719; sentiment macro-F1=0.6094; Graphics/Negative P/R/F1=0.8333/0.7143/0.7692; Graphics/Negative end-to-end F1=0.5600
+whole_shared_bge_C2: end-to-end micro-F1=0.6207; sentiment macro-F1=0.5735; Graphics/Negative P/R/F1=0.5200/0.9286/0.6667; Graphics/Negative end-to-end F1=0.4706
+whole_shared_bge_C8: end-to-end micro-F1=0.6167; sentiment macro-F1=0.5685; Graphics/Negative P/R/F1=0.5417/0.9286/0.6842; Graphics/Negative end-to-end F1=0.4706
+local_per_aspect_bge_C2: end-to-end micro-F1=0.6719; sentiment macro-F1=0.6610; Graphics/Negative P/R/F1=0.7500/0.8571/0.8000; Graphics/Negative end-to-end F1=0.4828
+local_per_aspect_bge_C8: end-to-end micro-F1=0.6798; sentiment macro-F1=0.6465; Graphics/Negative P/R/F1=0.7500/0.8571/0.8000; Graphics/Negative end-to-end F1=0.4828
+local_shared_bge_C2: end-to-end micro-F1=0.6463; sentiment macro-F1=0.6256; Graphics/Negative P/R/F1=0.7647/0.9286/0.8387; Graphics/Negative end-to-end F1=0.5000
+local_shared_bge_C8: end-to-end micro-F1=0.6404; sentiment macro-F1=0.6365; Graphics/Negative P/R/F1=0.8125/0.9286/0.8667; Graphics/Negative end-to-end F1=0.5000
+local_shared_hybrid_C2: end-to-end micro-F1=0.6660; sentiment macro-F1=0.6412; Graphics/Negative P/R/F1=0.7647/0.9286/0.8387; Graphics/Negative end-to-end F1=0.5000
+local_shared_hybrid_C8: end-to-end micro-F1=0.6719; sentiment macro-F1=0.6483; Graphics/Negative P/R/F1=0.8125/0.9286/0.8667; Graphics/Negative end-to-end F1=0.5161
+local_shared_hybrid_two_stage_C2: end-to-end micro-F1=0.6700; sentiment macro-F1=0.6434; Graphics/Negative P/R/F1=0.7647/0.9286/0.8387; Graphics/Negative end-to-end F1=0.5000
+local_shared_hybrid_two_stage_C8: end-to-end micro-F1=0.6700; sentiment macro-F1=0.6444; Graphics/Negative P/R/F1=0.7647/0.9286/0.8387; Graphics/Negative end-to-end F1=0.5000

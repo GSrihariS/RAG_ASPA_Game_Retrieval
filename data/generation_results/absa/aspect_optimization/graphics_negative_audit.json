@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "steam:1145350:236993233:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Positive",
+    "after_sentiment": "Positive",
+    "before_mentioned": false,
+    "after_mentioned": false
+  },
+  {
+    "chunk_id": "steam:1249970:216097062:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:1249970:227564323:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Positive",
+    "after_sentiment": "Negative",
+    "before_mentioned": false,
+    "after_mentioned": false
+  },
+  {
+    "chunk_id": "steam:1249970:234355613:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": false,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:1294810:143190050:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:1294810:154796709:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Positive",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:1294810:175411711:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:1962663:222050857:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:2246340:234018120:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": false,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:2246340:235255580:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:2246340:237271491:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Positive",
+    "after_sentiment": "Negative",
+    "before_mentioned": false,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:282560:162738553:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:285190:226120916:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": false,
+    "after_mentioned": true
+  },
+  {
+    "chunk_id": "steam:550:234982129:chunk:001",
+    "gold": "Negative",
+    "before_sentiment": "Negative",
+    "after_sentiment": "Negative",
+    "before_mentioned": true,
+    "after_mentioned": false
+  }
+]

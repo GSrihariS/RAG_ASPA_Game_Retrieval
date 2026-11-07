@@ -1,0 +1,14 @@
+{
+  "split": "Original document-grouped, game-stratified 600/200/200; seed 42; unchanged IDs",
+  "development_objective": "0.7 * end-to-end micro-F1 + 0.3 * Graphics/Negative end-to-end F1",
+  "guardrail": "Development end-to-end micro-F1 >= previous deployment minus 0.01",
+  "c_values": [
+    0.5,
+    2.0
+  ],
+  "training_data": "600 train reviews only",
+  "test_status": "Previously inspected holdout, reused for comparison; not a new blind benchmark",
+  "known_live_cases": "Diagnostic regression cases only; no labels/text added to training",
+  "annotation_sha256": "f81d19e01a544b772f79e014843b3de814a06f3e82be86a22cb26060d3085af3",
+  "original_split_manifest": "../aspect_previous/split_manifest.json"
+}

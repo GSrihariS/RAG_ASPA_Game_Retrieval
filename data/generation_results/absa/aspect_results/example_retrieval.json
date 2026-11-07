@@ -1,0 +1,51 @@
+{
+  "query": "How is the soundtrack in Hollow Knight?",
+  "results": [
+    {
+      "chunk_id": "steam:367520:236128627:chunk:001",
+      "document_id": "steam:367520:236128627",
+      "text": "Absolute Masterpiece! (9/10)\n​Hollow Knight is a breathtaking journey through a beautifully dark and tragic world. Everything in this game comes together perfectly to create an unforgettable experience:\n​Gameplay & Combat: Silky-smooth mechanics, tight controls, and rewarding progression.\n​Music & Atmosphere: The soundtrack and visual design are hauntingly beautiful, drawing you deep into the lore of Hallownest.\n​Challenge: The difficulty is tough and demanding, but incredibly satisfying to master.\n​Final Score: 9 / 10\nThe only reason it’s not a full 10/10 is the lack of official Arabic lauage support. Other than that, it is near perfection. Highly recommended to anyone who loves Metroidvanias and great storytelling!",
+      "metadata": {
+        "game_name": "Hollow Knight"
+      }
+    },
+    {
+      "chunk_id": "steam:367520:237444291:chunk:001",
+      "document_id": "steam:367520:237444291",
+      "text": "Just an hour in, and I’m already immersed into the world of hollow knight. The visuals, audio, mechanics and vibe just absolute peak gameplay. The lore seems very interesting so far, based off of the interactions and the cutscenes.\n\nThis game just might fix my attention span 🙌",
+      "metadata": {
+        "game_name": "Hollow Knight"
+      }
+    },
+    {
+      "chunk_id": "steam:367520:236276941:chunk:001",
+      "document_id": "steam:367520:236276941",
+      "text": "Great game. The lore is also incredible, especially when you finally piece together why the final boss stabbed himself, as he's actually trying to help you . The soundtrack is amazing. The sealed vessel OST is the only thing that kept me sane during the path of pain. The only downside is that the credits are unskippable.",
+      "metadata": {
+        "game_name": "Hollow Knight"
+      }
+    },
+    {
+      "chunk_id": "steam:367520:234115531:chunk:001",
+      "document_id": "steam:367520:234115531",
+      "text": "One of the truly best of the modern side scrollers. Undeniable vibe, music, art, and a story and world just fleshed out to be interesting but still mysterious enough to avoid most of the annoying parts of heavy narrative but crappy execution games (think Kojima) that always overstay their welcome.",
+      "metadata": {
+        "game_name": "Hollow Knight"
+      }
+    },
+    {
+      "chunk_id": "steam:367520:234857487:chunk:001",
+      "document_id": "steam:367520:234857487",
+      "text": "What a wonderful experience! The visuals, sound design, characters and gameplay are absolutely breathtaking. Went to the Resting Grounds many times just to listen to the music. Boss fights were all fun and unique from each other, platforming is intuitive, though quite challenging and frustrating in some places. As gloomy and melancholic the game is, it still offers quite a bit of color. Devastated I wont ever experience this game for the first time again.",
+      "metadata": {
+        "game_name": "Hollow Knight"
+      }
+    }
+  ],
+  "provenance": {
+    "kind": "saved_condensed_run_test_subset",
+    "run": "hybrid_rerank+qe+filter",
+    "query_id": "q02",
+    "fresh_retrieval": false
+  }
+}

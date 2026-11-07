@@ -4,14 +4,21 @@ This directory contains the downstream modules that consume the ranked Steam rev
 
 | Component | Location | Purpose |
 |---|---|---|
-| Aspect-based Sentiment Analysis | Provided by the classification contributor | Predict aspect-level sentiment from the review evidence |
+| Aspect-based Sentiment Analysis | [ABSA module and setup](ABSA_README.md) | Predict aspect-level sentiment from the review evidence |
 | Evidence-grounded RAG summarization | `generation/rag_summary/` | Answer the user question with review citations |
 
 The two components can use the same retrieved passages. The summarizer reads the review text directly and does not require predicted sentiment labels from the classification component. Its implementation and experiment instructions are documented in `rag_summary/README.md`.
 
+## Report materials
+
+- [Combined Generation report](docs/generation_report.md)
+- [Generation overview paragraph](docs/generation_overview.md)
+- [Section 4.1: Aspect-Based Sentiment Analysis](docs/aspect_report.md)
+- [Section 4.2 supporting results: Evidence-Grounded RAG Summarization](../../data/generation_results/rouge_results/report.md)
+
 ## Connecting to the UI
 
-`code/app.py` already computes `query` and a final ranked `hits` list. Its placeholder titled **"Sentiment analysis / generated answer"** is the integration point. The summarization function is:
+`code/app.py` passes the original `query` and final game-filtered `hits` to both panels. The ABSA panel analyzes these hits and adds `aspect_analysis` to the search JSON export. The summarization function is:
 
 ```python
 from generation.rag_summary.rag_generator import generate_summary
@@ -62,7 +69,7 @@ The API must support OpenAI-compatible Chat Completions and JSON object output. 
 
 ### Streamlit integration
 
-Use the tested replacement `app.py` and patch supplied in `rag_summary/integration/`, based on group `main` commit `ab5844e`. For a manual integration, require a game selection before search and pass the `game_name` filter to both retrievers. The block below handles generation in the existing container. Keep the classification component's UI alongside the summary. The app already imports `json` and `streamlit as st`, and defines `query`, `hits`, and the selected `games`.
+The shared `code/app.py` includes both panels. For a manual integration, require a game selection before search and pass the `game_name` filter to both retrievers. The block below shows how to render the summary alongside the ABSA panel. It assumes the app imports `json` and `streamlit as st`, and defines `query`, `hits`, and the selected `games`.
 
 ```python
 import os
@@ -214,11 +221,11 @@ Rescore a result ZIP without API calls:
 python generation/rag_summary/evaluate_generation.py generation-experiment.zip --output ../data/generation_results/rag_summary/rouge_rescored
 ```
 
-Outputs include the exact data split, demonstrations, original and actual evidence, all ROUGE scores, execution metrics, five paired comparisons and the two-factor interaction. Archived fact-ID result files remain available in `experiments/final/`; the old evaluation code and compatibility entry points have been removed.
+Outputs include the exact data split, demonstrations, original and actual evidence, all ROUGE scores, execution metrics, five paired comparisons and the two-factor interaction. Earlier result files remain available in [`data/generation_results/llm_judge_results/`](../../data/generation_results/llm_judge_results/); the old evaluation code and compatibility entry points have been removed.
 
 Use new output directories. Upload the updated complete `rag_summary/` module, including `experiment_execution.py`, `context_compression.py`, `generation_experiment_design.py`, `prompts/few_shot.txt`, `data/generation_experiment/` and the reviewed references. Full settings are in `rag_summary/README.md`.
 
-The classification contributor should document the classification interface, execution commands, and evaluation alongside this summarization interface.
+For the classification interface, execution commands, and evaluation, see the [ABSA instructions](ABSA_README.md).
 
 ## Conventions
 

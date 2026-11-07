@@ -1,0 +1,404 @@
+{
+  "monster_hunter_graphics_performance": {
+    "before": [
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "performance",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "bugs_stability",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "story",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:236141299:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:236141299:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "story",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Negative"
+      }
+    ],
+    "after": [
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "performance",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:234810080:chunk:002",
+        "aspect": "bugs_stability",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "story",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:237196590:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:236141299:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:236141299:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235424623:chunk:001",
+        "aspect": "performance",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "story",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Negative"
+      },
+      {
+        "chunk_id": "steam:2246340:235283196:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Negative"
+      }
+    ]
+  },
+  "hollow_knight_audio": {
+    "before": [
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      }
+    ],
+    "after": [
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235128741:chunk:004",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128627:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235591978:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:236128094:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "story",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "graphics_visuals",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "gameplay",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "controls",
+        "sentiment": "Positive"
+      },
+      {
+        "chunk_id": "steam:367520:235484072:chunk:001",
+        "aspect": "audio",
+        "sentiment": "Positive"
+      }
+    ]
+  }
+}

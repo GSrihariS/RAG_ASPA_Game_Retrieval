@@ -117,10 +117,15 @@ python -m data_pipeline.calculate_iaa
 
 ## Downstream task and generation
 
-The downstream task is evidence-grounded RAG summarization: answer a question from retrieved Steam reviews,
-with citations to the supporting passages. The module is in `code/generation/rag_summary/` and supports
+The app uses the same retrieved Steam reviews for aspect-based sentiment analysis (ABSA) and
+evidence-grounded RAG summarization. The summarizer answers the question and cites supporting passages. The module is in `code/generation/rag_summary/` and supports
 few-shot prompting and query-aware context compression. Generation and ROUGE scoring use the Python standard
 library and require no additional packages. Run the commands below from `code/`.
+
+**Inspect aspect sentiment in the UI.** Start `streamlit run app.py`, select the target games, and search.
+The Aspect model selector switches between **Previous baseline** and **Optimized**. The ABSA panel
+shows sentiment distributions and cited evidence without a generation API key. See the
+[ABSA instructions](code/generation/ABSA_README.md) and [English report](code/generation/docs/aspect_report.md).
 
 **Generate an answer in the UI.** Set an API key for an OpenAI-compatible service, start the UI, search,
 then click **Generate summary**. On Windows PowerShell, use `$env:GENERATION_API_KEY = "your-key"`.

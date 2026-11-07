@@ -1,0 +1,725 @@
+{
+  "schema_version": "1.0",
+  "query": "Are the graphics of Monster Hunter Wilds worth the performance cost?",
+  "model": {
+    "mode": "two_stage",
+    "use_char": true,
+    "C": 2.0,
+    "context_mode": "whole",
+    "feature_mode": "lexical",
+    "presence_C": 2.0,
+    "scores_calibrated": false,
+    "training": {
+      "configuration": "previous_deployment",
+      "seed": 42,
+      "train_chunks": 600,
+      "dev_chunks": 200,
+      "test_chunks": 200,
+      "trained_on": "train only; no gold evidence spans or live regression texts used as training data",
+      "selection_metric": "0.7 * end-to-end micro-F1 + 0.3 * Graphics/Negative end-to-end F1",
+      "selection_guardrail": "Development end-to-end micro-F1 >= previous deployment minus 0.01",
+      "annotation_sha256": "f81d19e01a544b772f79e014843b3de814a06f3e82be86a22cb26060d3085af3",
+      "test_status": "Previously inspected holdout, reused for comparison; not a new blind benchmark"
+    }
+  },
+  "input_chunk_count": 5,
+  "input_review_count": 5,
+  "aggregation_unit": "unique document_id per aspect",
+  "ratio_denominator": "classified_review_count (excludes cross-chunk Mixed)",
+  "scope": "Predictions on retrieved reviews only; not all Steam reviews.",
+  "evidence_policy": "Exact source excerpts for inspection; entailment has not been verified.",
+  "aspects": [
+    {
+      "aspect": "story",
+      "mentioned_review_count": 3,
+      "mention_ratio": 0.6,
+      "classified_review_count": 3,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 1,
+          "ratio": 0.3333333333333333,
+          "review_ids": [
+            "steam:2246340:235424623"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235424623:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 2,
+          "ratio": 0.6666666666666666,
+          "review_ids": [
+            "steam:2246340:237196590",
+            "steam:2246340:235283196"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235283196:chunk:001",
+            "steam:2246340:237196590:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "graphics_visuals",
+      "mentioned_review_count": 2,
+      "mention_ratio": 0.4,
+      "classified_review_count": 2,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 2,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:2246340:235424623",
+            "steam:2246340:235283196"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235283196:chunk:001",
+            "steam:2246340:235424623:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "gameplay",
+      "mentioned_review_count": 5,
+      "mention_ratio": 1.0,
+      "classified_review_count": 5,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 4,
+          "ratio": 0.8,
+          "review_ids": [
+            "steam:2246340:234810080",
+            "steam:2246340:237196590",
+            "steam:2246340:236141299",
+            "steam:2246340:235424623"
+          ],
+          "evidence_ids": [
+            "steam:2246340:234810080:chunk:002",
+            "steam:2246340:235424623:chunk:001",
+            "steam:2246340:236141299:chunk:001",
+            "steam:2246340:237196590:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 1,
+          "ratio": 0.2,
+          "review_ids": [
+            "steam:2246340:235283196"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235283196:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "controls",
+      "mentioned_review_count": 1,
+      "mention_ratio": 0.2,
+      "classified_review_count": 1,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 1,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:2246340:235283196"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235283196:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "performance",
+      "mentioned_review_count": 4,
+      "mention_ratio": 0.8,
+      "classified_review_count": 4,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 1,
+          "ratio": 0.25,
+          "review_ids": [
+            "steam:2246340:234810080"
+          ],
+          "evidence_ids": [
+            "steam:2246340:234810080:chunk:002"
+          ]
+        },
+        {
+          "sentiment": "Negative",
+          "count": 3,
+          "ratio": 0.75,
+          "review_ids": [
+            "steam:2246340:237196590",
+            "steam:2246340:236141299",
+            "steam:2246340:235424623"
+          ],
+          "evidence_ids": [
+            "steam:2246340:235424623:chunk:001",
+            "steam:2246340:236141299:chunk:001",
+            "steam:2246340:237196590:chunk:001"
+          ]
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "audio",
+      "mentioned_review_count": 0,
+      "mention_ratio": 0.0,
+      "classified_review_count": 0,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "bugs_stability",
+      "mentioned_review_count": 1,
+      "mention_ratio": 0.2,
+      "classified_review_count": 1,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 1,
+          "ratio": 1.0,
+          "review_ids": [
+            "steam:2246340:234810080"
+          ],
+          "evidence_ids": [
+            "steam:2246340:234810080:chunk:002"
+          ]
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": 0.0,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    },
+    {
+      "aspect": "online_multiplayer",
+      "mentioned_review_count": 0,
+      "mention_ratio": 0.0,
+      "classified_review_count": 0,
+      "sentiments": [
+        {
+          "sentiment": "Positive",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Negative",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        },
+        {
+          "sentiment": "Neutral",
+          "count": 0,
+          "ratio": null,
+          "review_ids": [],
+          "evidence_ids": []
+        }
+      ],
+      "mixed_review_count": 0,
+      "mixed_review_ids": [],
+      "mixed_evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "chunk_id": "steam:2246340:234810080:chunk:002",
+      "document_id": "steam:2246340:234810080",
+      "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold. While Capcom has taken a few steps to address the technical issues of the game since launch, it remains to be an issue for players with lower end PCs, especially with those who have specs closer to the minimum requirements.\n\nHowever, if you own a PC that is well above the recommended requirements and can perform well on the technical side, Monster Hunter Wilds is a game that is well worth its high price for anyone who enjoys action games considering the amount time that you can get out of it, weapon complexity, monster variety, and its attention to detail.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198196901929/recommended/2246340/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.5406659085122447,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6478342801575405,
+        "Negative": 0.2941833595528991,
+        "Neutral": 0.057982360289560234
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold. While Capcom has taken a few steps to address the technical issues of the game since launch, it remains to be an issue for players with lower end PCs, especially with those who have specs closer to the minimum requirements.\n\nHowever, if you own a PC that is well above the recommended requirements and can perform well on the technical side, Monster Hunter Wilds is a game that is well worth its high price for anyone who enjoys action games considering the amount time that you can get out of it, weapon complexity, monster variety, and its attention to detail.",
+        "start": 0,
+        "end": 837,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:234810080:chunk:002",
+      "document_id": "steam:2246340:234810080",
+      "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold. While Capcom has taken a few steps to address the technical issues of the game since launch, it remains to be an issue for players with lower end PCs, especially with those who have specs closer to the minimum requirements.\n\nHowever, if you own a PC that is well above the recommended requirements and can perform well on the technical side, Monster Hunter Wilds is a game that is well worth its high price for anyone who enjoys action games considering the amount time that you can get out of it, weapon complexity, monster variety, and its attention to detail.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198196901929/recommended/2246340/",
+      "aspect": "performance",
+      "mentioned": true,
+      "presence_score": 0.7183390110140788,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.4717127182594311,
+        "Negative": 0.45728977983790925,
+        "Neutral": 0.07099750190265963
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold.",
+        "start": 0,
+        "end": 274,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:234810080:chunk:002",
+      "document_id": "steam:2246340:234810080",
+      "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold. While Capcom has taken a few steps to address the technical issues of the game since launch, it remains to be an issue for players with lower end PCs, especially with those who have specs closer to the minimum requirements.\n\nHowever, if you own a PC that is well above the recommended requirements and can perform well on the technical side, Monster Hunter Wilds is a game that is well worth its high price for anyone who enjoys action games considering the amount time that you can get out of it, weapon complexity, monster variety, and its attention to detail.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198196901929/recommended/2246340/",
+      "aspect": "bugs_stability",
+      "mentioned": true,
+      "presence_score": 0.5210335705267617,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.4145837285919504,
+        "Negative": 0.5854162714080495,
+        "Neutral": 0.0
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The main drawback with the game and where most of the negative reception results from is due to expensive hardware requirements, graphical complaints with low quality textures, and performance issues especially with PCs closer or under the recommended requirement threshold. While Capcom has taken a few steps to address the technical issues of the game since launch, it remains to be an issue for players with lower end PCs, especially with those who have specs closer to the minimum requirements.\n\nHowever, if you own a PC that is well above the recommended requirements and can perform well on the technical side, Monster Hunter Wilds is a game that is well worth its high price for anyone who enjoys action games considering the amount time that you can get out of it, weapon complexity, monster variety, and its attention to detail.",
+        "start": 0,
+        "end": 837,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:237196590:chunk:001",
+      "document_id": "steam:2246340:237196590",
+      "text": "Monster Hunter Wilds is an absolute triumph of creature design, visceral combat, and sprawling, living ecosystems. The sheer scale of the new biomes and the fluidity of the weapon movesets make every hunt an unforgettable spectacle.\n\nHowever, the game suffers from severe performance issues that heavily impact the experience. On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.\n\nFurthermore, the story is a dismal 2/10. The narrative drags on with uninspired dialogue, predictable twists, and bland characters that you will actively want to skip just to get back to the action.\n\nDespite these heavy flaws in technical stability and storytelling, the core gameplay loop of hunting, crafting, and mastering your weapon is too exhilarating to put down.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198388689601/recommended/2246340/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.8385395142014768,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.36856418960227116,
+        "Negative": 0.5356901997080119,
+        "Neutral": 0.09574561068971693
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The narrative drags on with uninspired dialogue, predictable twists, and bland characters that you will actively want to skip just to get back to the action.",
+        "start": 545,
+        "end": 702,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:237196590:chunk:001",
+      "document_id": "steam:2246340:237196590",
+      "text": "Monster Hunter Wilds is an absolute triumph of creature design, visceral combat, and sprawling, living ecosystems. The sheer scale of the new biomes and the fluidity of the weapon movesets make every hunt an unforgettable spectacle.\n\nHowever, the game suffers from severe performance issues that heavily impact the experience. On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.\n\nFurthermore, the story is a dismal 2/10. The narrative drags on with uninspired dialogue, predictable twists, and bland characters that you will actively want to skip just to get back to the action.\n\nDespite these heavy flaws in technical stability and storytelling, the core gameplay loop of hunting, crafting, and mastering your weapon is too exhilarating to put down.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198388689601/recommended/2246340/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.7255486686731137,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6476889292617544,
+        "Negative": 0.30905485951821965,
+        "Neutral": 0.04325621122002594
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Monster Hunter Wilds is an absolute triumph of creature design, visceral combat, and sprawling, living ecosystems.",
+        "start": 0,
+        "end": 114,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:237196590:chunk:001",
+      "document_id": "steam:2246340:237196590",
+      "text": "Monster Hunter Wilds is an absolute triumph of creature design, visceral combat, and sprawling, living ecosystems. The sheer scale of the new biomes and the fluidity of the weapon movesets make every hunt an unforgettable spectacle.\n\nHowever, the game suffers from severe performance issues that heavily impact the experience. On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.\n\nFurthermore, the story is a dismal 2/10. The narrative drags on with uninspired dialogue, predictable twists, and bland characters that you will actively want to skip just to get back to the action.\n\nDespite these heavy flaws in technical stability and storytelling, the core gameplay loop of hunting, crafting, and mastering your weapon is too exhilarating to put down.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198388689601/recommended/2246340/",
+      "aspect": "performance",
+      "mentioned": true,
+      "presence_score": 0.5735875969312807,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.38353982886254373,
+        "Negative": 0.5684422257762419,
+        "Neutral": 0.04801794536121425
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "On many systems, frame rate stutters, optimization hiccups, and muddy texture streaming drag down the immersion, making smooth gameplay a constant battle against the hardware.",
+        "start": 327,
+        "end": 502,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:236141299:chunk:001",
+      "document_id": "steam:2246340:236141299",
+      "text": "I just love Monster Hunter Wilds, the performance has room to improve sure but the gameplay is just good.\nI can with full heart recommend Wilds and if you are unsure grab it in a sale but its worth the full price 100%",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198128094614/recommended/2246340/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.7878295783583614,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6361021732751421,
+        "Negative": 0.18991771186702525,
+        "Neutral": 0.17398011485783274
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "I just love Monster Hunter Wilds, the performance has room to improve sure but the gameplay is just good.",
+        "start": 0,
+        "end": 105,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:236141299:chunk:001",
+      "document_id": "steam:2246340:236141299",
+      "text": "I just love Monster Hunter Wilds, the performance has room to improve sure but the gameplay is just good.\nI can with full heart recommend Wilds and if you are unsure grab it in a sale but its worth the full price 100%",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198128094614/recommended/2246340/",
+      "aspect": "performance",
+      "mentioned": true,
+      "presence_score": 0.7351644194296295,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.44605803949702316,
+        "Negative": 0.47750841525140214,
+        "Neutral": 0.07643354525157471
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "I just love Monster Hunter Wilds, the performance has room to improve sure but the gameplay is just good.",
+        "start": 0,
+        "end": 105,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "document_id": "steam:2246340:235424623",
+      "text": "despite its issues, it's the best monster hunter IMO\nperformance issues are still there, some solvable by mods ( yes i'm aware my gpu is outdated )\n\nabout the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great. can't beat the very much needed QoL features. monster roster is also very good. definitely the best new world mh, and going back to old gen will make you miss the QoL this game has immensely.\n\nreally the only negative thing i have to say about wilds is the performance and the graphics. everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate. for me personally, i just bit the bullet and settled for high graphics on locked 30fps. it is what it is.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198134631367/recommended/2246340/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.6132264092319658,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.5371853666274012,
+        "Negative": 0.35691087582526027,
+        "Neutral": 0.10590375754733851
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "despite its issues, it's the best monster hunter IMO\nperformance issues are still there, some solvable by mods ( yes i'm aware my gpu is outdated )\n\nabout the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great. can't beat the very much needed QoL features. monster roster is also very good. definitely the best new world mh, and going back to old gen will make you miss the QoL this game has immensely.\n\nreally the only negative thing i have to say about wilds is the performance and the graphics. everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate. for me personally, i just bit the bullet and settled for high graphics on locked 30fps. it is what it is.",
+        "start": 0,
+        "end": 800,
+        "selection_method": "full_passage_fallback",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "document_id": "steam:2246340:235424623",
+      "text": "despite its issues, it's the best monster hunter IMO\nperformance issues are still there, some solvable by mods ( yes i'm aware my gpu is outdated )\n\nabout the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great. can't beat the very much needed QoL features. monster roster is also very good. definitely the best new world mh, and going back to old gen will make you miss the QoL this game has immensely.\n\nreally the only negative thing i have to say about wilds is the performance and the graphics. everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate. for me personally, i just bit the bullet and settled for high graphics on locked 30fps. it is what it is.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198134631367/recommended/2246340/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.5719553679475,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.6157198523415961,
+        "Negative": 0.26635594569444554,
+        "Neutral": 0.11792420196395824
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "really the only negative thing i have to say about wilds is the performance and the graphics.",
+        "start": 481,
+        "end": 574,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "document_id": "steam:2246340:235424623",
+      "text": "despite its issues, it's the best monster hunter IMO\nperformance issues are still there, some solvable by mods ( yes i'm aware my gpu is outdated )\n\nabout the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great. can't beat the very much needed QoL features. monster roster is also very good. definitely the best new world mh, and going back to old gen will make you miss the QoL this game has immensely.\n\nreally the only negative thing i have to say about wilds is the performance and the graphics. everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate. for me personally, i just bit the bullet and settled for high graphics on locked 30fps. it is what it is.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198134631367/recommended/2246340/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.6530533700352364,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.7442608541744072,
+        "Negative": 0.22826644631790421,
+        "Neutral": 0.027472699507688554
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "about the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great.",
+        "start": 149,
+        "end": 287,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235424623:chunk:001",
+      "document_id": "steam:2246340:235424623",
+      "text": "despite its issues, it's the best monster hunter IMO\nperformance issues are still there, some solvable by mods ( yes i'm aware my gpu is outdated )\n\nabout the game itself: love the combat, focus mode is one of the best additions they've ever made in a monhun game, wound system is great. can't beat the very much needed QoL features. monster roster is also very good. definitely the best new world mh, and going back to old gen will make you miss the QoL this game has immensely.\n\nreally the only negative thing i have to say about wilds is the performance and the graphics. everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate. for me personally, i just bit the bullet and settled for high graphics on locked 30fps. it is what it is.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198134631367/recommended/2246340/",
+      "aspect": "performance",
+      "mentioned": true,
+      "presence_score": 0.8731149131470354,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.445556721181996,
+        "Negative": 0.51288524417969,
+        "Neutral": 0.041558034638314034
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "everyone states that even with more modern hardware they still struggle to run the game at a consistent good framerate.",
+        "start": 575,
+        "end": 694,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "document_id": "steam:2246340:235283196",
+      "text": "I started playing Monster Hunter back in the Freedom Unite days. In my opinion, Monster Hunter Wilds has a lot of issues. The story is overly long and slow-paced, both during cutscenes and missions. The difficulty level is too low. The variety of monsters and equipment is unsatisfactory (I miss the days when the base game had everything needed from start to finish, without having to wait for DLC to get the complete experience). Navigating the maps is impossible without automatic movement. The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad. The concept of \"Artian\" weapons absolutely needs to go: gear should be crafted from monsters, and relying on luck for stats isn't a good mechanic. I found no added value in the open-world map.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198276444806/recommended/2246340/",
+      "aspect": "story",
+      "mentioned": true,
+      "presence_score": 0.6330960039870382,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.3448584465352681,
+        "Negative": 0.5418444347806395,
+        "Neutral": 0.11329711868409244
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The story is overly long and slow-paced, both during cutscenes and missions.",
+        "start": 122,
+        "end": 198,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "document_id": "steam:2246340:235283196",
+      "text": "I started playing Monster Hunter back in the Freedom Unite days. In my opinion, Monster Hunter Wilds has a lot of issues. The story is overly long and slow-paced, both during cutscenes and missions. The difficulty level is too low. The variety of monsters and equipment is unsatisfactory (I miss the days when the base game had everything needed from start to finish, without having to wait for DLC to get the complete experience). Navigating the maps is impossible without automatic movement. The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad. The concept of \"Artian\" weapons absolutely needs to go: gear should be crafted from monsters, and relying on luck for stats isn't a good mechanic. I found no added value in the open-world map.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198276444806/recommended/2246340/",
+      "aspect": "graphics_visuals",
+      "mentioned": true,
+      "presence_score": 0.6237464460607602,
+      "sentiment": "Positive",
+      "sentiment_scores": {
+        "Positive": 0.5683368173314276,
+        "Negative": 0.2949093231458632,
+        "Neutral": 0.1367538595227093
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad.",
+        "start": 494,
+        "end": 602,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "document_id": "steam:2246340:235283196",
+      "text": "I started playing Monster Hunter back in the Freedom Unite days. In my opinion, Monster Hunter Wilds has a lot of issues. The story is overly long and slow-paced, both during cutscenes and missions. The difficulty level is too low. The variety of monsters and equipment is unsatisfactory (I miss the days when the base game had everything needed from start to finish, without having to wait for DLC to get the complete experience). Navigating the maps is impossible without automatic movement. The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad. The concept of \"Artian\" weapons absolutely needs to go: gear should be crafted from monsters, and relying on luck for stats isn't a good mechanic. I found no added value in the open-world map.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198276444806/recommended/2246340/",
+      "aspect": "gameplay",
+      "mentioned": true,
+      "presence_score": 0.8584347959832546,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.41132158493291254,
+        "Negative": 0.5436831315145979,
+        "Neutral": 0.04499528355248971
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "The difficulty level is too low.",
+        "start": 199,
+        "end": 231,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    },
+    {
+      "chunk_id": "steam:2246340:235283196:chunk:001",
+      "document_id": "steam:2246340:235283196",
+      "text": "I started playing Monster Hunter back in the Freedom Unite days. In my opinion, Monster Hunter Wilds has a lot of issues. The story is overly long and slow-paced, both during cutscenes and missions. The difficulty level is too low. The variety of monsters and equipment is unsatisfactory (I miss the days when the base game had everything needed from start to finish, without having to wait for DLC to get the complete experience). Navigating the maps is impossible without automatic movement. The graphics are unnecessarily demanding, forcing visual compromises that ultimately make the game look bad. The concept of \"Artian\" weapons absolutely needs to go: gear should be crafted from monsters, and relying on luck for stats isn't a good mechanic. I found no added value in the open-world map.",
+      "game_name": "Monster Hunter Wilds",
+      "source_url": "https://steamcommunity.com/profiles/76561198276444806/recommended/2246340/",
+      "aspect": "controls",
+      "mentioned": true,
+      "presence_score": 0.6251636089673893,
+      "sentiment": "Negative",
+      "sentiment_scores": {
+        "Positive": 0.4368430333982763,
+        "Negative": 0.4992440092008373,
+        "Neutral": 0.06391295740088654
+      },
+      "subjectivity": "Opinionated",
+      "excerpt": {
+        "text": "Navigating the maps is impossible without automatic movement.",
+        "start": 432,
+        "end": 493,
+        "selection_method": "aspect_keyword_sentence",
+        "verified_entailment": false
+      }
+    }
+  ]
+}

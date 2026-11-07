@@ -6,6 +6,7 @@ from datetime import datetime
 
 import streamlit as st
 
+from generation.aspect_ui import render_aspect_analysis
 from generation.rag_summary.rag_generator import (
     GenerationError, OpenAICompatibleClient, generate_summary, safe_error,
 )
@@ -285,8 +286,9 @@ def main():
 
     st.subheader('Overview')
     render_stats(hits)
+    aspect_result = render_aspect_analysis(hits, query)
     with st.container(border=True):
-        st.markdown('**Sentiment analysis / generated answer**')
+        st.markdown('**Evidence-grounded review summary**')
         render_summary(query, hits, games)
 
     st.subheader(f'Top {len(hits)} reviews')
@@ -306,7 +308,9 @@ def main():
         'timings_ms': timings,
         'exported_at': datetime.now().isoformat(timespec='seconds'),
         'results': hits,
+        'aspect_analysis': aspect_result,
     }
+    st.session_state['last_search_export'] = export
     st.download_button('Download results (JSON)', json.dumps(export, ensure_ascii=False, indent=2),
                        file_name='search_results.json', mime='application/json')
     for rank, hit in enumerate(hits, start=1):
