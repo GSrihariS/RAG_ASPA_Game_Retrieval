@@ -117,9 +117,14 @@ python -m data_pipeline.calculate_iaa
 
 ## Downstream task and generation
 
-The downstream task is evidence-grounded RAG summarization: answer a question from the retrieved reviews, with
-citations. The experiment compares four methods (`baseline`, `improved`, `verify_delete`, `verify_revise`) on
-100 fixed questions. Run these commands from `code/`.
+The app uses the same ranked reviews for two downstream tasks. **Aspect-based sentiment analysis (ABSA)** shows
+aspect sentiment distributions with source excerpts and requires no generation API key. **Evidence-grounded RAG
+summarization** answers the question with citations. Its experiment compares four methods (`baseline`, `improved`,
+`verify_delete`, `verify_revise`) on 100 fixed questions. Run these commands from `code/`.
+
+**Inspect aspect sentiment in the UI.** Start `streamlit run app.py`, run a search, and choose **Previous baseline**
+or **Optimized** in the Aspect model selector. See the [ABSA instructions](code/generation/ABSA_README.md) and
+[report Section 4.1](code/generation/docs/aspect_report.md) for the method, evaluation, and demonstration.
 
 **Generate an answer in the UI.** This needs an API key for an OpenAI-compatible service. Set the key, start the
 UI, search, then click **Generate summary**. On Windows PowerShell, use `$env:GENERATION_API_KEY = "your-key"`.
